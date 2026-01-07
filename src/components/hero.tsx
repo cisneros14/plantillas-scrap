@@ -44,6 +44,7 @@ export default function Hero() {
         height={1000}
         src="/placeholder.webp"
         alt="hero"
+        priority
         className="w-full border aspect-video bg-accent rounded-xl overflow-hidden object-cover" />
       </div>
     </div>

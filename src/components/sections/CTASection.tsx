@@ -1,5 +1,10 @@
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/button";
+import dynamic from "next/dynamic";
+
+const ContactDialog = dynamic(() =>
+  import("../ContactDialog").then((mod) => mod.ContactDialog)
+);
 
 export function CTASection() {
   return (
@@ -19,14 +24,7 @@ export function CTASection() {
               Llamar ahora
             </a>
           </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="bg-transparent border-primary-foreground hover:bg-primary-foreground hover:text-primary"
-            asChild
-          >
-            <a href="#contacto">Solicitar Presupuesto</a>
-          </Button>
+          <ContactDialog />
         </div>
       </div>
     </section>

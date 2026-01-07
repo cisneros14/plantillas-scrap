@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 import { ImageN } from "../ui/image-with-skeleton";
+import dynamic from "next/dynamic";
+
+const ContactDialog = dynamic(() => import("../ContactDialog").then(mod => mod.ContactDialog));
 
 export function AboutSection() {
   return (
@@ -34,11 +37,7 @@ export function AboutSection() {
               ))}
             </div>
 
-            <div className="pt-4">
-              <Button size="lg" asChild>
-                <a href="#contacto">Contáctanos</a>
-              </Button>
-            </div>
+            <ContactDialog/>
           </div>
 
           {/* Placeholder for About Image - In a real app, use a real image */}

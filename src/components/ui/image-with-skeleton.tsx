@@ -37,6 +37,7 @@ export function ImageN({
         }}
         alt={alt}
         src={imgSrc}
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         {...props}
       />
     </div>

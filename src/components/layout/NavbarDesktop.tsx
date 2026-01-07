@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -11,9 +10,14 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { ModeToggle } from "@/components/mode-toggle";
-import { ContactDialog } from "../ContactDialog";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { Facebook, Instagram } from "lucide-react";
+import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
+import dynamic from "next/dynamic";
+
+const ContactDialog = dynamic(() => import("../ContactDialog").then(mod => mod.ContactDialog), {
+  loading: () => <div className="w-24 h-10 bg-muted/20 animate-pulse rounded-md" />, // Optional: Skeleton for the button
+  ssr: false // Optional: If we don't need it on server
+});
 
 export function NavbarDesktop() {
   return (
@@ -44,9 +48,15 @@ export function NavbarDesktop() {
         </div>
         <div className="flex items-center gap-4 ">
           {/* redes sociales iconos */}
-          <a href={siteConfig.social.facebook}><Facebook className="h-4 w-4 text-muted-foreground"/></a>
-          <a href={siteConfig.social.instagram}><Instagram className="h-4 w-4 text-muted-foreground"/></a>
-          <a href={siteConfig.social.whatsapp}><FaWhatsapp className="h-4 w-4 text-muted-foreground"/></a>
+          <a href={siteConfig.social.facebook}>
+            <Facebook className="h-4 w-4 text-muted-foreground" />
+          </a>
+          <a href={siteConfig.social.instagram}>
+            <Instagram className="h-4 w-4 text-muted-foreground" />
+          </a>
+          <a href={siteConfig.social.whatsapp}>
+            <WhatsappIcon className="h-4 w-4 text-muted-foreground" />
+          </a>
 
           <ContactDialog />
           <ModeToggle />
