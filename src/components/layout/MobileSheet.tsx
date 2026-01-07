@@ -19,7 +19,7 @@ interface MobileSheetProps {
 export function MobileSheet({ isOpen, onClose }: MobileSheetProps) {
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
-      <SheetContent side="left" className="w-[300px] sm:w-[400px]">
+      <SheetContent side="left" className="w-[300px] sm:w-[400px] px-4">
         <SheetHeader className="text-left mb-8">
           <SheetTitle className="text-xl font-bold text-primary">
             {siteConfig.branding.logo_text}

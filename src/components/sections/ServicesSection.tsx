@@ -18,8 +18,8 @@ export function ServicesSection() {
             Nuestros Servicios
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Soluciones integrales diseñadas para impulsar tu negocio al
-            siguiente nivel.
+            Soluciones legales integrales y personalizadas para proteger sus
+            intereses.
           </p>
         </div>
 
@@ -33,7 +33,7 @@ export function ServicesSection() {
             return (
               <Card
                 key={service.title}
-                className="border-none bg-muted/60 shadow transition-shadow"
+                className="bg-blue-500/4"
               >
                 <CardHeader>
                   <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">

@@ -71,7 +71,7 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contacto" className=" bg-muted/50">
+    <section id="contacto" className=" bg-blue-500/2">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
@@ -161,23 +161,7 @@ export function ContactSection() {
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
                       <Instagram className="h-6 w-6" />
-                    </a>
-                    <a
-                      href={siteConfig.social.twitter}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <Twitter className="h-6 w-6" />
-                    </a>
-                    <a
-                      href={siteConfig.social.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <Linkedin className="h-6 w-6" />
-                    </a>
+                    </a> 
                   </div>
                 </div>
               </CardContent>
@@ -222,7 +206,10 @@ export function ContactSection() {
                               placeholder="Ingresa tu número de identificación"
                               {...field}
                               onChange={(e) => {
-                                const value = e.target.value.replace(/[^0-9]/g, "");
+                                const value = e.target.value.replace(
+                                  /[^0-9]/g,
+                                  ""
+                                );
                                 field.onChange(value);
                               }}
                               maxLength={13}

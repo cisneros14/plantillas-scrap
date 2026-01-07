@@ -8,15 +8,14 @@ const ContactDialog = dynamic(() =>
 
 export function CTASection() {
   return (
-    <section className="">
+    <section className="bg-blue-500/2">
       <div className="container px-4 mx-auto text-center">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
-          ¿Listo para transformar tu negocio?
+          ¿Necesita Asesoría Legal Confiable?
         </h2>
         <p className="text-lg max-w-2xl mx-auto mb-8">
-          Únete a cientos de clientes satisfechos que han confiado en{" "}
-          {siteConfig.business.name} para llevar sus proyectos al siguiente
-          nivel.
+          Confíe en Y&L Estudios para proteger sus intereses y
+          resolver sus conflictos con profesionalismo y eficacia.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg" variant="secondary" asChild>

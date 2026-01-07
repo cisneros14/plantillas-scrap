@@ -10,7 +10,7 @@ export default function HomeLayout({
   return (
     <>
       <NavbarDesktop />
-      <main className="flex-1 bg-muted/60">{children}</main>
+      <main className="flex-1 bg-blue-500/2">{children}</main>
       <Footer />
       <MobileBottomBar />
     </>

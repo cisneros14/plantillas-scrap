@@ -1,44 +1,44 @@
 import { siteConfig } from "@/config/site";
-import { Shield, Target, Zap, Smile } from "lucide-react";
+import { Shield, Target, Heart, Award } from "lucide-react";
 
 const valueProps = [
   {
-    icon: Zap,
-    title: "Rapidez y Eficiencia",
+    icon: Shield,
+    title: "Ética y Confidencialidad",
     description:
-      "Optimizamos cada proceso para entregarte resultados en tiempo récord sin sacrificar la calidad.",
+      "Manejo responsable y reservado de su información, garantizando la máxima discreción en cada caso.",
   },
   {
-    icon: Shield,
-    title: "Seguridad Garantizada",
+    icon: Heart,
+    title: "Trato Humano",
     description:
-      "Tus datos y proyectos están protegidos con los más altos estándares de seguridad del mercado.",
+      "Acompañamiento cercano y personalizado, entendiendo las necesidades específicas de cada cliente.",
   },
   {
     icon: Target,
-    title: "Enfoque en Resultados",
+    title: "Soluciones Efectivas",
     description:
-      "No solo trabajamos, nos alineamos con tus objetivos para asegurar el éxito de tu negocio.",
+      "Enfoque orientado a resultados claros y resolución de conflictos de manera ágil.",
   },
   {
-    icon: Smile,
-    title: "Soporte Dedicado",
+    icon: Award,
+    title: "Experiencia",
     description:
-      "Nuestro equipo está siempre disponible para resolver tus dudas y acompañarte en cada paso.",
+      "Más de 17 años de trayectoria profesional y liderazgo en estudios jurídicos respaldan nuestro servicio.",
   },
 ];
 
 export function ValuePropositionSection() {
   return (
-    <section className="py-24 bg-muted/60">
+    <section className="py-24 bg-blue-500/2">
       <div className="container px-4 mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            ¿Por qué elegir {siteConfig.business.name}?
+            ¿Por qué elegir Y&L Estudios?
           </h2>
           <p className="text-lg text-muted-foreground">
-            Nos diferenciamos por ofrecer un servicio integral que combina
-            tecnología, experiencia y compromiso para impulsar tu crecimiento.
+            Nos diferenciamos por ofrecer un servicio jurídico integral basado
+            en valores sólidos y resultados comprobados.
           </p>
         </div>
 
@@ -46,7 +46,7 @@ export function ValuePropositionSection() {
           {valueProps.map((prop, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center p-6 rounded-2xl bg-background shadow transition-colors duration-300"
+              className="flex flex-col items-center text-center p-6 rounded-2xl bg-background border transition-colors duration-300"
             >
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary">
                 <prop.icon className="h-6 w-6" />

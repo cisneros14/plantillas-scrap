@@ -1,8 +1,9 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, CirclePlay } from "lucide-react";
+import { ArrowUpRight, CirclePlay, MapPin } from "lucide-react";
 import Link from "next/link";
 import { ImageN } from "./ui/image-with-skeleton";
+import { ContactDialog } from "./ContactDialog";
 
 export default function Hero() {
   return (
@@ -14,38 +15,51 @@ export default function Hero() {
             className="rounded-full py-1 border-border"
             asChild
           >
-            <Link href="#">
-              Just released v1.0.0 <ArrowUpRight className="ml-1 size-4" />
+            <Link href="#nosotros">
+              Más de 17 años de experiencia{" "}
+              <ArrowUpRight className="ml-1 size-4" />
             </Link>
           </Badge>
           <h1 className="mt-6 max-w-[17ch] text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem] font-semibold leading-[1.2]! tracking-[-0.035em]">
-            Customized Shadcn UI Blocks & Components
+            Y&L Estudio Jurídico
           </h1>
+          <h3 className="mt-6 max-w-[60ch] sm:text-lg text-foreground/80 flex items-center gap-2">
+            <MapPin className="h-6 w-6 text-primary shrink-0" />
+            Quito - Ecuador
+          </h3>
           <p className="mt-6 max-w-[60ch] sm:text-lg text-foreground/80">
-            Explore a collection of Shadcn UI blocks and components, ready to
-            preview and copy. Streamline your development workflow with
-            easy-to-implement examples.
+            Somos un equipo altamente especializado en diversas ramas del
+            derecho, comprometido con brindar un asesoramiento legal integral,
+            estratégico y de la más alta calidad, enfocado en proteger sus
+            intereses y ofrecer soluciones claras y efectivas.
           </p>
+
           <div className="mt-12 flex items-center gap-4">
-            <Button size="lg" className="rounded-full text-base">
-              Get Started <ArrowUpRight className="h-5! w-5!" />
-            </Button>
+            <ContactDialog>
+              <Button size="lg" className="rounded-full text-base">
+                Agendar Cita <ArrowUpRight className="h-5! w-5!" />
+              </Button>
+            </ContactDialog>
             <Button
               variant="outline"
               size="lg"
               className="rounded-full text-base shadow-none"
+              asChild
             >
-              <CirclePlay className="h-5! w-5!" /> Watch Demo
+              <a href="#servicios">
+                <CirclePlay className="h-5! w-5!" /> Ver Servicios
+              </a>
             </Button>
           </div>
         </div>
         <ImageN
-        width={1000}
-        height={1000}
-        src="/placeholder.webp"
-        alt="hero"
-        priority
-        className="w-full border aspect-video bg-accent rounded-xl overflow-hidden object-cover" />
+          width={1000}
+          height={1000}
+          src="/img2.png"
+          alt="hero"
+          priority
+          className="w-full border max-h-[600px] rounded-xl overflow-hidden object-cover"
+        />
       </div>
     </div>
   );

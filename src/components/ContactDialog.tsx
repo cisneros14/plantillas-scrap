@@ -9,12 +9,13 @@ import {
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, Instagram, Facebook, MessageCircle } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { FaWhatsapp } from "react-icons/fa";
 
-export function ContactDialog() {
+export function ContactDialog({ children }: { children?: React.ReactNode }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="default">Contáctanos</Button>
+        {children ? children : <Button variant="default">Contáctanos</Button>}
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
@@ -53,7 +54,7 @@ export function ContactDialog() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <MessageCircle className="h-5 w-5" />
+              <FaWhatsapp className="h-5 w-5" />
               <div className="flex flex-col items-start">
                 <span className="font-medium">WhatsApp</span>
                 <span className="text-xs text-muted-foreground">

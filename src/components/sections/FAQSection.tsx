@@ -15,7 +15,7 @@ export function FAQSection() {
             Preguntas Frecuentes
           </h2>
           <p className="text-lg text-muted-foreground">
-            Resolvemos tus dudas más comunes sobre nuestros servicios.
+            Resolvemos sus dudas legales más comunes de manera clara y sencilla.
           </p>
         </div>
 

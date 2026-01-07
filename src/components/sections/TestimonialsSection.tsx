@@ -12,7 +12,7 @@ import {
 
 export function TestimonialsSection() {
   return (
-    <section className="bg-muted/60">
+    <section className="bg-blue-500/2">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
@@ -36,7 +36,7 @@ export function TestimonialsSection() {
               {siteConfig.testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
-                    <Card className="border-none h-full">
+                    <Card className="border h-full">
                       <CardHeader>
                         <Quote className="h-8 w-8 text-primary/40 mb-4" />
                         <p className="text-lg italic text-muted-foreground mb-6">

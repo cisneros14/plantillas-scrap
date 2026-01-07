@@ -37,87 +37,111 @@ export const siteConfig = {
     },
   },
   business: {
-    name: "Tu Negocio Local S.A.",
-    phone: "+34 600 000 000",
-    whatsapp: "34600000000",
-    address: "Calle Principal 123, Madrid, España",
+    name: "David E. Yumiceba G.",
+    phone: "+593 99 123 4567", // Placeholder, user didn't provide phone but whatsapp link implies it
+    whatsapp: "593991234567", // Placeholder
+    address: "Quito, Pichincha – Ecuador",
     coordinates: {
-      lat: 40.416775,
-      long: -3.703790,
+      lat: -0.180653,
+      long: -78.467834,
     },
-    email: "contacto@tunegocio.com",
-    operating_hours: "Mo-Fr 09:00-18:00",
+    email: "contacto@davidyumiceba.com", // Placeholder
+    operating_hours: "Lu-Vi 09:00-18:00",
   },
   nav_items: [
     { label: "Inicio", href: "#inicio" },
+    { label: "Perfil", href: "#nosotros" },
     { label: "Servicios", href: "#servicios" },
-    { label: "Nosotros", href: "#nosotros" },
     { label: "Contacto", href: "#contacto" },
   ],
   branding: {
-    primary: "221.2 83.2% 53.3%", // Blue 600 HSL
+    primary: "221.2 83.2% 53.3%", // Keep blue for now
     primary_foreground: "0 0% 98%",
     font_sans: "font-sans",
-    logo_text: "TuNegocio",
+    logo_text: "Y&L Jurídico",
   },
   services: [
     {
-      title: "Consultoría Estratégica",
-      description: "Analizamos tu negocio para identificar oportunidades de crecimiento y optimización.",
-      icon: "TrendingUp", 
+      title: "Mediación y Conflictos",
+      description: "Resolución efectiva de conflictos, priorizando soluciones ágiles y consensuadas.",
+      icon: "Handshake", 
     },
     {
-      title: "Desarrollo Web",
-      description: "Creamos sitios web modernos, rápidos y optimizados para buscadores.",
-      icon: "Laptop",
+      title: "Asesoría Civil",
+      description: "Asesoría integral en derecho civil para proteger sus intereses y patrimonio.",
+      icon: "Scale",
     },
     {
-      title: "Marketing Digital",
-      description: "Estrategias de marketing para aumentar tu visibilidad y atraer más clientes.",
-      icon: "Megaphone",
+      title: "Derecho de Familia",
+      description: "Acompañamiento legal en casos de familia, niñez y adolescencia con enfoque humano.",
+      icon: "Users",
     },
     {
-      title: "Soporte Técnico",
-      description: "Asistencia técnica especializada para resolver cualquier incidencia.",
-      icon: "Headset",
+      title: "Trámites Notariales",
+      description: "Elaboración de minutas, escrituras públicas, poderes y otros documentos.",
+      icon: "FileText",
     },
   ],
   testimonials: [
     {
-      name: "María García",
-      role: "CEO, TechStart",
-      content: "El servicio fue excepcional. Transformaron completamente nuestra presencia digital y los resultados fueron inmediatos.",
+      name: "Cliente Satisfecho",
+      role: "Empresario",
+      content: "La mediación fue rápida y efectiva. Logramos un acuerdo beneficioso para ambas partes sin necesidad de un juicio largo.",
       avatar: "/avatars/01.png",
     },
     {
-      name: "Carlos Rodríguez",
-      role: "Director, MarketingPro",
-      content: "Profesionales, rápidos y eficientes. La mejor inversión que hemos hecho para nuestro negocio este año.",
+      name: "Familia Pérez",
+      role: "Cliente Particular",
+      content: "Excelente trato humano y profesionalismo en nuestro caso de familia. Nos sentimos muy respaldados.",
       avatar: "/avatars/02.png",
     },
     {
-      name: "Ana Martínez",
-      role: "Dueña, Boutique Local",
-      content: "Me ayudaron a entender qué necesitaba mi negocio y lo ejecutaron a la perfección. Totalmente recomendados.",
+      name: "Juan M.",
+      role: "Cliente",
+      content: "Asesoría clara y transparente en mis trámites notariales. Muy recomendado.",
       avatar: "/avatars/03.png",
     },
   ],
   faq: [
     {
-      question: "¿Cuáles son sus horarios de atención?",
-      answer: "Nuestro horario de atención es de lunes a viernes de 9:00 a 18:00. Sin embargo, ofrecemos soporte de emergencia para clientes con planes premium.",
+      question: "¿La mediación tiene validez legal en Ecuador?",
+      answer: "Absolutamente. Según la Ley de Arbitraje y Mediación, el acta que firmamos en un Centro de Mediación tiene efecto de sentencia ejecutoriada y cosa juzgada. Esto significa que tiene el mismo peso legal que la orden final de un Juez. Si una parte incumple lo acordado, se puede exigir su cumplimiento inmediato ante la justicia sin necesidad de iniciar un juicio desde cero. Es la vía más rápida y económica en 2026.",
     },
     {
-      question: "¿Ofrecen servicios personalizados?",
-      answer: "Sí, todos nuestros planes se adaptan a las necesidades específicas de cada cliente. Realizamos una consultoría inicial para entender tus requerimientos.",
+      question: "¿Atienden casos de derecho de familia?",
+      answer: "Sí, es una de nuestras áreas principales. Manejamos casos bajo la normativa actual del COGEP y el Código de la Niñez, incluyendo: Divorcios (mutuo acuerdo y litigiosos), Pensiones Alimenticias (cálculos, demandas e incidentes con la Tabla 2026), y Tenencia y Visitas.",
     },
     {
-      question: "¿Cuál es el tiempo de entrega promedio?",
-      answer: "Depende del proyecto. Para sitios web corporativos, el tiempo promedio es de 2 a 3 semanas. Para proyectos más complejos, definimos un cronograma detallado.",
+      question: "¿Qué tipo de trámites notariales realiza?",
+      answer: "Aunque no somos una notaría, elaboramos la minuta (el documento legal base) y gestionamos todo el proceso ante el Notario para garantizar que sus escrituras no tengan errores legales. Realizamos: Traspaso de dominio (Compraventas), Posesiones Efectivas, Permisos de salida del país, Constitución de compañías SAS, entre otros.",
     },
     {
-      question: "¿Ofrecen garantía de satisfacción?",
-      answer: "Absolutamente. Nos aseguramos de que estés 100% satisfecho con el resultado final antes de cerrar el proyecto.",
+      question: "¿Es obligatorio iniciar un juicio o existen alternativas?",
+      answer: "No siempre es obligatorio. Somos expertos en Resolución Alternativa de Conflictos. Antes de litigar, evaluamos si su caso puede resolverse mediante Mediación o Negociación Directa, ahorrando tiempo y dinero. Si la contraparte no cede, estamos preparados para iniciar la demanda judicial inmediatamente.",
+    },
+    {
+      question: "¿Ofrece atención personalizada?",
+      answer: "Sí. No somos una 'fábrica de casos'. Usted tendrá un abogado asignado directamente a su causa. Mantenemos canales de comunicación directos (WhatsApp Corporativo y Reuniones Virtuales/Presenciales) para mantenerle informado sobre cada avance.",
+    },
+    {
+      question: "¿Cómo puedo agendar una consulta?",
+      answer: "Puede agendar directamente a través de nuestro enlace de WhatsApp o en nuestra página de reservas online. Ofrecemos modalidad Presencial (en nuestras oficinas) y Virtual (Zoom/Meet) para clientes en otras provincias o en el extranjero.",
+    },
+    {
+      question: "¿La primera consulta tiene costo?",
+      answer: "Sí, nuestra consulta tiene un honorario base. Esto se debe a que realizamos un análisis jurídico preliminar de su caso y le entregamos una estrategia legal ('Hoja de Ruta') concreta, nos contrate o no para el juicio posterior.",
+    },
+    {
+      question: "¿Cuánto tiempo puede tomar la resolución de un caso?",
+      answer: "Los tiempos varían: Vía Notarial/Mediación (1-3 semanas), Juicios Sumarios (3-8 meses en primera instancia), Juicios Ordinarios (más de un año). Siempre seremos honestos con usted sobre los tiempos reales.",
+    },
+    {
+      question: "¿Se garantiza la confidencialidad del caso?",
+      answer: "Totalmente. Nos regimos bajo el principio de Secreto Profesional del Código Orgánico de la Función Judicial. Toda la información y documentos están protegidos legalmente y no serán divulgados.",
+    },
+    {
+      question: "¿Puedo recibir asesoría antes de iniciar cualquier trámite?",
+      answer: "Es lo más recomendable. Practicamos la Abogacía Preventiva. Consultarnos antes de firmar un contrato o tomar decisiones legales importantes puede evitarle demandas costosas en el futuro.",
     },
   ],
   social: {
