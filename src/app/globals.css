@@ -190,3 +190,10 @@ button, a {
 @utility pb-safe {
   padding-bottom: env(safe-area-inset-bottom);
 }
+
+
+
+
+.prueba{
+  color: #ff004c;
+}

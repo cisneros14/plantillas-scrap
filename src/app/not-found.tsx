@@ -22,9 +22,7 @@ export default function NotFound() {
               </div>
             </div>
             <div className="space-y-2">
-              <h2 className="text-lg font-medium text-muted-foreground">
-                {siteConfig.metadata.title}
-              </h2>
+              <span className="text-lg font-bold">{siteConfig.name}</span>
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
                 Página no encontrada
               </h1>

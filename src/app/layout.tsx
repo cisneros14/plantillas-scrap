@@ -11,37 +11,33 @@ import "./globals.css";
 import { siteConfig } from "@/config/site";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ThemeProvider } from "@/components/theme-provider";
+import { generateThemeVariables } from "@/lib/theme-generator";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
+  adjustFontFallback: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  adjustFontFallback: true,
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: siteConfig.metadata.title,
-    template: `%s | ${siteConfig.metadata.applicationName}`,
-  },
-  description: siteConfig.metadata.description,
-  keywords: siteConfig.metadata.keywords,
-  authors: siteConfig.metadata.authors,
-  applicationName: siteConfig.metadata.applicationName,
-  metadataBase: new URL(siteConfig.seo.canonicalUrl),
-  openGraph: siteConfig.seo.openGraph,
-  twitter: siteConfig.seo.twitter,
-  robots: siteConfig.seo.robots,
-};
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = constructMetadata();
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const themeCss = generateThemeVariables(siteConfig.branding.primary);
+
   return (
     <html lang="es" suppressHydrationWarning>
       <head>
@@ -50,6 +46,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden`}
       >
+        <style
+          id="theme-styles"
+          dangerouslySetInnerHTML={{ __html: themeCss }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

@@ -12,7 +12,7 @@ export function Footer() {
               {siteConfig.branding.logo_text}
             </span>
             <p className="text-sm text-muted-foreground">
-              {siteConfig.metadata.description}
+              {siteConfig.description}
             </p>
           </div>
 

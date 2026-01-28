@@ -71,17 +71,8 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contacto" className=" bg-muted/50">
+    <section id="contacto" className="bg-muted/50 py-16">
       <div className="container px-4 mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Contáctanos
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Estamos aquí para ayudarte. Envíanos un mensaje o visítanos.
-          </p>
-        </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-8">
             <Card>
@@ -109,7 +100,7 @@ export function ContactSection() {
                     <a
                       href={`tel:${siteConfig.business.phone.replace(
                         /\s+/g,
-                        ""
+                        "",
                       )}`}
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
@@ -222,7 +213,10 @@ export function ContactSection() {
                               placeholder="Ingresa tu número de identificación"
                               {...field}
                               onChange={(e) => {
-                                const value = e.target.value.replace(/[^0-9]/g, "");
+                                const value = e.target.value.replace(
+                                  /[^0-9]/g,
+                                  "",
+                                );
                                 field.onChange(value);
                               }}
                               maxLength={13}

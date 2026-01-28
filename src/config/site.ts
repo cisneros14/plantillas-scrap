@@ -1,41 +1,21 @@
-
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  metadata: {
-    title: "Servicios Profesionales | Tu Negocio Local",
-    description: "Ofrecemos los mejores servicios en tu área. Calidad garantizada y atención personalizada.",
-    keywords: ["servicios", "local", "negocio", "reparación", "mantenimiento"],
-    applicationName: "TuNegocioApp",
-    authors: [{ name: "Tu Negocio", url: "https://tunegocio.com" }],
+  name: "Tu Negocio Local",
+  description: "Ofrecemos los mejores servicios en tu área. Calidad garantizada y atención personalizada.",
+  url: "https://tunegocio.com",
+  ogImage: "https://tunegocio.com/og.jpg",
+  author: {
+    name: "Tu Negocio",
+    url: "https://tunegocio.com",
+    twitter: "@tunegocio",
   },
-  seo: {
-    canonicalUrl: "https://tunegocio.com",
-    openGraph: {
-      type: "website",
-      locale: "es_ES",
-      url: "https://tunegocio.com",
-      siteName: "Tu Negocio Local",
-      images: [
-        {
-          url: "https://tunegocio.com/og-image.jpg",
-          width: 1200,
-          height: 630,
-          alt: "Tu Negocio Local",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      site: "@tunegocio",
-      creator: "@tunegocio",
-      images: ["https://tunegocio.com/twitter-image.jpg"],
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
-  },
+  keywords: ["servicios", "local", "negocio", "reparación", "mantenimiento"],
+  applicationName: "TuNegocioApp",
+  creator: "Tu Negocio",
+  language: "es",
+  
+  // Business Specifics for JSON-LD and Contact Info
   business: {
     name: "Tu Negocio Local S.A.",
     phone: "+34 600 000 000",
@@ -48,18 +28,33 @@ export const siteConfig = {
     email: "contacto@tunegocio.com",
     operating_hours: "Mo-Fr 09:00-18:00",
   },
+
+  // Navigation
   nav_items: [
-    { label: "Inicio", href: "#inicio" },
-    { label: "Servicios", href: "#servicios" },
-    { label: "Nosotros", href: "#nosotros" },
-    { label: "Contacto", href: "#contacto" },
+    { label: "Inicio", href: "/" },
+    { label: "Servicios", href: "/services" },
+    { label: "Nosotros", href: "/about" },
+    { label: "Contacto", href: "/contact" },
   ],
+
+  // Branding & Design System
   branding: {
-    primary: "221.2 83.2% 53.3%", // Blue 600 HSL
+    primary: "#ff004c", 
     primary_foreground: "0 0% 98%",
     font_sans: "font-sans",
     logo_text: "TuNegocio",
   },
+
+  // Social Links
+  social: {
+    facebook: "https://facebook.com",
+    instagram: "https://instagram.com",
+    twitter: "https://twitter.com",
+    linkedin: "https://linkedin.com",
+    whatsapp: "https://wa.me/593991234567",
+  },
+
+  // Content Sections (Maintaining existing data structure)
   services: [
     {
       title: "Consultoría Estratégica",
@@ -120,11 +115,82 @@ export const siteConfig = {
       answer: "Absolutamente. Nos aseguramos de que estés 100% satisfecho con el resultado final antes de cerrar el proyecto.",
     },
   ],
-  social: {
-    facebook: "https://facebook.com",
-    instagram: "https://instagram.com",
-    twitter: "https://twitter.com",
-    linkedin: "https://linkedin.com",
-    whatsapp: "https://wa.me/593991234567",
-  },
+  process: [
+    {
+      title: "Consulta Inicial",
+      description: "Nos reunimos para entender a fondo tus necesidades y objetivos comerciales.",
+      icon: "MessageCircle",
+    },
+    {
+      title: "Estrategia",
+      description: "Diseñamos un plan de acción personalizado para tu negocio.",
+      icon: "Lightbulb",
+    },
+    {
+      title: "Ejecución",
+      description: "Implementamos las soluciones con los más altos estándares de calidad.",
+      icon: "Hammer",
+    },
+    {
+      title: "Optimización",
+      description: "Monitoreamos y mejoramos continuamente para asegurar resultados.",
+      icon: "TrendingUp",
+    },
+  ],
+  pricing: [
+    {
+      name: "Básico",
+      price: "€499",
+      description: "Perfecto para pequeños negocios que están empezando.",
+      features: ["Diseño Web Básico", "3 Páginas", "Contacto por Email", "SEO Básico"],
+      cta: "Empezar",
+      popular: false,
+    },
+    {
+      name: "Profesional",
+      price: "€999",
+      description: "La mejor opción para negocios en crecimiento.",
+      features: ["Diseño Premium", "Hasta 10 Páginas", "Soporte Prioritario", "SEO Avanzado", "Integración CMS"],
+      cta: "Elegir Profesional",
+      popular: true,
+    },
+    {
+      name: "Empresarial",
+      price: "Consultar",
+      description: "Soluciones a medida para grandes organizaciones.",
+      features: ["Desarrollo a Medida", "Páginas Ilimitadas", "Soporte 24/7", "Auditoría SEO Mensual", "E-commerce"],
+      cta: "Contactar",
+      popular: false,
+    },
+  ],
+  team: [
+    {
+      name: "Ana García",
+      role: "CEO & Fundadora",
+      bio: "Con más de 15 años de experiencia liderando equipos y estrategias digitales.",
+      image: "/placeholder.webp",
+      social: { twitter: "#", linkedin: "#" }
+    },
+    {
+      name: "Carlos Ruiz",
+      role: "Director Tecnológico",
+      bio: "Apasionado por la innovación y la arquitectura de software escalable.",
+      image: "/placeholder.webp",
+      social: { twitter: "#", linkedin: "#" }
+    },
+    {
+      name: "Laura Martínez",
+      role: "Directora de Diseño",
+      bio: "Creando experiencias visuales impactantes que conectan con los usuarios.",
+      image: "/placeholder.webp",
+      social: { twitter: "#", linkedin: "#" }
+    },
+    {
+      name: "David López",
+      role: "Lead Developer",
+      bio: "Experto en desarrollo full-stack y optimización de rendimiento.",
+      image: "/placeholder.webp",
+      social: { twitter: "#", linkedin: "#" }
+    }
+  ],
 };
