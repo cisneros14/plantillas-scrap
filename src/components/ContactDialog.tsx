@@ -7,8 +7,9 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, Instagram, Facebook, MessageCircle } from "lucide-react";
+import { Phone, Mail, Instagram, Facebook } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
 
 export function ContactDialog() {
   return (
@@ -48,12 +49,12 @@ export function ContactDialog() {
             <a
               href={`https://wa.me/${siteConfig.business.whatsapp.replace(
                 /\+/g,
-                ""
+                "",
               )}`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <MessageCircle className="h-5 w-5" />
+              <WhatsappIcon className="h-5 w-5" />
               <div className="flex flex-col items-start">
                 <span className="font-medium">WhatsApp</span>
                 <span className="text-xs text-muted-foreground">
