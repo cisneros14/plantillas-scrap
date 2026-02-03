@@ -19,7 +19,7 @@ export default function Hero() {
               HOGAR TECH COMPANY OFICIAL{" "}
               <ArrowUpRight className="ml-1 size-4" />
             </Link>
-          </Badge>
+          </Badge> 
           <h1 className="max-w-[20ch] text-[var(--secondary)] text-4xl md:text-5xl lg:text-[3.75rem] xl:text-[4.5rem] font-semibold leading-[1.2]! tracking-[-0.035em]">
             Tecnología de Punta a Precios de Oferta 🇪🇨
           </h1>
