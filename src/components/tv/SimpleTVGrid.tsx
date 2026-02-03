@@ -61,7 +61,7 @@ export function SimpleTVGrid({
     <section className={`py-16 ${className}`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-10">
-          <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-white">
+          <h2 className="text-3xl text-[var(--secondary)] font-bold tracking-tight dark:text-white">
             {title}
           </h2>
           <Button variant="ghost" className="gap-2" asChild>

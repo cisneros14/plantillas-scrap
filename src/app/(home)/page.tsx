@@ -43,11 +43,13 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Static Shell: Immediate LCP */}
       <Hero />
-      <SimpleTVGrid
-        title="Ofertas Destacadas"
-        maxPrice={400}
-        className="bg-zinc-50 dark:bg-zinc-900/50"
-      />
+      <Suspense fallback={<SectionSkeleton />}>
+        <SimpleTVGrid
+          title="Ofertas Destacadas"
+          maxPrice={400}
+          className="bg-zinc-50 dark:bg-zinc-900/50"
+        />
+      </Suspense>
       <ValuePropositionSection />
 
       {/* Streaming Content */}
@@ -56,20 +58,28 @@ export default function Home() {
       </Suspense>
 
       <Suspense fallback={<SectionSkeleton />}>
-        <CTASection />
+        <SimpleTVGrid
+          title="Lo Mejor de TCL"
+          brandId={3}
+          className="bg-zinc-50 dark:bg-zinc-900/50"
+        />
       </Suspense>
 
       <Suspense fallback={<SectionSkeleton />}>
-        <AboutSection />
+        <CTASection />
       </Suspense>
+
+      {/* <Suspense fallback={<SectionSkeleton />}>
+        <AboutSection />
+      </Suspense> */}
 
       <Suspense fallback={<SectionSkeleton />}>
         <TestimonialsSection />
       </Suspense>
 
-      <Suspense fallback={<SectionSkeleton />}>
+      {/* <Suspense fallback={<SectionSkeleton />}>
         <FAQSection />
-      </Suspense>
+      </Suspense> */}
 
       <Suspense fallback={<SectionSkeleton />}>
         <ContactSection />

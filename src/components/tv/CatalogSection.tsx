@@ -66,25 +66,25 @@ export function CatalogSection() {
   };
 
   return (
-    <section id="catalogo" className="!py-20 bg-zinc-50 dark:bg-zinc-950">
+    <section id="catalogo" className="bg-zinc-50 dark:bg-zinc-950">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-end md:items-center mb-10 gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
           <div>
-            <h2 className="text-4xl font-black tracking-tight text-zinc-900 dark:text-white mb-2">
+            <h2 className="text-3xl md:text-4xl font-black tracking-tight text-zinc-900 dark:text-white mb-2">
               Nuestro Catálogo
             </h2>
-            <p className="text-zinc-500 dark:text-zinc-400">
+            <p className="text-zinc-500 dark:text-zinc-400 text-sm md:text-base max-w-[50ch]">
               Explora nuestra selección exclusiva de televisores
               internacionales.
             </p>
           </div>
-          <div className="text-zinc-400 text-sm">
-            Mostrando {filteredTVs.length} resultados
+          <div className="text-zinc-400 text-sm font-medium bg-zinc-100 dark:bg-zinc-800/50 px-3 py-1 rounded-full">
+            {filteredTVs.length} resultados
           </div>
         </div>
 
         {/* Filters Bar */}
-        <div className="bg-white dark:bg-zinc-900 p-4 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 mb-8 sticky top-20 z-30 backdrop-blur-md bg-opacity-90 dark:bg-opacity-90">
+        <div className="bg-white dark:bg-zinc-900 p-4 rounded-2xl shadow-sm border border-zinc-200 dark:border-zinc-800 mb-8 sticky md:top-20 z-30 backdrop-blur-md bg-opacity-90 dark:bg-opacity-90">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400 w-4 h-4" />
@@ -96,7 +96,7 @@ export function CatalogSection() {
               />
             </div>
 
-            <div className="flex flex-wrap gap-2 items-center">
+            <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 items-center w-full lg:w-auto">
               <select
                 value={selectedMarca}
                 onChange={(e) => setSelectedMarca(e.target.value)}
@@ -123,13 +123,13 @@ export function CatalogSection() {
                 ))}
               </select>
 
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 col-span-2 sm:col-span-auto sm:w-auto">
                 <Input
                   type="number"
-                  placeholder="Min $"
+                  placeholder="Precio Mínimo $"
                   value={minPrice}
                   onChange={(e) => setMinPrice(e.target.value)}
-                  className="w-24 bg-zinc-50 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700"
+                  className="w-full sm:w-32 bg-zinc-50 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700"
                 />
               </div>
 

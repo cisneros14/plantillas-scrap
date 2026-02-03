@@ -171,15 +171,10 @@
 }
 
 section {
-  @apply py-30;
+  @apply py-20;
   @media (max-width: 768px) {
-    @apply py-20;
+    @apply py-10;
   }
-}
-
-@utility py-30 {
-  padding-top: 7.5rem;
-  padding-bottom: 7.5rem;
 }
 
 button, a {

@@ -28,8 +28,8 @@ export default function Hero() {
             real. Calidad, confianza y los mejores precios del mercado. Envíos
             seguros a todo el Ecuador.
           </p>
-          <div className="mt-12 flex items-center gap-4">
-            <Button size="lg" className="rounded-full text-base" asChild>
+          <div className="mt-12 flex flex-col md:flex-row items-center gap-4">
+            <Button size="lg" className="rounded-full text-base w-full md:w-auto" asChild>
               <Link href="/catalogo">
                 Ver Catálogo <ArrowUpRight className="ml-2 h-5 w-5" />
               </Link>
@@ -37,7 +37,7 @@ export default function Hero() {
             <Button
               variant="outline"
               size="lg"
-              className="rounded-full text-base shadow-none"
+              className="rounded-full text-base shadow-none w-full md:w-auto"
               asChild
             >
               <Link href="https://wa.me/593987834918" target="_blank">
@@ -52,7 +52,7 @@ export default function Hero() {
           src="/logo2.png"
           alt="hero"
           priority
-          className="w-full max-w-[400px] mx-auto rounded-xl overflow-hidden object-cover"
+          className="w-full max-w-[280px] md:max-w-[400px] mx-auto rounded-xl overflow-hidden object-cover"
         />
       </div>
     </div>
