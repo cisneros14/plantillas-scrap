@@ -77,7 +77,9 @@ export function ContactSection() {
           <div className="space-y-8">
             <Card>
               <CardHeader>
-                <CardTitle>Información de Contacto</CardTitle>
+                <CardTitle className="text-[var(--secondary)] text-2xl">
+                  Información de Contacto
+                </CardTitle>
                 <CardDescription>
                   Encuéntranos en nuestras oficinas o contáctanos directamente.
                 </CardDescription>
@@ -178,7 +180,9 @@ export function ContactSection() {
           <div>
             <Card>
               <CardHeader>
-                <CardTitle>Envíanos un mensaje</CardTitle>
+                <CardTitle className="text-[var(--secondary)] text-2xl">
+                  Envíanos un mensaje
+                </CardTitle>
                 <CardDescription>
                   Completa el formulario y te responderemos lo antes posible.
                 </CardDescription>

@@ -4,27 +4,27 @@ import { Shield, Target, Zap, Smile } from "lucide-react";
 const valueProps = [
   {
     icon: Zap,
-    title: "Rapidez y Eficiencia",
+    title: "Precios Bajos",
     description:
-      "Optimizamos cada proceso para entregarte resultados en tiempo récord sin sacrificar la calidad.",
+      "Mejoramos cualquier cotización para cuidar tu economía. Los mejores precios del mercado.",
   },
   {
     icon: Shield,
-    title: "Seguridad Garantizada",
+    title: "Calidad Garantizada",
     description:
-      "Tus datos y proyectos están protegidos con los más altos estándares de seguridad del mercado.",
+      "Productos 100% originales con garantía oficial de fábrica para tu tranquilidad.",
   },
   {
     icon: Target,
-    title: "Enfoque en Resultados",
+    title: "Asesoría Experta",
     description:
-      "No solo trabajamos, nos alineamos con tus objetivos para asegurar el éxito de tu negocio.",
+      "Te guiamos personalmente para que elijas el televisor perfecto para tu espacio.",
   },
   {
     icon: Smile,
-    title: "Soporte Dedicado",
+    title: "Compras Seguras",
     description:
-      "Nuestro equipo está siempre disponible para resolver tus dudas y acompañarte en cada paso.",
+      "Tu compra es segura con nosotros. Cientos de clientes satisfechos nos respaldan.",
   },
 ];
 
@@ -33,7 +33,7 @@ export function ValuePropositionSection() {
     <section className="py-24 bg-muted/60">
       <div className="container px-4 mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+          <h2 className="text-3xl font-bold text-[var(--secondary)] tracking-tight sm:text-4xl mb-4">
             ¿Por qué elegir {siteConfig.business.name}?
           </h2>
           <p className="text-lg text-muted-foreground">

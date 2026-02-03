@@ -15,7 +15,7 @@ export function TestimonialsSection() {
     <section className="bg-muted/60">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+          <h2 className="text-3xl font-bold text-[var(--secondary)] tracking-tight sm:text-4xl mb-4">
             Lo que dicen nuestros clientes
           </h2>
           <p className="text-lg text-muted-foreground mx-auto">

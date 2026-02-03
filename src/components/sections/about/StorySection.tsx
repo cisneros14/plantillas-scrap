@@ -12,7 +12,7 @@ export function StorySection() {
             <ImageN
               width={800}
               height={600}
-              src="/placeholder.webp" // In a real scenario, this would be a real image
+              src="/logo.png" // In a real scenario, this would be a real image
               alt="Nuestra historia"
               className="w-full h-[400px] object-cover rounded-2xl shadow-lg"
             />

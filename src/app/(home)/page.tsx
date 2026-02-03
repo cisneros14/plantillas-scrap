@@ -1,9 +1,10 @@
 import { Suspense } from "react";
-import Hero from "@/components/hero";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ValuePropositionSection } from "@/components/sections/ValuePropositionSection";
 import dynamic from "next/dynamic";
+import Hero from "@/components/hero";
+import { SimpleTVGrid } from "@/components/tv/SimpleTVGrid";
 
 // Dynamic imports for heavy below-the-fold sections
 const CTASection = dynamic(
@@ -42,6 +43,11 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Static Shell: Immediate LCP */}
       <Hero />
+      <SimpleTVGrid
+        title="Ofertas Destacadas"
+        maxPrice={400}
+        className="bg-zinc-50 dark:bg-zinc-900/50"
+      />
       <ValuePropositionSection />
 
       {/* Streaming Content */}

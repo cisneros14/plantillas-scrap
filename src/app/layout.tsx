@@ -12,6 +12,7 @@ import { siteConfig } from "@/config/site";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ThemeProvider } from "@/components/theme-provider";
 import { generateThemeVariables } from "@/lib/theme-generator";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -57,6 +58,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <FloatingWhatsApp />
         </ThemeProvider>
       </body>
     </html>

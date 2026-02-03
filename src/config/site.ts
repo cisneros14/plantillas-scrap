@@ -1,48 +1,49 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Tu Negocio Local",
-  description: "Ofrecemos los mejores servicios en tu área. Calidad garantizada y atención personalizada.",
-  url: "https://tunegocio.com",
-  ogImage: "https://tunegocio.com/og.jpg",
+  name: "Hogar Tech Company",
+  description: "Los mejores precios del mercado en Televisores. Grandes ofertas por el día de hoy.",
+  url: "https://hogartech.com",
+  ogImage: "https://hogartech.com/og.jpg",
   author: {
-    name: "Tu Negocio",
-    url: "https://tunegocio.com",
-    twitter: "@tunegocio",
+    name: "Hogar Tech",
+    url: "https://hogartech.com",
+    twitter: "@hogartech",
   },
-  keywords: ["servicios", "local", "negocio", "reparación", "mantenimiento"],
-  applicationName: "TuNegocioApp",
-  creator: "Tu Negocio",
+  keywords: ["televisores", "smart tv", "4k", "quito", "ecuador", "ofertas"],
+  applicationName: "HogarTechApp",
+  creator: "Hogar Tech",
   language: "es",
   
   // Business Specifics for JSON-LD and Contact Info
   business: {
-    name: "Tu Negocio Local S.A.",
-    phone: "+34 600 000 000",
-    whatsapp: "34600000000",
-    address: "Calle Principal 123, Madrid, España",
+    name: "Hogar Tech Company",
+    phone: "098 783 4918",
+    whatsapp: "593987834918",
+    address: "JUAN GONZALES Y JUAN PABLO SANZ, Quito, Ecuador",
     coordinates: {
-      lat: 40.416775,
-      long: -3.703790,
+      lat: -0.180653,
+      long: -78.467834,
     },
-    email: "contacto@tunegocio.com",
-    operating_hours: "Mo-Fr 09:00-18:00",
+    email: "hogartechcompany@gmail.com",
+    operating_hours: "Mo-Su 10:00-18:00",
   },
 
   // Navigation
   nav_items: [
     { label: "Inicio", href: "/" },
-    { label: "Servicios", href: "/services" },
-    { label: "Nosotros", href: "/about" },
-    { label: "Contacto", href: "/contact" },
+    { label: "Catálogo", href: "/catalogo" },
+    { label: "Servicios", href: "#services" },
+    { label: "Contacto", href: "#contact" },
   ],
 
   // Branding & Design System
   branding: {
-    primary: "#ff004c", 
+    primary: "#FF8C00", // Orange from the roof/arrow
+    secondary: "#2c7fbf", // Blue from the pillars
     primary_foreground: "0 0% 98%",
     font_sans: "font-sans",
-    logo_text: "TuNegocio",
+    logo_text: "HogarTech",
   },
 
   // Social Links
@@ -51,146 +52,75 @@ export const siteConfig = {
     instagram: "https://instagram.com",
     twitter: "https://twitter.com",
     linkedin: "https://linkedin.com",
-    whatsapp: "https://wa.me/593991234567",
+    whatsapp: "https://wa.me/593987834918",
   },
 
-  // Content Sections (Maintaining existing data structure)
+  // Content Sections - Adapted for TV Store
   services: [
     {
-      title: "Consultoría Estratégica",
-      description: "Analizamos tu negocio para identificar oportunidades de crecimiento y optimización.",
-      icon: "TrendingUp", 
+      title: "Garantía Extendida",
+      description: "Productos de calidad con garantía oficial para tu tranquilidad.",
+      icon: "BadgeCheck", 
     },
     {
-      title: "Desarrollo Web",
-      description: "Creamos sitios web modernos, rápidos y optimizados para buscadores.",
-      icon: "Laptop",
+      title: "Asesoría Personalizada",
+      description: "Te ayudamos a elegir el mejor producto para tu hogar.",
+      icon: "MessageCircle",
     },
     {
-      title: "Marketing Digital",
-      description: "Estrategias de marketing para aumentar tu visibilidad y atraer más clientes.",
-      icon: "Megaphone",
+      title: "Envíos Seguros",
+      description: "Servicio local en Quito y envíos a todo el Ecuador.",
+      icon: "Truck",
     },
     {
       title: "Soporte Técnico",
-      description: "Asistencia técnica especializada para resolver cualquier incidencia.",
-      icon: "Headset",
+      description: "Asistencia para la configuración de tus equipos.",
+      icon: "Wrench", 
     },
   ],
   testimonials: [
     {
-      name: "María García",
-      role: "CEO, TechStart",
-      content: "El servicio fue excepcional. Transformaron completamente nuestra presencia digital y los resultados fueron inmediatos.",
+      name: "Juan Pérez",
+      role: "Cliente Satisfecho",
+      content: "Excelente atención, compré mi Samsung 55\" y me llegó al día siguiente a Guayaquil sin problemas. %100 recomendados.",
       avatar: "/avatars/01.png",
     },
     {
-      name: "Carlos Rodríguez",
-      role: "Director, MarketingPro",
-      content: "Profesionales, rápidos y eficientes. La mejor inversión que hemos hecho para nuestro negocio este año.",
+      name: "María Fernanda",
+      role: "Quito",
+      content: "Los mejores precios que encontré en la ciudad. La asesoría fue excelente para elegir la TV perfecta para mi sala.",
       avatar: "/avatars/02.png",
     },
     {
-      name: "Ana Martínez",
-      role: "Dueña, Boutique Local",
-      content: "Me ayudaron a entender qué necesitaba mi negocio y lo ejecutaron a la perfección. Totalmente recomendados.",
+      name: "Carlos Andrade",
+      role: "Cliente Frecuente",
+      content: "Es la segunda TV que compro aquí. Garantía real y factura legal. Muy confiables.",
       avatar: "/avatars/03.png",
     },
   ],
   faq: [
     {
-      question: "¿Cuáles son sus horarios de atención?",
-      answer: "Nuestro horario de atención es de lunes a viernes de 9:00 a 18:00. Sin embargo, ofrecemos soporte de emergencia para clientes con planes premium.",
+      question: "¿Qué métodos de pago aceptan?",
+      answer: "Aceptamos efectivo, transferencia bancaria y tarjeta de crédito.",
     },
     {
-      question: "¿Ofrecen servicios personalizados?",
-      answer: "Sí, todos nuestros planes se adaptan a las necesidades específicas de cada cliente. Realizamos una consultoría inicial para entender tus requerimientos.",
+      question: "¿Tienen local físico?",
+      answer: "Sí, estamos en Juan Gonzales y Juan Pablo Sanz, Quito.",
     },
     {
-      question: "¿Cuál es el tiempo de entrega promedio?",
-      answer: "Depende del proyecto. Para sitios web corporativos, el tiempo promedio es de 2 a 3 semanas. Para proyectos más complejos, definimos un cronograma detallado.",
+      question: "¿Realizan envíos a provincias?",
+      answer: "Sí, realizamos envíos seguros a todo el país por medio de Servientrega o transporte privado.",
     },
     {
-      question: "¿Ofrecen garantía de satisfacción?",
-      answer: "Absolutamente. Nos aseguramos de que estés 100% satisfecho con el resultado final antes de cerrar el proyecto.",
-    },
-  ],
-  process: [
-    {
-      title: "Consulta Inicial",
-      description: "Nos reunimos para entender a fondo tus necesidades y objetivos comerciales.",
-      icon: "MessageCircle",
+      question: "¿Los productos tienen garantía?",
+      answer: "Sí, todos nuestros productos cuentan con garantía de fábrica y soporte técnico.",
     },
     {
-      title: "Estrategia",
-      description: "Diseñamos un plan de acción personalizado para tu negocio.",
-      icon: "Lightbulb",
-    },
-    {
-      title: "Ejecución",
-      description: "Implementamos las soluciones con los más altos estándares de calidad.",
-      icon: "Hammer",
-    },
-    {
-      title: "Optimización",
-      description: "Monitoreamos y mejoramos continuamente para asegurar resultados.",
-      icon: "TrendingUp",
+      question: "¿El precio incluye IVA?",
+      answer: "Sí, todos los precios publicados incluyen IVA y entregamos factura.",
     },
   ],
-  pricing: [
-    {
-      name: "Básico",
-      price: "€499",
-      description: "Perfecto para pequeños negocios que están empezando.",
-      features: ["Diseño Web Básico", "3 Páginas", "Contacto por Email", "SEO Básico"],
-      cta: "Empezar",
-      popular: false,
-    },
-    {
-      name: "Profesional",
-      price: "€999",
-      description: "La mejor opción para negocios en crecimiento.",
-      features: ["Diseño Premium", "Hasta 10 Páginas", "Soporte Prioritario", "SEO Avanzado", "Integración CMS"],
-      cta: "Elegir Profesional",
-      popular: true,
-    },
-    {
-      name: "Empresarial",
-      price: "Consultar",
-      description: "Soluciones a medida para grandes organizaciones.",
-      features: ["Desarrollo a Medida", "Páginas Ilimitadas", "Soporte 24/7", "Auditoría SEO Mensual", "E-commerce"],
-      cta: "Contactar",
-      popular: false,
-    },
-  ],
-  team: [
-    {
-      name: "Ana García",
-      role: "CEO & Fundadora",
-      bio: "Con más de 15 años de experiencia liderando equipos y estrategias digitales.",
-      image: "/placeholder.webp",
-      social: { twitter: "#", linkedin: "#" }
-    },
-    {
-      name: "Carlos Ruiz",
-      role: "Director Tecnológico",
-      bio: "Apasionado por la innovación y la arquitectura de software escalable.",
-      image: "/placeholder.webp",
-      social: { twitter: "#", linkedin: "#" }
-    },
-    {
-      name: "Laura Martínez",
-      role: "Directora de Diseño",
-      bio: "Creando experiencias visuales impactantes que conectan con los usuarios.",
-      image: "/placeholder.webp",
-      social: { twitter: "#", linkedin: "#" }
-    },
-    {
-      name: "David López",
-      role: "Lead Developer",
-      bio: "Experto en desarrollo full-stack y optimización de rendimiento.",
-      image: "/placeholder.webp",
-      social: { twitter: "#", linkedin: "#" }
-    }
-  ],
+  process: [],
+  pricing: [], 
+  team: [],
 };
