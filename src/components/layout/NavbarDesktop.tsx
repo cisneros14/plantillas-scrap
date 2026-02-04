@@ -13,6 +13,7 @@ import { ModeToggle } from "@/components/mode-toggle";
 import { Facebook, Instagram } from "lucide-react";
 import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 const ContactDialog = dynamic(() => import("../ContactDialog").then(mod => mod.ContactDialog), {
   loading: () => <div className="w-24 h-10 bg-muted/20 animate-pulse rounded-md" />, // Optional: Skeleton for the button
@@ -24,8 +25,9 @@ export function NavbarDesktop() {
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 hidden md:flex">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-6">
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="text-xl font-bold text-primary">
+          <Link href="/" className="flex !items-center space-x-2">
+           <Image src="/logo2.png" alt="Logo" width={100} height={100} className="w-10 h-10"/>
+           <span className="text-xl font-bold text-primary mt-2">
               {siteConfig.branding.logo_text}
             </span>
           </Link>
@@ -47,6 +49,9 @@ export function NavbarDesktop() {
           </NavigationMenu>
         </div>
         <div className="flex items-center gap-4 ">
+
+          <div className="hidden lg:flex items-center gap-2">
+
           {/* redes sociales iconos */}
           <a href={siteConfig.social.facebook}>
             <Facebook className="h-4 w-4 text-muted-foreground" />
@@ -57,6 +62,7 @@ export function NavbarDesktop() {
           <a href={siteConfig.social.whatsapp}>
             <WhatsappIcon className="h-4 w-4 text-muted-foreground" />
           </a>
+          </div>
 
           <ContactDialog />
           <ModeToggle />
