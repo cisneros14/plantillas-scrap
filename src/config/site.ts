@@ -35,6 +35,7 @@ export const siteConfig = {
     { label: "Servicios", href: "/services" },
     { label: "Nosotros", href: "/about" },
     { label: "Contacto", href: "/contact" },
+    { label: "Catalogo", href: "/catalogo" },
   ],
 
   // Branding & Design System

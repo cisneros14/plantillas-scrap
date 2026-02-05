@@ -30,7 +30,7 @@ const valueProps = [
 
 export function ValuePropositionSection() {
   return (
-    <section className="py-24 bg-muted/60">
+    <section className="bg-muted/60">
       <div className="container px-4 mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">

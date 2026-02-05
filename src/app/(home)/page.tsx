@@ -3,6 +3,8 @@ import Hero from "@/components/hero";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ValuePropositionSection } from "@/components/sections/ValuePropositionSection";
+import { ProductDemoSection } from "@/components/sections/ProductDemoSection";
+import { CategorySection } from "@/components/sections/CategorySection";
 import dynamic from "next/dynamic";
 
 // Dynamic imports for heavy below-the-fold sections
@@ -42,6 +44,8 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Static Shell: Immediate LCP */}
       <Hero />
+      <CategorySection />
+      <ProductDemoSection />
       <ValuePropositionSection />
 
       {/* Streaming Content */}
