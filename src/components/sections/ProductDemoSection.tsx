@@ -9,7 +9,7 @@ export function ProductDemoSection() {
   return (
     <section className="bg-background">
       <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
-        <div className="mb-4 flex items-center justify-between gap-4 md:mb-8">
+        <div className="mb-4 flex flex-col md:flex-row md:items-center justify-between gap-4 md:mb-8">
           <h2 className="mb-0 text-2xl font-bold text-gray-900 dark:text-white">
             Productos Destacados
           </h2>

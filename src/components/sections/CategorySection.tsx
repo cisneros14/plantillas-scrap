@@ -75,7 +75,7 @@ export function CategorySection() {
   return (
     <section className="bg-muted/60">
       <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
-        <div className="mb-4 flex items-center justify-between gap-4 md:mb-8">
+        <div className="mb-4 flex flex-col md:flex-row md:items-center justify-between gap-4 md:mb-8">
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">
             Categorías que podrían interesarte
           </h2>

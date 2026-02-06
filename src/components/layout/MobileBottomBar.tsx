@@ -1,6 +1,6 @@
 "use client";
 
-import { Home, Phone, MessageCircle, Menu } from "lucide-react";
+import { Home, Phone, MessageCircle, Menu, CirclePlay } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { siteConfig } from "@/config/site";
@@ -30,10 +30,10 @@ export function MobileBottomBar() {
             asChild
             className="flex-1 flex flex-col items-center justify-center gap-1 h-auto py-2 hover:bg-transparent hover:text-primary rounded-none"
           >
-            <a href={`tel:${siteConfig.business.phone.replace(/\s+/g, "")}`}>
-              <Phone className="h-5 w-5" />
-              <span className="text-[10px] font-normal">Llamar</span>
-            </a>
+            <Link href={`/catalogo`}>
+              <CirclePlay className="h-5 w-5" />
+              <span className="text-[10px] font-normal">Catalogo</span>
+            </Link>
           </Button>
 
           <Button
@@ -41,14 +41,14 @@ export function MobileBottomBar() {
             asChild
             className="flex-1 flex flex-col items-center justify-center gap-1 h-auto py-2 hover:bg-transparent hover:text-primary rounded-none"
           >
-            <a
+            <Link
               href={`https://wa.me/${siteConfig.business.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
             >
               <MessageCircle className="h-5 w-5" />
               <span className="text-[10px] font-normal">WhatsApp</span>
-            </a>
+            </Link>
           </Button>
 
           <Button
