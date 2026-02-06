@@ -2,23 +2,27 @@ import { ProductCard } from "@/components/product-card";
 import { FilterSidebar } from "@/components/catalog/FilterSidebar";
 import { products } from "@/data/products";
 
-export default function CatalogoPage({
+import { Suspense } from "react";
+
+export default async function CatalogoPage({
   searchParams,
 }: {
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
+  const resolvedSearchParams = await searchParams;
+
   // Parse search params for filtering
   const minPrice =
-    typeof searchParams.minPrice === "string"
-      ? parseFloat(searchParams.minPrice)
+    typeof resolvedSearchParams.minPrice === "string"
+      ? parseFloat(resolvedSearchParams.minPrice)
       : undefined;
   const maxPrice =
-    typeof searchParams.maxPrice === "string"
-      ? parseFloat(searchParams.maxPrice)
+    typeof resolvedSearchParams.maxPrice === "string"
+      ? parseFloat(resolvedSearchParams.maxPrice)
       : undefined;
   const rating =
-    typeof searchParams.rating === "string"
-      ? parseFloat(searchParams.rating)
+    typeof resolvedSearchParams.rating === "string"
+      ? parseFloat(resolvedSearchParams.rating)
       : undefined;
 
   // Filter products
@@ -41,7 +45,13 @@ export default function CatalogoPage({
         </div>
 
         <div className="flex flex-col gap-8 lg:flex-row">
-          <FilterSidebar />
+          <Suspense
+            fallback={
+              <div className="w-full lg:w-72 h-screen bg-muted/20 animate-pulse rounded-lg" />
+            }
+          >
+            <FilterSidebar />
+          </Suspense>
 
           <div className="flex-1">
             {filteredProducts.length > 0 ? (
