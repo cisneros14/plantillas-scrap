@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { siteConfig } from "@/config/site";
 import { Card } from "@/components/ui/card";
 import { Button } from "./ui/button";
 
@@ -116,10 +116,18 @@ export function ProductCard({
   onQuickLook,
   onToggleFavorite,
 }: ProductCardProps) {
+  const createWhatsAppLink = (productName: string) => {
+    const phoneNumber = siteConfig.business.whatsapp;
+    const message = `Hola, me interesa el producto: ${productName}`;
+    return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  };
+
+  const whatsappLink = createWhatsAppLink(product.name);
+
   return (
     <Card className="rounded-lg border border-gray-200 bg-muted/60 p-6 shadow-sm dark:border-neutral-700">
       <div className="h-56 w-full relative">
-        <Link href={`/product-details/${product.id}`}>
+        <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
           {/* Light Mode Image */}
           <img
             className={`mx-auto h-full ${product.imageDark ? "dark:hidden" : ""}`}
@@ -134,7 +142,7 @@ export function ProductCard({
               alt={product.name}
             />
           )}
-        </Link>
+        </a>
       </div>
 
       <div className="pt-6">
@@ -221,12 +229,14 @@ export function ProductCard({
           </div>
         </div>
 
-        <Link
-          href={`/product-details/${product.id}`}
+        <a
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white"
         >
           {product.name}
-        </Link>
+        </a>
 
         <div className="mt-2 flex items-center gap-2">
           <div className="flex items-center">
@@ -264,28 +274,34 @@ export function ProductCard({
           <Button
             size={"sm"}
             variant={"default"}
-            type="button"
-            onClick={() => onAddToCart?.(product)}
-            className="inline-flex items-center rounded-lg text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+            asChild
+            className="rounded-lg text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
           >
-            <svg
-              className="me-1 h-5 w-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              viewBox="0 0 24 24"
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center"
             >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
-              />
-            </svg>
-            Comprar
+              <svg
+                className="me-1 h-5 w-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
+                />
+              </svg>
+              Comprar
+            </a>
           </Button>
         </div>
       </div>
