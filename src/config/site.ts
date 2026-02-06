@@ -2,48 +2,47 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Tu Negocio Local",
-  description: "Ofrecemos los mejores servicios en tu área. Calidad garantizada y atención personalizada.",
-  url: "https://tunegocio.com",
-  ogImage: "https://tunegocio.com/og.jpg",
+  description: "Electrodomésticos de alta gama al por mayor y menor, directo a tus manos.",
+  url: "https://riscasa.com",
+  ogImage: "https://riscasa.com/og.jpg",
   author: {
-    name: "Tu Negocio",
-    url: "https://tunegocio.com",
-    twitter: "@tunegocio",
+    name: "Riscasa",
+    url: "https://riscasa.com",
+    twitter: "@riscasa",
   },
-  keywords: ["servicios", "local", "negocio", "reparación", "mantenimiento"],
-  applicationName: "TuNegocioApp",
-  creator: "Tu Negocio",
+  keywords: ["electrodomésticos", "hogar", "cocina", "ninja", "shark", "ofertas"],
+  applicationName: "RiscasaStore",
+  creator: "Riscasa",
   language: "es",
   
   // Business Specifics for JSON-LD and Contact Info
   business: {
-    name: "Tu Negocio Local S.A.",
-    phone: "+34 600 000 000",
-    whatsapp: "34600000000",
-    address: "Calle Principal 123, Madrid, España",
+    name: "Distribuidora RISCASA",
+    phone: "+593 99 719 6340",
+    whatsapp: "593997196340",
+    address: "Centro Comercial Polaris, Isidro Ayora Cueva, Guayaquil, Ecuador",
     coordinates: {
-      lat: 40.416775,
-      long: -3.703790,
+      lat: -2.1188,
+      long: -79.90135,
     },
-    email: "contacto@tunegocio.com",
-    operating_hours: "Mo-Fr 09:00-18:00",
+    email: "ventas@riscasa.com",
+    operating_hours: "Lu-Sa 09:00-18:00",
   },
 
   // Navigation
   nav_items: [
     { label: "Inicio", href: "/" },
-    { label: "Servicios", href: "/services" },
+    { label: "Catálogo", href: "/catalogo" },
     { label: "Nosotros", href: "/about" },
     { label: "Contacto", href: "/contact" },
-    { label: "Catalogo", href: "/catalogo" },
   ],
 
   // Branding & Design System
   branding: {
-    primary: "#ff004c", 
+    primary: "#123679", 
     primary_foreground: "0 0% 98%",
     font_sans: "font-sans",
-    logo_text: "TuNegocio",
+    logo_text: "RISCASA",
   },
 
   // Social Links
@@ -52,29 +51,29 @@ export const siteConfig = {
     instagram: "https://instagram.com",
     twitter: "https://twitter.com",
     linkedin: "https://linkedin.com",
-    whatsapp: "https://wa.me/593991234567",
+    whatsapp: "https://wa.me/593997196340",
   },
 
   // Content Sections (Maintaining existing data structure)
   services: [
     {
-      title: "Consultoría Estratégica",
-      description: "Analizamos tu negocio para identificar oportunidades de crecimiento y optimización.",
-      icon: "TrendingUp", 
+      title: "Envíos a Todo el País",
+      description: "Llevamos tus productos a cualquier ciudad del país con total seguridad.",
+      icon: "Truck", 
     },
     {
-      title: "Desarrollo Web",
-      description: "Creamos sitios web modernos, rápidos y optimizados para buscadores.",
-      icon: "Laptop",
+      title: "Garantía Garantizada",
+      description: "Todos nuestros productos cuentan con garantía de fábrica para tu tranquilidad.",
+      icon: "ShieldCheck",
     },
     {
-      title: "Marketing Digital",
-      description: "Estrategias de marketing para aumentar tu visibilidad y atraer más clientes.",
-      icon: "Megaphone",
+      title: "Precios de Mayorista",
+      description: "Ofrecemos los mejores precios del mercado en ventas al por mayor y menor.",
+      icon: "DollarSign",
     },
     {
-      title: "Soporte Técnico",
-      description: "Asistencia técnica especializada para resolver cualquier incidencia.",
+      title: "Soporte Personalizado",
+      description: "Te asesoramos en tu compra para que elijas el producto ideal para ti.",
       icon: "Headset",
     },
   ],

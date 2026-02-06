@@ -5,7 +5,9 @@ import Image from "next/image";
 import { ImageN } from "../ui/image-with-skeleton";
 import dynamic from "next/dynamic";
 
-const ContactDialog = dynamic(() => import("../ContactDialog").then(mod => mod.ContactDialog));
+const ContactDialog = dynamic(() =>
+  import("../ContactDialog").then((mod) => mod.ContactDialog),
+);
 
 export function AboutSection() {
   return (
@@ -17,18 +19,17 @@ export function AboutSection() {
               Sobre {siteConfig.business.name}
             </h2>
             <p className="text-lg text-muted-foreground">
-              Somos una empresa comprometida con la excelencia y la satisfacción
-              del cliente. Con años de experiencia en el sector, ofrecemos
-              soluciones personalizadas que se adaptan a tus necesidades
-              específicas.
+              Somos importadores directos de las mejores marcas de
+              electrodomésticos. Nuestra misión es llevar tecnología y confort a
+              tu hogar con productos originales y garantía garantizada.
             </p>
 
             <div className="space-y-4">
               {[
-                "Equipo altamente cualificado",
-                "Atención personalizada 24/7",
-                "Garantía de satisfacción",
-                "Tecnología de vanguardia",
+                "Productos 100% Originales",
+                "Garantía Directa de Fábrica",
+                "Envíos Seguros a Todo el País",
+                "Los Mejores Precios del Mercado",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary" />
@@ -37,7 +38,7 @@ export function AboutSection() {
               ))}
             </div>
 
-            <ContactDialog/>
+            <ContactDialog />
           </div>
 
           {/* Placeholder for About Image - In a real app, use a real image */}

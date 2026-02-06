@@ -4,27 +4,27 @@ import { Shield, Target, Zap, Smile } from "lucide-react";
 const valueProps = [
   {
     icon: Zap,
-    title: "Rapidez y Eficiencia",
+    title: "Entrega Inmediata",
     description:
-      "Optimizamos cada proceso para entregarte resultados en tiempo récord sin sacrificar la calidad.",
+      "Recibe tus productos en tiempo récord. Contamos con stock disponible para envío inmediato.",
   },
   {
     icon: Shield,
-    title: "Seguridad Garantizada",
+    title: "Garantía Oficial",
     description:
-      "Tus datos y proyectos están protegidos con los más altos estándares de seguridad del mercado.",
+      "Todos nuestros productos cuentan con garantía directa de fábrica. Compra con total confianza.",
   },
   {
     icon: Target,
-    title: "Enfoque en Resultados",
+    title: "Asesoría Experta",
     description:
-      "No solo trabajamos, nos alineamos con tus objetivos para asegurar el éxito de tu negocio.",
+      "¿Dudas? Nuestro equipo de expertos te ayudará a elegir el electrodoméstico perfecto para ti.",
   },
   {
     icon: Smile,
-    title: "Soporte Dedicado",
+    title: "Atención Post-Venta",
     description:
-      "Nuestro equipo está siempre disponible para resolver tus dudas y acompañarte en cada paso.",
+      "Estamos contigo incluso después de tu compra. Soporte técnico y atención dedicada.",
   },
 ];
 
@@ -37,8 +37,9 @@ export function ValuePropositionSection() {
             ¿Por qué elegir {siteConfig.business.name}?
           </h2>
           <p className="text-lg text-muted-foreground">
-            Nos diferenciamos por ofrecer un servicio integral que combina
-            tecnología, experiencia y compromiso para impulsar tu crecimiento.
+            Nos diferenciamos por ofrecer los mejores electrodomésticos
+            importados, con precios competitivos y un servicio que prioriza tu
+            satisfacción.
           </p>
         </div>
 

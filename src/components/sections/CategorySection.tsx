@@ -2,14 +2,15 @@
 
 import Link from "next/link";
 import {
-  Laptop,
-  Tv,
-  Tablet,
-  Headphones,
-  Printer,
-  Keyboard,
-  Wifi,
+  Utensils,
+  Wind,
+  Snowflake,
+  Sparkles,
+  Flame,
+  ChefHat,
   Tag,
+  ArrowRight,
+  Coffee,
 } from "lucide-react";
 
 interface Category {
@@ -21,52 +22,52 @@ interface Category {
 
 const categories: Category[] = [
   {
-    id: "laptops",
-    name: "Laptops & Computers",
-    icon: <Laptop className="h-8 w-8 mb-4 text-primary/60" />,
-    href: "#",
+    id: "kitchen",
+    name: "Cocina",
+    icon: <Utensils className="h-8 w-8 mb-4 text-primary" />,
+    href: "/catalogo?category=cocina",
   },
   {
-    id: "tv",
-    name: "TV",
-    icon: <Tv className="h-8 w-8 mb-4 text-primary/60" />,
-    href: "#",
+    id: "air-fryers",
+    name: "Freidoras de Aire",
+    icon: <Flame className="h-8 w-8 mb-4 text-primary" />,
+    href: "/catalogo?category=freidoras",
   },
   {
-    id: "tablets",
-    name: "Tablets",
-    icon: <Tablet className="h-8 w-8 mb-4 text-primary/60" />,
-    href: "#",
+    id: "cleaning",
+    name: "Limpieza",
+    icon: <Sparkles className="h-8 w-8 mb-4 text-primary" />,
+    href: "/catalogo?category=limpieza",
   },
   {
-    id: "audio",
-    name: "Audio",
-    icon: <Headphones className="h-8 w-8 mb-4 text-primary/60" />,
-    href: "#",
+    id: "refrigeration",
+    name: "Refrigeración",
+    icon: <Snowflake className="h-8 w-8 mb-4 text-primary" />,
+    href: "/catalogo?category=refrigeracion",
   },
   {
-    id: "printers",
-    name: "Printers",
-    icon: <Printer className="h-8 w-8 mb-4 text-primary/60" />,
-    href: "#",
+    id: "climate",
+    name: "Calefacción y Ventilación",
+    icon: <Wind className="h-8 w-8 mb-4 text-primary" />,
+    href: "/catalogo?category=climatizacion",
   },
   {
-    id: "accessories",
-    name: "Computer Accessories",
-    icon: <Keyboard className="h-8 w-8 mb-4 text-primary/60" />,
-    href: "#",
+    id: "small-appliances",
+    name: "Pequeños Electrodomésticos",
+    icon: <Coffee className="h-8 w-8 mb-4 text-primary" />,
+    href: "/catalogo?category=pequenos",
   },
   {
-    id: "security",
-    name: "Security & Wi-Fi",
-    icon: <Wifi className="h-8 w-8 mb-4 text-primary/60" />,
-    href: "#",
+    id: "ovens",
+    name: "Hornos",
+    icon: <ChefHat className="h-8 w-8 mb-4 text-primary" />,
+    href: "/catalogo?category=hornos",
   },
   {
     id: "deals",
-    name: "Deals",
-    icon: <Tag className="h-8 w-8 mb-4 text-primary/60" />,
-    href: "#",
+    name: "Ofertas",
+    icon: <Tag className="h-8 w-8 mb-4 text-primary" />,
+    href: "/catalogo?category=ofertas",
   },
 ];
 
@@ -80,26 +81,10 @@ export function CategorySection() {
           </h2>
           <Link
             href="#"
-            className="flex items-center text-base font-medium text-primary-700 hover:underline dark:text-primary-500"
+            className="flex gap-2 items-center text-base font-medium text-primary-700 hover:underline dark:text-primary-500"
           >
             Ver todas las categorías
-            <svg
-              className="ms-1 h-5 w-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M19 12H5m14 0-4 4m4-4-4-4"
-              />
-            </svg>
+            <ArrowRight />
           </Link>
         </div>
 

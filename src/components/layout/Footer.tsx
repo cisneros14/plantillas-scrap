@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { Separator } from "@/components/ui/separator";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -8,9 +9,15 @@ export function Footer() {
       <div className="container py-12 md:py-16">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="space-y-4">
-            <span className="text-xl font-bold text-primary">
-              {siteConfig.branding.logo_text}
-            </span>
+            <Link href="/">
+              <Image
+                src="/logoR.png"
+                alt="logo"
+                width={100}
+                height={100}
+                className="w-34 object-cover"
+              />
+            </Link>
             <p className="text-sm text-muted-foreground">
               {siteConfig.description}
             </p>

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import dynamic from "next/dynamic";
 
 const ContactDialog = dynamic(() =>
-  import("../ContactDialog").then((mod) => mod.ContactDialog)
+  import("../ContactDialog").then((mod) => mod.ContactDialog),
 );
 
 export function CTASection() {
@@ -11,12 +11,12 @@ export function CTASection() {
     <section className="">
       <div className="container px-4 mx-auto text-center">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
-          ¿Listo para transformar tu negocio?
+          ¿Listo para equipar tu hogar con lo mejor?
         </h2>
         <p className="text-lg max-w-2xl mx-auto mb-8">
-          Únete a cientos de clientes satisfechos que han confiado en{" "}
-          {siteConfig.business.name} para llevar sus proyectos al siguiente
-          nivel.
+          Descubre la calidad, tecnología y diseño que solo{" "}
+          {siteConfig.business.name} puede ofrecerte. Productos exclusivos al
+          mejor precio.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg" variant="secondary" asChild>
