@@ -41,6 +41,8 @@ export const siteConfig = {
   branding: {
     primary: "#123679", 
     primary_foreground: "0 0% 98%",
+    secondary: "#1e40af", // Added secondary color
+    secondary_foreground: "0 0% 98%",
     font_sans: "font-sans",
     logo_text: "RISCASA",
   },

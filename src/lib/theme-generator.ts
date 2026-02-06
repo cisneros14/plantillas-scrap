@@ -49,8 +49,15 @@ export function generatePalette(baseColor: string): ColorPalette {
   return p;
 }
 
-export function generateThemeVariables(primaryColorHex: string): string {
+export function generateThemeVariables(primaryColorHex: string, secondaryColorHex?: string): string {
     const palette = generatePalette(primaryColorHex);
+    // If secondary color is provided, generate its palette, otherwise default to a slate-like gray if you want, 
+    // or we can just skip it. But the user asked to use the "same logic".
+    // Let's assume if it's provided, we generate it. 
+    // If not provided, we might want to let the CSS defaults take over, 
+    // but the function overrides everything. 
+    // So let's make it optional but recommended to be passed.
+    const secondaryPalette = secondaryColorHex ? generatePalette(secondaryColorHex) : null;
     
     let css = ":root {\n";
     
@@ -58,12 +65,24 @@ export function generateThemeVariables(primaryColorHex: string): string {
     css += `  --primary: ${palette[500]};\n`; 
     css += `  --primary-foreground: ${palette.foreground};\n`;
     
-    // Shade variables
+    // Shade variables for Primary
     Object.keys(palette).forEach((key) => {
         if (key !== "DEFAULT" && key !== "foreground") {
              css += `  --primary-${key}: ${palette[key as any]};\n`;
         }
     });
+
+    // Secondary
+    if (secondaryPalette) {
+      css += `  --secondary: ${secondaryPalette[500]};\n`;
+      css += `  --secondary-foreground: ${secondaryPalette.foreground};\n`;
+       // Shade variables for Secondary
+       Object.keys(secondaryPalette).forEach((key) => {
+        if (key !== "DEFAULT" && key !== "foreground") {
+             css += `  --secondary-${key}: ${secondaryPalette[key as any]};\n`;
+        }
+    });
+    }
     
     // Update Ring to match primary
     css += `  --ring: ${palette[500]};\n`; 
@@ -74,6 +93,19 @@ export function generateThemeVariables(primaryColorHex: string): string {
     css += ".dark {\n";
     css += `  --primary: ${palette[500]};\n`; 
     css += `  --primary-foreground: ${palette.foreground};\n`;
+
+    if (secondaryPalette) {
+        // For dark mode, typically secondary might be inverted or just the same. 
+        // In the previous logic, the palette was just one set. 
+        // Standard shadcn often uses the same variable values unless manually tweaked.
+        // However, usually dark mode needs different lightness. 
+        // But `generatePalette` returns a fixed set of hex codes based on the input.
+        // If we want "same logic as primary", looking at lines 75-76:
+        // css += `  --primary: ${palette[500]};\n`;
+        // Use the same 500 shade.
+        css += `  --secondary: ${secondaryPalette[500]};\n`;
+        css += `  --secondary-foreground: ${secondaryPalette.foreground};\n`;
+    }
     css += "}\n";
     
     return css;
