@@ -84,7 +84,7 @@ export function ContactSection() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <MapPin className="h-6 w-6 text-primary shrink-0" />
+                  <MapPin className="h-6 w-6 text-secondary shrink-0" />
                   <div>
                     <h3 className="font-medium">Dirección</h3>
                     <p className="text-muted-foreground">
@@ -94,7 +94,7 @@ export function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <Phone className="h-6 w-6 text-primary shrink-0" />
+                  <Phone className="h-6 w-6 text-secondary shrink-0" />
                   <div>
                     <h3 className="font-medium">Teléfono</h3>
                     <a
@@ -102,7 +102,7 @@ export function ContactSection() {
                         /\s+/g,
                         "",
                       )}`}
-                      className="text-muted-foreground hover:text-primary transition-colors"
+                      className="text-muted-foreground hover:text-secondary transition-colors"
                     >
                       {siteConfig.business.phone}
                     </a>
@@ -110,12 +110,12 @@ export function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <Mail className="h-6 w-6 text-primary shrink-0" />
+                  <Mail className="h-6 w-6 text-secondary shrink-0" />
                   <div>
                     <h3 className="font-medium">Email</h3>
                     <a
                       href={`mailto:${siteConfig.business.email}`}
-                      className="text-muted-foreground hover:text-primary transition-colors"
+                      className="text-muted-foreground hover:text-secondary transition-colors"
                     >
                       {siteConfig.business.email}
                     </a>
@@ -123,7 +123,7 @@ export function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <Clock className="h-6 w-6 text-primary shrink-0" />
+                  <Clock className="h-6 w-6 text-secondary shrink-0" />
                   <div>
                     <h3 className="font-medium">Horario</h3>
                     <p className="text-muted-foreground">

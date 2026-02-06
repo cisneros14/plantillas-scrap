@@ -6,11 +6,11 @@ import {
   Wind,
   Snowflake,
   Sparkles,
-  Flame,
-  ChefHat,
+  Tv,
+  Gamepad2,
   Tag,
   ArrowRight,
-  Coffee,
+  Monitor,
 } from "lucide-react";
 
 interface Category {
@@ -22,46 +22,46 @@ interface Category {
 
 const categories: Category[] = [
   {
-    id: "kitchen",
-    name: "Cocina",
-    icon: <Utensils className="h-8 w-8 mb-4 text-primary" />,
-    href: "/catalogo?category=cocina",
-  },
-  {
-    id: "air-fryers",
-    name: "Freidoras de Aire",
-    icon: <Flame className="h-8 w-8 mb-4 text-primary" />,
-    href: "/catalogo?category=freidoras",
-  },
-  {
-    id: "cleaning",
-    name: "Limpieza",
-    icon: <Sparkles className="h-8 w-8 mb-4 text-primary" />,
-    href: "/catalogo?category=limpieza",
-  },
-  {
     id: "refrigeration",
     name: "Refrigeración",
     icon: <Snowflake className="h-8 w-8 mb-4 text-primary" />,
     href: "/catalogo?category=refrigeracion",
   },
   {
+    id: "kitchen",
+    name: "Cocina",
+    icon: <Utensils className="h-8 w-8 mb-4 text-primary" />,
+    href: "/catalogo?category=cocina",
+  },
+  {
+    id: "cleaning",
+    name: "Lavado y Limpieza",
+    icon: <Sparkles className="h-8 w-8 mb-4 text-primary" />,
+    href: "/catalogo?category=limpieza",
+  },
+  {
     id: "climate",
-    name: "Calefacción y Ventilación",
+    name: "Climatización",
     icon: <Wind className="h-8 w-8 mb-4 text-primary" />,
     href: "/catalogo?category=climatizacion",
   },
   {
-    id: "small-appliances",
-    name: "Pequeños Electrodomésticos",
-    icon: <Coffee className="h-8 w-8 mb-4 text-primary" />,
-    href: "/catalogo?category=pequenos",
+    id: "tv-audio",
+    name: "Audio y Video",
+    icon: <Tv className="h-8 w-8 mb-4 text-primary" />,
+    href: "/catalogo?category=tv-audio",
   },
   {
-    id: "ovens",
-    name: "Hornos",
-    icon: <ChefHat className="h-8 w-8 mb-4 text-primary" />,
-    href: "/catalogo?category=hornos",
+    id: "technology",
+    name: "Tecnología",
+    icon: <Monitor className="h-8 w-8 mb-4 text-primary" />,
+    href: "/catalogo?category=tecnologia",
+  },
+  {
+    id: "gaming",
+    name: "Gaming",
+    icon: <Gamepad2 className="h-8 w-8 mb-4 text-primary" />,
+    href: "/catalogo?category=gaming",
   },
   {
     id: "deals",

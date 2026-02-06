@@ -49,7 +49,7 @@ export function generatePalette(baseColor: string): ColorPalette {
   return p;
 }
 
-export function generateThemeVariables(primaryColorHex: string): string {
+export function generateThemeVariables(primaryColorHex: string, secondaryColorHex?: string): string {
     const palette = generatePalette(primaryColorHex);
     
     let css = ":root {\n";
@@ -64,6 +64,20 @@ export function generateThemeVariables(primaryColorHex: string): string {
              css += `  --primary-${key}: ${palette[key as any]};\n`;
         }
     });
+
+    // Secondary
+    if (secondaryColorHex) {
+        const secondaryPalette = generatePalette(secondaryColorHex);
+        css += `  --secondary: ${secondaryPalette[500]};\n`;
+        css += `  --secondary-foreground: ${secondaryPalette.foreground};\n`;
+        
+        // Secondary Shade variables
+        Object.keys(secondaryPalette).forEach((key) => {
+            if (key !== "DEFAULT" && key !== "foreground") {
+                 css += `  --secondary-${key}: ${secondaryPalette[key as any]};\n`;
+            }
+        });
+    }
     
     // Update Ring to match primary
     css += `  --ring: ${palette[500]};\n`; 
@@ -74,6 +88,15 @@ export function generateThemeVariables(primaryColorHex: string): string {
     css += ".dark {\n";
     css += `  --primary: ${palette[500]};\n`; 
     css += `  --primary-foreground: ${palette.foreground};\n`;
+    
+    if (secondaryColorHex) {
+        // Need to regenerate or just use the same for now, or invert logic. 
+        // For simplicity reusing the same logic but usually dark mode might need adjustment.
+        // Assuming generatePalette handles shades, base 500 is same.
+        const secondaryPalette = generatePalette(secondaryColorHex);
+        css += `  --secondary: ${secondaryPalette[500]};\n`;
+        css += `  --secondary-foreground: ${secondaryPalette.foreground};\n`;
+    }
     css += "}\n";
     
     return css;

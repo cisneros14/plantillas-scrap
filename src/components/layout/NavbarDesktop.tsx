@@ -32,7 +32,7 @@ export function NavbarDesktop() {
         <div className="flex items-center gap-6">
           <Link href="/">
             <Image
-              src="/logoR.png"
+              src="/logoM.png"
               alt="logo"
               width={0}
               height={0}

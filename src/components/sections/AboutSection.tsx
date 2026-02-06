@@ -32,7 +32,7 @@ export function AboutSection() {
                 "Los Mejores Precios del Mercado",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary" />
+                  <CheckCircle2 className="h-5 w-5 text-secondary" />
                   <span className="text-muted-foreground">{item}</span>
                 </div>
               ))}
