@@ -19,8 +19,14 @@ export interface Product {
   reviewsCount: number;
   imageLight: string;
   imageDark?: string;
-  discountBadge?: string; // e.g., "Up to 35% off"
+  discountBadge?: string;
   features?: ProductFeature[];
+  // New fields for details page from line 22
+  images?: string[]; // Gallery images
+  // description is already defined above
+  colors?: string[]; // e.g. ["Green", "Pink", "Silver", "Blue"]
+  capacities?: string[]; // e.g. ["256GB", "512GB", "1TB"]
+  specs?: { label: string; value: string }[];
 }
 
 interface ProductCardProps {
@@ -113,7 +119,7 @@ export function ProductCard({
   return (
     <Card className="rounded-lg border border-gray-200 bg-muted/60 p-6 shadow-sm dark:border-neutral-700">
       <div className="h-56 w-full relative">
-        <Link href={`#`}>
+        <Link href={`/product-details/${product.id}`}>
           {/* Light Mode Image */}
           <img
             className={`mx-auto h-full ${product.imageDark ? "dark:hidden" : ""}`}
@@ -216,7 +222,7 @@ export function ProductCard({
         </div>
 
         <Link
-          href={`#`}
+          href={`/product-details/${product.id}`}
           className="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white"
         >
           {product.name}

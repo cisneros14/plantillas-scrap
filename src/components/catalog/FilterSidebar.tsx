@@ -116,7 +116,7 @@ export function FilterSidebar() {
       </div>
 
       {/* Search */}
-      <div className="relative mb-6">
+      <div className="relative">
         <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
         <Input
           placeholder="Buscar..."
@@ -124,11 +124,7 @@ export function FilterSidebar() {
         />
       </div>
 
-      <Accordion
-        type="multiple"
-        defaultValue={["category", "price", "shipping", "rating"]}
-        className="w-full"
-      >
+      <Accordion type="multiple" defaultValue={[]} className="w-full">
         {/* Category */}
         <AccordionItem value="category" className="border-border">
           <AccordionTrigger className="text-gray-900 dark:text-gray-200 hover:text-primary hover:no-underline">
