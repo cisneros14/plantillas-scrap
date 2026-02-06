@@ -42,6 +42,8 @@ export const siteConfig = {
   branding: {
     primary: "#ff004c", 
     primary_foreground: "0 0% 98%",
+    secondary: "#2c7fbf",
+    secondary_foreground: "0 0% 98%",
     font_sans: "font-sans",
     logo_text: "TuNegocio",
   },

@@ -36,7 +36,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const themeCss = generateThemeVariables(siteConfig.branding.primary);
+  const themeCss = generateThemeVariables(
+    siteConfig.branding.primary,
+    siteConfig.branding.secondary,
+  );
 
   return (
     <html lang="es" suppressHydrationWarning>

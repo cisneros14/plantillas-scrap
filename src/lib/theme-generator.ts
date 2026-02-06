@@ -49,8 +49,9 @@ export function generatePalette(baseColor: string): ColorPalette {
   return p;
 }
 
-export function generateThemeVariables(primaryColorHex: string): string {
+export function generateThemeVariables(primaryColorHex: string, secondaryColorHex?: string): string {
     const palette = generatePalette(primaryColorHex);
+    const secondaryPalette = secondaryColorHex ? generatePalette(secondaryColorHex) : null;
     
     let css = ":root {\n";
     
@@ -58,12 +59,25 @@ export function generateThemeVariables(primaryColorHex: string): string {
     css += `  --primary: ${palette[500]};\n`; 
     css += `  --primary-foreground: ${palette.foreground};\n`;
     
-    // Shade variables
+    // Primary Shade variables
     Object.keys(palette).forEach((key) => {
         if (key !== "DEFAULT" && key !== "foreground") {
-             css += `  --primary-${key}: ${palette[key as any]};\n`;
+             css += `  --primary-${key}: ${palette[Number(key)]};\n`;
         }
     });
+
+    // Main Secondary
+    if (secondaryPalette) {
+        css += `  --secondary: ${secondaryPalette[500]};\n`; 
+        css += `  --secondary-foreground: ${secondaryPalette.foreground};\n`; // Or use defined secondary_foreground if passed
+        
+        // Secondary Shade variables
+        Object.keys(secondaryPalette).forEach((key) => {
+            if (key !== "DEFAULT" && key !== "foreground") {
+                css += `  --secondary-${key}: ${secondaryPalette[Number(key)]};\n`;
+            }
+        });
+    }
     
     // Update Ring to match primary
     css += `  --ring: ${palette[500]};\n`; 
@@ -74,6 +88,12 @@ export function generateThemeVariables(primaryColorHex: string): string {
     css += ".dark {\n";
     css += `  --primary: ${palette[500]};\n`; 
     css += `  --primary-foreground: ${palette.foreground};\n`;
+    
+    if (secondaryPalette) {
+        css += `  --secondary: ${secondaryPalette[500]};\n`; 
+        css += `  --secondary-foreground: ${secondaryPalette.foreground};\n`;
+    }
+
     css += "}\n";
     
     return css;
