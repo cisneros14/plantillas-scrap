@@ -45,7 +45,157 @@ export const siteConfig = {
     secondary_foreground: "0 0% 98%",
     font_sans: "font-sans",
     logo_text: "RISCASA",
+    logo: "/logoR.png",
+    logo_hero: "/logoR2.png",
   },
+
+  hero: {
+    badge: {
+        text: "Just released v1.0.0",
+        href: "#",
+    },
+    title: "Importadores Directos de las Mejores Marcas para tu Hogar",
+    description: "¿Buscas calidad y buen precio? Somos la solución que estabas esperando. Electrodomésticos de alta gama al por mayor y menor, directo a tus manos.",
+    actions: [
+        { label: "Ver Productos", href: "/catalogo", variant: "default", icon: "ArrowUpRight" },
+        { label: "Cotizar al Por Mayor", href: "#", variant: "outline", icon: "CirclePlay" }
+    ]
+  },
+
+  about: {
+    hero: {
+      badge: "Nuestra Historia",
+      title_prefix: "Impulsando el futuro de",
+      title_suffix: "Tu Negocio",
+      description: "Conoce a las personas y los valores que hacen posible nuestra misión de transformar ideas en realidades digitales exitosas."
+    },
+    story: {
+      title: "Quiénes Somos",
+      description1: "creemos en el poder de la tecnología para resolver problemas reales. Fundada con la visión de ayudar a empresas locales a competir en un mundo global, hemos crecido gracias a la confianza de nuestros clientes.",
+      description2: "Nuestro enfoque combina creatividad, estrategia y excelencia técnica. No solo entregamos proyectos; construimos relaciones duraderas basadas en resultados tangibles.",
+      image: "/placeholder.webp",
+      features: [
+        "Innovación constante",
+        "Transparencia total",
+        "Compromiso con la calidad",
+        "Resultados medibles",
+      ]
+    },
+    values: {
+      title: "Nuestros Pilares",
+      description: "Lo que nos impulsa cada día a ser mejores.",
+      items: [
+         { title: "Misión", description: "Empoderar a empresas de todos los tamaños con herramientas digitales accesibles, potentes y personalizadas.", icon: "Target" },
+         { title: "Visión", description: "Ser el referente líder en transformación digital, reconocidos por nuestra innovación y calidad humana.", icon: "Eye" },
+         { title: "Valores", description: "Integridad, pasión por la excelencia, aprendizaje continuo y un profundo respeto por nuestros clientes y equipo.", icon: "Heart" }
+      ]
+    },
+    description: "Somos importadores directos de las mejores marcas de electrodomésticos. Nuestra misión es llevar tecnología y confort a tu hogar con productos originales y garantía garantizada.",
+    features: [
+        "Productos 100% Originales",
+        "Garantía Directa de Fábrica",
+        "Envíos Seguros a Todo el País",
+        "Los Mejores Precios del Mercado",
+    ],
+    image: "/placeholder.webp",
+  },
+
+  contact_page: {
+    hero: {
+      badge: "Contáctanos",
+      title_prefix: "Estamos aquí para",
+      title_suffix: "Ayudarte",
+      description: "¿Tienes alguna pregunta o necesitas más información? Envíanos un mensaje o visítanos."
+    }
+  },
+
+  services_page: {
+     hero: {
+       badge: "Nuestros Servicios",
+       title_prefix: "Soluciones integrales para",
+       title_suffix: "Tu Crecimiento",
+       description: "Explora nuestra gama completa de servicios diseñados para potenciar cada aspecto de tu negocio, desde la estrategia hasta la ejecución."
+     },
+     process: {
+       title: "Nuestro Proceso de Trabajo",
+       description: "Un enfoque estructurado y transparente para garantizar el éxito de tu proyecto."
+     },
+     pricing: {
+       title: "Planes y Precios",
+       description: "Elige el plan que mejor se adapte a tus necesidades. Sin costos ocultos."
+     }
+  },
+
+  cta_section: {
+     title: "¿Listo para equipar tu hogar con lo mejor?",
+     description: "Descubre la calidad, tecnología y diseño que solo nosotros podemos ofrecerte. Productos exclusivos al mejor precio.",
+     button_primary: "Llamar ahora",
+  },
+
+  auth: {
+     login: {
+       title: "Iniciar sesión",
+       description: "Ingresa tu correo electrónico para acceder a tu cuenta",
+       email_label: "Correo electrónico",
+       password_label: "Contraseña",
+       forgot_password: "¿Olvidaste tu contraseña?",
+       submit_button: "Ingresar",
+       google_button: "Ingresar con Google",
+       register_text: "¿No tienes una cuenta?",
+       register_link: "Regístrate"
+     }
+  },
+  
+  categories: [
+    {
+      id: "kitchen",
+      name: "Cocina",
+      icon: "Utensils",
+      href: "/catalogo?category=cocina",
+    },
+    {
+      id: "air-fryers",
+      name: "Freidoras de Aire",
+      icon: "Flame",
+      href: "/catalogo?category=freidoras",
+    },
+    {
+      id: "cleaning",
+      name: "Limpieza",
+      icon: "Sparkles",
+      href: "/catalogo?category=limpieza",
+    },
+    {
+      id: "refrigeration",
+      name: "Refrigeración",
+      icon: "Snowflake",
+      href: "/catalogo?category=refrigeracion",
+    },
+    {
+      id: "climate",
+      name: "Calefacción y Ventilación",
+      icon: "Wind",
+      href: "/catalogo?category=climatizacion",
+    },
+    {
+      id: "small-appliances",
+      name: "Pequeños Electrodomésticos",
+      icon: "Coffee",
+      href: "/catalogo?category=pequenos",
+    },
+    {
+      id: "ovens",
+      name: "Hornos",
+      icon: "ChefHat",
+      href: "/catalogo?category=hornos",
+    },
+    {
+      id: "deals",
+      name: "Ofertas",
+      icon: "Tag",
+      href: "/catalogo?category=ofertas",
+    },
+  ],
 
   // Social Links
   social: {
@@ -165,6 +315,16 @@ export const siteConfig = {
       popular: false,
     },
   ],
+  value_proposition: {
+    description: "Nos diferenciamos por ofrecer los mejores electrodomésticos importados, con precios competitivos y un servicio que prioriza tu satisfacción.",
+    items: [
+        { icon: "Zap", title: "Entrega Inmediata", description: "Recibe tus productos en tiempo récord. Contamos con stock disponible para envío inmediato." },
+        { icon: "Shield", title: "Garantía Oficial", description: "Todos nuestros productos cuentan con garantía directa de fábrica. Compra con total confianza." },
+        { icon: "Target", title: "Asesoría Experta", description: "¿Dudas? Nuestro equipo de expertos te ayudará a elegir el electrodoméstico perfecto para ti." },
+        { icon: "Smile", title: "Atención Post-Venta", description: "Estamos contigo incluso después de tu compra. Soporte técnico y atención dedicada." },
+    ]
+  },
+
   team: [
     {
       name: "Ana García",

@@ -12,38 +12,26 @@ export function StorySection() {
             <ImageN
               width={800}
               height={600}
-              src="/placeholder.webp" // In a real scenario, this would be a real image
-              alt="Nuestra historia"
+              src={siteConfig.about.story.image}
+              alt={siteConfig.about.story.title}
               className="w-full h-[400px] object-cover rounded-2xl shadow-lg"
             />
           </div>
 
           <div className="space-y-6 order-1 lg:order-2">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Quiénes Somos
+              {siteConfig.about.story.title}
             </h2>
             <div className="text-lg text-muted-foreground space-y-4">
               <p>
-                En <strong>{siteConfig.business.name}</strong>, creemos en el
-                poder de la tecnología para resolver problemas reales. Fundada
-                con la visión de ayudar a empresas locales a competir en un
-                mundo global, hemos crecido gracias a la confianza de nuestros
-                clientes.
+                En <strong>{siteConfig.business.name}</strong>,{" "}
+                {siteConfig.about.story.description1}
               </p>
-              <p>
-                Nuestro enfoque combina creatividad, estrategia y excelencia
-                técnica. No solo entregamos proyectos; construimos relaciones
-                duraderas basadas en resultados tangibles.
-              </p>
+              <p>{siteConfig.about.story.description2}</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-              {[
-                "Innovación constante",
-                "Transparencia total",
-                "Compromiso con la calidad",
-                "Resultados medibles",
-              ].map((item) => (
+              {siteConfig.about.story.features.map((item) => (
                 <div key={item} className="flex items-center gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary shrink-0" />
                   <span className="font-medium">{item}</span>

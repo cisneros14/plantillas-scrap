@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import { siteConfig } from "@/config/site";
 
 export function ContactHero() {
   return (
@@ -22,15 +23,17 @@ export function ContactHero() {
 
       <div className="container px-4 mx-auto text-center">
         <Badge variant="secondary" className="mb-4">
-          Contáctanos
+          {siteConfig.contact_page.hero.badge}
         </Badge>
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl mb-6">
-          Estamos aquí para <br className="hidden sm:inline" />
-          <span className="text-primary">Ayudarte</span>
+          {siteConfig.contact_page.hero.title_prefix}{" "}
+          <br className="hidden sm:inline" />
+          <span className="text-primary">
+            {siteConfig.contact_page.hero.title_suffix}
+          </span>
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          ¿Tienes alguna pregunta o necesitas más información? Envíanos un
-          mensaje o visítanos.
+          {siteConfig.contact_page.hero.description}
         </p>
       </div>
     </section>

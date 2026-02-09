@@ -12,11 +12,10 @@ export function ProcessSection() {
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Nuestro Proceso de Trabajo
+            {siteConfig.services_page.process.title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Un enfoque estructurado y transparente para garantizar el éxito de
-            tu proyecto.
+            {siteConfig.services_page.process.description}
           </p>
         </div>
 

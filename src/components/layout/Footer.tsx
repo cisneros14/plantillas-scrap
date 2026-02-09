@@ -2,6 +2,7 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
+import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 
 export function Footer() {
   return (
@@ -11,8 +12,8 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="/">
               <Image
-                src="/logoR.png"
-                alt="logo"
+                src={siteConfig.branding.logo}
+                alt={siteConfig.branding.logo_text}
                 width={100}
                 height={100}
                 className="w-34 object-cover"
@@ -21,6 +22,32 @@ export function Footer() {
             <p className="text-sm text-muted-foreground">
               {siteConfig.description}
             </p>
+            <div className="flex gap-4">
+              <Link
+                href={siteConfig.social.facebook}
+                className="text-muted-foreground hover:text-primary"
+              >
+                <Facebook className="h-5 w-5" />
+              </Link>
+              <Link
+                href={siteConfig.social.instagram}
+                className="text-muted-foreground hover:text-primary"
+              >
+                <Instagram className="h-5 w-5" />
+              </Link>
+              <Link
+                href={siteConfig.social.twitter}
+                className="text-muted-foreground hover:text-primary"
+              >
+                <Twitter className="h-5 w-5" />
+              </Link>
+              <Link
+                href={siteConfig.social.linkedin}
+                className="text-muted-foreground hover:text-primary"
+              >
+                <Linkedin className="h-5 w-5" />
+              </Link>
+            </div>
           </div>
 
           <div>

@@ -18,6 +18,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { login } from "@/app/actions/auth";
 import { useActionState } from "react";
+import { siteConfig } from "@/config/site";
 
 export function LoginForm({
   className,
@@ -29,16 +30,16 @@ export function LoginForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader>
-          <CardTitle>Iniciar sesión</CardTitle>
-          <CardDescription>
-            Ingresa tu correo electrónico para acceder a tu cuenta
-          </CardDescription>
+          <CardTitle>{siteConfig.auth.login.title}</CardTitle>
+          <CardDescription>{siteConfig.auth.login.description}</CardDescription>
         </CardHeader>
         <CardContent>
           <form action={action}>
             <FieldGroup>
               <Field>
-                <FieldLabel htmlFor="email">Correo electrónico</FieldLabel>
+                <FieldLabel htmlFor="email">
+                  {siteConfig.auth.login.email_label}
+                </FieldLabel>
                 <Input
                   id="email"
                   name="email"
@@ -49,12 +50,14 @@ export function LoginForm({
               </Field>
               <Field>
                 <div className="flex items-center">
-                  <FieldLabel htmlFor="password">Contraseña</FieldLabel>
+                  <FieldLabel htmlFor="password">
+                    {siteConfig.auth.login.password_label}
+                  </FieldLabel>
                   <a
                     href="#"
                     className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
                   >
-                    ¿Olvidaste tu contraseña?
+                    {siteConfig.auth.login.forgot_password}
                   </a>
                 </div>
                 <Input id="password" name="password" type="password" required />
@@ -68,13 +71,16 @@ export function LoginForm({
 
               <Field>
                 <Button type="submit" className="w-full" disabled={isPending}>
-                  {isPending ? "Ingresando..." : "Ingresar"}
+                  {isPending
+                    ? "Ingresando..."
+                    : siteConfig.auth.login.submit_button}
                 </Button>
                 <Button variant="outline" type="button" className="w-full">
-                  Ingresar con Google
+                  {siteConfig.auth.login.google_button}
                 </Button>
                 <FieldDescription className="text-center">
-                  ¿No tienes una cuenta? <a href="#">Regístrate</a>
+                  {siteConfig.auth.login.register_text}{" "}
+                  <a href="#">{siteConfig.auth.login.register_link}</a>
                 </FieldDescription>
               </Field>
             </FieldGroup>

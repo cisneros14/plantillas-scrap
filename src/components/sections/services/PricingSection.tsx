@@ -20,11 +20,10 @@ export function PricingSection() {
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Planes y Precios
+            {siteConfig.services_page.pricing.title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Elige el plan que mejor se adapte a tus necesidades. Sin costos
-            ocultos.
+            {siteConfig.services_page.pricing.description}
           </p>
         </div>
 

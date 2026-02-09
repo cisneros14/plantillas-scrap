@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import { siteConfig } from "@/config/site";
 
 export function ServicesHero() {
   return (
@@ -20,15 +21,17 @@ export function ServicesHero() {
 
       <div className="container relative px-4 mx-auto text-center">
         <Badge variant="secondary" className="mb-4">
-          Nuestros Servicios
+          {siteConfig.services_page.hero.badge}
         </Badge>
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl mb-6">
-          Soluciones integrales para <br className="hidden sm:inline" />
-          <span className="text-primary">Tu Crecimiento</span>
+          {siteConfig.services_page.hero.title_prefix}{" "}
+          <br className="hidden sm:inline" />
+          <span className="text-primary">
+            {siteConfig.services_page.hero.title_suffix}
+          </span>
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Explora nuestra gama completa de servicios diseñados para potenciar
-          cada aspecto de tu negocio, desde la estrategia hasta la ejecución.
+          {siteConfig.services_page.hero.description}
         </p>
       </div>
     </section>

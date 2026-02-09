@@ -1,7 +1,9 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, CirclePlay } from "lucide-react";
+import * as Icons from "lucide-react";
+import { LucideIcon } from "lucide-react";
 import Link from "next/link";
+import { siteConfig } from "@/config/site";
 
 import Image from "next/image";
 
@@ -15,41 +17,63 @@ export default function Hero() {
             className="rounded-full py-1 border-border"
             asChild
           >
-            <Link href="#">
-              Just released v1.0.0 <ArrowUpRight className="ml-1 size-4" />
+            <Link href={siteConfig.hero.badge.href}>
+              {siteConfig.hero.badge.text}{" "}
+              <Icons.ArrowUpRight className="ml-1 size-4" />
             </Link>
           </Badge>
           <h1 className="mt-6 max-w-[17ch] text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem] font-bold leading-[1.1] tracking-tight">
-            Importadores Directos de las Mejores Marcas para tu Hogar
+            {siteConfig.hero.title}
           </h1>
           <p className="mt-6 max-w-[60ch] sm:text-lg text-foreground/80">
-            ¿Buscas calidad y buen precio? Somos la solución que estabas
-            esperando. Electrodomésticos de alta gama al por mayor y menor,
-            directo a tus manos.
+            {siteConfig.hero.description}
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-            <Link href="/catalogo" className="w-full sm:w-auto">
-              <Button
-                size="lg"
-                className="w-full sm:w-auto rounded-full text-base shadow-lg hover:shadow-xl transition-shadow"
-              >
-                Ver Productos <ArrowUpRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Button
-              variant="outline"
-              size="lg"
-              className="w-full sm:w-auto rounded-full text-base shadow-sm hover:bg-accent/50"
-            >
-              <CirclePlay className="mr-2 h-5 w-5" /> Cotizar al Por Mayor
-            </Button>
+            {siteConfig.hero.actions.map((action, index) => {
+              const IconComponent = action.icon
+                ? (Icons[action.icon as keyof typeof Icons] as LucideIcon) ||
+                  Icons.ArrowRight
+                : null;
+
+              const isOutline = action.variant === "outline";
+
+              return (
+                <Link
+                  key={index}
+                  href={action.href}
+                  className="w-full sm:w-auto"
+                >
+                  <Button
+                    variant={
+                      action.variant as
+                        | "default"
+                        | "destructive"
+                        | "outline"
+                        | "secondary"
+                        | "ghost"
+                        | "link"
+                    }
+                    size="lg"
+                    className={`w-full sm:w-auto rounded-full text-base ${!isOutline ? "shadow-lg hover:shadow-xl transition-shadow" : "shadow-sm hover:bg-accent/50"}`}
+                  >
+                    {isOutline && IconComponent && (
+                      <IconComponent className="mr-2 h-5 w-5" />
+                    )}
+                    {action.label}
+                    {!isOutline && IconComponent && (
+                      <IconComponent className="ml-2 h-5 w-5" />
+                    )}
+                  </Button>
+                </Link>
+              );
+            })}
           </div>
         </div>
         <div className="mt-8 lg:mt-0 flex justify-center">
           <Image
             width={1000}
             height={1000}
-            src="/logoR2.png"
+            src={siteConfig.branding.logo_hero}
             alt="hero"
             priority
             className="w-full max-w-sm lg:max-w-md h-auto object-contain animate-in fade-in zoom-in duration-700 delay-100"

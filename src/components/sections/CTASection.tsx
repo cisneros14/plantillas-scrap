@@ -11,17 +11,15 @@ export function CTASection() {
     <section className="">
       <div className="container px-4 mx-auto text-center">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
-          ¿Listo para equipar tu hogar con lo mejor?
+          {siteConfig.cta_section.title}
         </h2>
         <p className="text-lg max-w-2xl mx-auto mb-8">
-          Descubre la calidad, tecnología y diseño que solo{" "}
-          {siteConfig.business.name} puede ofrecerte. Productos exclusivos al
-          mejor precio.
+          {siteConfig.cta_section.description}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg" variant="secondary" asChild>
             <a href={`tel:${siteConfig.business.phone.replace(/\s+/g, "")}`}>
-              Llamar ahora
+              {siteConfig.cta_section.button_primary}
             </a>
           </Button>
           <ContactDialog />

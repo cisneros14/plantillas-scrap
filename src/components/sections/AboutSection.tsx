@@ -1,7 +1,5 @@
 import { siteConfig } from "@/config/site";
-import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
-import Image from "next/image";
 import { ImageN } from "../ui/image-with-skeleton";
 import dynamic from "next/dynamic";
 
@@ -19,18 +17,11 @@ export function AboutSection() {
               Sobre {siteConfig.business.name}
             </h2>
             <p className="text-lg text-muted-foreground">
-              Somos importadores directos de las mejores marcas de
-              electrodomésticos. Nuestra misión es llevar tecnología y confort a
-              tu hogar con productos originales y garantía garantizada.
+              {siteConfig.about.description}
             </p>
 
             <div className="space-y-4">
-              {[
-                "Productos 100% Originales",
-                "Garantía Directa de Fábrica",
-                "Envíos Seguros a Todo el País",
-                "Los Mejores Precios del Mercado",
-              ].map((item) => (
+              {siteConfig.about.features.map((item) => (
                 <div key={item} className="flex items-center gap-2">
                   <CheckCircle2 className="h-5 w-5 text-primary" />
                   <span className="text-muted-foreground">{item}</span>
@@ -45,7 +36,7 @@ export function AboutSection() {
           <ImageN
             width={1000}
             height={1000}
-            src="/placeholder.webp"
+            src={siteConfig.about.image}
             alt="about"
             className="w-full border object-cover h-[400px] lg:h-[400px] rounded-2xl overflow-hidden"
           />
