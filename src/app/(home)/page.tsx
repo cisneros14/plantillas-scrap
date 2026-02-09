@@ -50,7 +50,7 @@ export default function Home() {
 
       {/* Streaming Content */}
       <Suspense fallback={<SectionSkeleton />}>
-        <ServicesSection />
+        <ServicesSection /> 
       </Suspense>
 
       <Suspense fallback={<SectionSkeleton />}>
