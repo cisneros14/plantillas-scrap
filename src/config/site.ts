@@ -1,32 +1,32 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Tu Negocio Local",
-  description: "Electrodomésticos de alta gama al por mayor y menor, directo a tus manos.",
-  url: "https://riscasa.com",
-  ogImage: "https://riscasa.com/og.jpg",
+  name: "Distribuidora ELCA",
+  description: "Ser una empresa líder en comercialización de electrodomésticos, para satisfacer las necesidades de nuestros clientes, con productos de alta calidad.",
+  url: "https://distribuidoraelca.com",
+  ogImage: "https://distribuidoraelca.com/og.jpg",
   author: {
-    name: "Riscasa",
-    url: "https://riscasa.com",
-    twitter: "@riscasa",
+    name: "Distribuidora ELCA",
+    url: "https://distribuidoraelca.com",
+    twitter: "@distribuidoraelca",
   },
-  keywords: ["electrodomésticos", "hogar", "cocina", "ninja", "shark", "ofertas"],
-  applicationName: "RiscasaStore",
-  creator: "Riscasa",
+  keywords: ["electrodomésticos", "hogar", "cocina", "tecnología", "quito", "ecuador", "elca"],
+  applicationName: "DistribuidoraELCA",
+  creator: "Distribuidora ELCA",
   language: "es",
   
   // Business Specifics for JSON-LD and Contact Info
   business: {
-    name: "Distribuidora RISCASA",
-    phone: "+593 99 719 6340",
-    whatsapp: "593997196340",
-    address: "Centro Comercial Polaris, Isidro Ayora Cueva, Guayaquil, Ecuador",
+    name: "Distribuidora ELCA",
+    phone: "+593 99 705 3865",
+    whatsapp: "593997053865",
+    address: "Ipiales Centro, Quito 170401 / Colinas del Sur, Quito, Ecuador",
     coordinates: {
-      lat: -2.1188,
-      long: -79.90135,
+      lat: -0.22985, // Quito approx
+      long: -78.52495,
     },
-    email: "ventas@riscasa.com",
-    operating_hours: "Lu-Sa 09:00-18:00",
+    email: "info@distribuidoraelca.com",
+    operating_hours: "Siempre abierto",
   },
 
   // Navigation
@@ -39,160 +39,139 @@ export const siteConfig = {
 
   // Branding & Design System
   branding: {
-    primary: "#123679", 
+    primary: "#2250d4", 
     primary_foreground: "0 0% 98%",
-    secondary: "#1e40af", // Added secondary color
+    secondary: "#f5632b", 
     secondary_foreground: "0 0% 98%",
     font_sans: "font-sans",
-    logo_text: "RISCASA",
+    logo_text: "Distribuidora ELCA",
   },
 
   // Social Links
   social: {
-    facebook: "https://facebook.com",
-    instagram: "https://instagram.com",
+    facebook: "https://www.facebook.com/elca.tu.hogar",
+    instagram: "https://www.instagram.com/distribuidora.elca2000",
     twitter: "https://twitter.com",
     linkedin: "https://linkedin.com",
-    whatsapp: "https://wa.me/593997196340",
+    whatsapp: "https://wa.me/593997053865",
   },
 
   // Content Sections (Maintaining existing data structure)
   services: [
     {
-      title: "Envíos a Todo el País",
-      description: "Llevamos tus productos a cualquier ciudad del país con total seguridad.",
+      title: "Envíos a Domicilio",
+      description: "Llevamos tus electrodomésticos a la puerta de tu hogar con total seguridad.",
       icon: "Truck", 
     },
     {
-      title: "Garantía Garantizada",
-      description: "Todos nuestros productos cuentan con garantía de fábrica para tu tranquilidad.",
+      title: "Garantía de Calidad",
+      description: "Productos 100% originales y garantizados de las mejores marcas.",
       icon: "ShieldCheck",
     },
     {
-      title: "Precios de Mayorista",
-      description: "Ofrecemos los mejores precios del mercado en ventas al por mayor y menor.",
+      title: "Pagos Flexibles",
+      description: "Aceptamos efectivo, tarjetas de crédito y transferencias.",
       icon: "DollarSign",
     },
     {
-      title: "Soporte Personalizado",
-      description: "Te asesoramos en tu compra para que elijas el producto ideal para ti.",
+      title: "Atención Personalizada",
+      description: "Asesoramiento experto para que elijas lo mejor para tu hogar.",
       icon: "Headset",
     },
   ],
   testimonials: [
     {
-      name: "María García",
-      role: "CEO, TechStart",
-      content: "El servicio fue excepcional. Transformaron completamente nuestra presencia digital y los resultados fueron inmediatos.",
+      name: "Cliente Satisfecho",
+      role: "Compra Verificada",
+      content: "Excelente atención y precios muy competitivos. Mi refrigeradora llegó en perfecto estado.",
       avatar: "/avatars/01.png",
     },
     {
-      name: "Carlos Rodríguez",
-      role: "Director, MarketingPro",
-      content: "Profesionales, rápidos y eficientes. La mejor inversión que hemos hecho para nuestro negocio este año.",
+      name: "Usuario de Facebook",
+      role: "Recomendación",
+      content: "Muy buena variedad de productos y el personal es muy amable. Totalmente recomendados.",
       avatar: "/avatars/02.png",
     },
     {
-      name: "Ana Martínez",
-      role: "Dueña, Boutique Local",
-      content: "Me ayudaron a entender qué necesitaba mi negocio y lo ejecutaron a la perfección. Totalmente recomendados.",
+      name: "Comprador Local",
+      role: "Cliente Frecuente",
+      content: "Siempre encuentro lo que busco para mi casa en Distribuidora ELCA.",
       avatar: "/avatars/03.png",
     },
   ],
   faq: [
     {
       question: "¿Cuáles son sus horarios de atención?",
-      answer: "Nuestro horario de atención es de lunes a viernes de 9:00 a 18:00. Sin embargo, ofrecemos soporte de emergencia para clientes con planes premium.",
+      answer: "Estamos siempre abiertos para atender tus consultas y pedidos.",
     },
     {
-      question: "¿Ofrecen servicios personalizados?",
-      answer: "Sí, todos nuestros planes se adaptan a las necesidades específicas de cada cliente. Realizamos una consultoría inicial para entender tus requerimientos.",
+      question: "¿Qué métodos de pago aceptan?",
+      answer: "Aceptamos pagos en efectivo, tarjeta de crédito y transferencias bancarias.",
     },
     {
-      question: "¿Cuál es el tiempo de entrega promedio?",
-      answer: "Depende del proyecto. Para sitios web corporativos, el tiempo promedio es de 2 a 3 semanas. Para proyectos más complejos, definimos un cronograma detallado.",
+      question: "¿Realizan envíos a domicilio?",
+      answer: "Sí, realizamos envíos seguros a su domicilio. Contáctenos para más detalles sobre cobertura.",
     },
     {
-      question: "¿Ofrecen garantía de satisfacción?",
-      answer: "Absolutamente. Nos aseguramos de que estés 100% satisfecho con el resultado final antes de cerrar el proyecto.",
+      question: "¿Tienen garantía los productos?",
+      answer: "Sí, todos nuestros productos son de alta calidad y cuentan con garantía.",
     },
   ],
   process: [
     {
-      title: "Consulta Inicial",
-      description: "Nos reunimos para entender a fondo tus necesidades y objetivos comerciales.",
+      title: "Contáctanos",
+      description: "Escríbenos por WhatsApp o visítanos en nuestros locales.",
       icon: "MessageCircle",
     },
     {
-      title: "Estrategia",
-      description: "Diseñamos un plan de acción personalizado para tu negocio.",
+      title: "Asesoría",
+      description: "Te ayudamos a elegir el electrodoméstico ideal para tus necesidades.",
       icon: "Lightbulb",
     },
     {
-      title: "Ejecución",
-      description: "Implementamos las soluciones con los más altos estándares de calidad.",
-      icon: "Hammer",
+      title: "Compra",
+      description: "Realiza tu pago de forma segura con el método que prefieras.",
+      icon: "DollarSign",
     },
     {
-      title: "Optimización",
-      description: "Monitoreamos y mejoramos continuamente para asegurar resultados.",
-      icon: "TrendingUp",
+      title: "Entrega",
+      description: "Recibe tu producto en la comodidad de tu hogar.",
+      icon: "Truck",
     },
   ],
   pricing: [
     {
-      name: "Básico",
-      price: "€499",
-      description: "Perfecto para pequeños negocios que están empezando.",
-      features: ["Diseño Web Básico", "3 Páginas", "Contacto por Email", "SEO Básico"],
-      cta: "Empezar",
-      popular: false,
-    },
-    {
-      name: "Profesional",
-      price: "€999",
-      description: "La mejor opción para negocios en crecimiento.",
-      features: ["Diseño Premium", "Hasta 10 Páginas", "Soporte Prioritario", "SEO Avanzado", "Integración CMS"],
-      cta: "Elegir Profesional",
+      name: "Combos Hogar",
+      price: "Consultar",
+      description: "Equipa tu cocina con nuestros combos especiales.",
+      features: ["Cocina + Refrigeradora", "Microondas + Licuadora", "Precios de Oferta", "Garantía Incluida"],
+      cta: "Ver Ofertas",
       popular: true,
     },
     {
-      name: "Empresarial",
-      price: "Consultar",
-      description: "Soluciones a medida para grandes organizaciones.",
-      features: ["Desarrollo a Medida", "Páginas Ilimitadas", "Soporte 24/7", "Auditoría SEO Mensual", "E-commerce"],
-      cta: "Contactar",
+      name: "Mayoristas",
+      price: "Precios Especiales",
+      description: "Precios exclusivos para compras al por mayor.",
+      features: ["Descuentos por Volumen", "Atención Prioritaria", "Catálogo Extendido", "Envíos Coordinados"],
+      cta: "Cotizar Mayorista",
+      popular: false,
+    },
+    {
+      name: "Crédito Directo",
+      price: "A tu medida",
+      description: "Facilidades de pago para que lleves lo que necesitas.",
+      features: ["Cuotas Accesibles", "Aprobación Rápida", "Mínimos Requisitos", "Pagos Flexibles"],
+      cta: "Solicitar Crédito",
       popular: false,
     },
   ],
   team: [
     {
-      name: "Ana García",
-      role: "CEO & Fundadora",
-      bio: "Con más de 15 años de experiencia liderando equipos y estrategias digitales.",
+      name: "Equipo de Ventas",
+      role: "Asesores Comerciales",
+      bio: "Personal capacitado y motivado para brindarte la mejor atención.",
       image: "/placeholder.webp",
       social: { twitter: "#", linkedin: "#" }
     },
-    {
-      name: "Carlos Ruiz",
-      role: "Director Tecnológico",
-      bio: "Apasionado por la innovación y la arquitectura de software escalable.",
-      image: "/placeholder.webp",
-      social: { twitter: "#", linkedin: "#" }
-    },
-    {
-      name: "Laura Martínez",
-      role: "Directora de Diseño",
-      bio: "Creando experiencias visuales impactantes que conectan con los usuarios.",
-      image: "/placeholder.webp",
-      social: { twitter: "#", linkedin: "#" }
-    },
-    {
-      name: "David López",
-      role: "Lead Developer",
-      bio: "Experto en desarrollo full-stack y optimización de rendimiento.",
-      image: "/placeholder.webp",
-      social: { twitter: "#", linkedin: "#" }
-    }
   ],
 };

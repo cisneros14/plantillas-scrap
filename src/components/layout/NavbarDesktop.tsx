@@ -32,12 +32,12 @@ export function NavbarDesktop() {
         <div className="flex items-center gap-6">
           <Link href="/">
             <Image
-              src="/logoR.png"
+              src="/logoEE.png"
               alt="logo"
               width={0}
               height={0}
               sizes="100vw"
-              className="w-32 h-auto object-contain rounded-md"
+              className="w-24 h-auto object-contain rounded-md"
             />
           </Link>
           <NavigationMenu>
