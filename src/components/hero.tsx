@@ -19,12 +19,12 @@ export default function Hero() {
             </Link>
           </Badge>
           <h1 className="mt-0 md:mt-4 max-w-[17ch] text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.7rem] font-semibold leading-[1.2]! tracking-[-0.035em]">
-            Mancasa: Electrodomésticos y Hogar para tu Familia
+            Customized Shadcn UI Blocks & Components
           </h1>
           <p className="mt-4 md:mt-6 max-w-[60ch] sm:text-lg text-foreground/80">
-            Somos una empresa comercializadora de electrodomésticos, equipos de
-            tecnología y productos para el hogar. Visítanos en Guayaquil o
-            compra en línea.
+            Explore a collection of Shadcn UI blocks and components, ready to
+            preview and copy. Streamline your development workflow with
+            easy-to-implement examples.
           </p>
           <div className="mt-8 md:mt-12 flex flex-col sm:flex-row items-center gap-4">
             <Link href="/catalogo" className="w-full sm:w-auto">
@@ -44,7 +44,7 @@ export default function Hero() {
         <Image
           width={1000}
           height={1000}
-          src="/logoM.png"
+          src="/placeholder.webp"
           alt="hero"
           priority
         className="w-full max-w-sm lg:max-w-xl h-auto object-contain animate-in fade-in zoom-in duration-700 delay-100"/>
