@@ -45,7 +45,7 @@ export default function Hero() {
         src="/placeholder.webp"
         alt="hero"
         priority
-        className="w-full border aspect-video bg-accent rounded-xl overflow-hidden object-cover" />
+        className="w-full max-w-sm lg:max-w-md h-auto object-contain animate-in fade-in zoom-in duration-700 delay-100"/>
       </div>
     </div>
   );
