@@ -19,7 +19,7 @@ export function Footer() {
                 className="w-34 object-cover"
               />
             </Link>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground mt-3">
               {siteConfig.description}
             </p>
             <div className="flex gap-4">

@@ -1,32 +1,32 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Tu Negocio Local",
-  description: "Electrodomésticos de alta gama al por mayor y menor, directo a tus manos.",
-  url: "https://riscasa.com",
-  ogImage: "https://riscasa.com/og.jpg",
+  name: "ElectroFlores",
+  description: "Ventas al contado y a crédito personal y bancario de electrodomésticos y motocicletas al por menor.",
+  url: "https://electroflores.com",
+  ogImage: "https://electroflores.com/og.jpg",
   author: {
-    name: "Riscasa",
-    url: "https://riscasa.com",
-    twitter: "@riscasa",
+    name: "ElectroFlores",
+    url: "https://electroflores.com",
+    twitter: "@electroflores",
   },
-  keywords: ["electrodomésticos", "hogar", "cocina", "ninja", "shark", "ofertas"],
-  applicationName: "RiscasaStore",
-  creator: "Riscasa",
+  keywords: ["electrodomésticos", "motocicletas", "hogar", "cocina", "crédito", "quito"],
+  applicationName: "ElectroFlores",
+  creator: "ElectroFlores",
   language: "es",
   
   // Business Specifics for JSON-LD and Contact Info
   business: {
-    name: "Distribuidora RISCASA",
-    phone: "+593 99 719 6340",
-    whatsapp: "593997196340",
-    address: "Centro Comercial Polaris, Isidro Ayora Cueva, Guayaquil, Ecuador",
+    name: "Electrodomésticos Flores",
+    phone: "+593 99 756 4415",
+    whatsapp: "593997564415",
+    address: "Av. Mariscal Sucre S23-80 y Portovelo, Quito, Ecuador",
     coordinates: {
-      lat: -2.1188,
-      long: -79.90135,
+      lat: -0.2692, // Approximate for Av Mariscal Sucre S23, Quito
+      long: -78.5522,
     },
-    email: "ventas@riscasa.com",
-    operating_hours: "Lu-Sa 09:00-18:00",
+    email: "electrodflores@gmail.com",
+    operating_hours: "Lu-Sa 09:30-18:30",
   },
 
   // Navigation
@@ -39,63 +39,63 @@ export const siteConfig = {
 
   // Branding & Design System
   branding: {
-    primary: "#123679", 
+    primary: "#080753", 
     primary_foreground: "0 0% 98%",
-    secondary: "#1e40af", // Added secondary color
+    secondary: "#e30512", // Added secondary color
     secondary_foreground: "0 0% 98%",
     font_sans: "font-sans",
-    logo_text: "RISCASA",
-    logo: "/logoR.png",
-    logo_hero: "/logoR2.png",
+    logo_text: "ELECTRO FLORES",
+    logo: "/logo2.png", // Keeping existing path as user didn't provide new asset filename, but name changed
+    logo_hero: "/logo.jpg",
   },
 
   hero: {
     badge: {
-        text: "Just released v1.0.0",
+        text: "Ofertas de Temporada",
         href: "#",
     },
-    title: "Importadores Directos de las Mejores Marcas para tu Hogar",
-    description: "¿Buscas calidad y buen precio? Somos la solución que estabas esperando. Electrodomésticos de alta gama al por mayor y menor, directo a tus manos.",
+    title: "Electrodomésticos y Motocicletas para tu Hogar",
+    description: "Ventas al contado y a crédito. Encuentra las mejores marcas con garantía y respaldo.",
     actions: [
-        { label: "Ver Productos", href: "/catalogo", variant: "default", icon: "ArrowUpRight" },
-        { label: "Cotizar al Por Mayor", href: "#", variant: "outline", icon: "CirclePlay" }
+        { label: "Ver Catálogo", href: "/catalogo", variant: "default", icon: "ArrowUpRight" },
+        { label: "Contactar", href: "/contact", variant: "outline", icon: "CirclePlay" }
     ]
   },
 
   about: {
     hero: {
-      badge: "Nuestra Historia",
-      title_prefix: "Impulsando el futuro de",
-      title_suffix: "Tu Negocio",
-      description: "Conoce a las personas y los valores que hacen posible nuestra misión de transformar ideas en realidades digitales exitosas."
+      badge: "Sobre Nosotros",
+      title_prefix: "Tu confianza, nuestra",
+      title_suffix: "Prioridad",
+      description: "En ElectroFlores nos dedicamos a equipar tu hogar y facilitar tu movilidad con los mejores productos y planes de financiamiento."
     },
     story: {
-      title: "Quiénes Somos",
-      description1: "creemos en el poder de la tecnología para resolver problemas reales. Fundada con la visión de ayudar a empresas locales a competir en un mundo global, hemos crecido gracias a la confianza de nuestros clientes.",
-      description2: "Nuestro enfoque combina creatividad, estrategia y excelencia técnica. No solo entregamos proyectos; construimos relaciones duraderas basadas en resultados tangibles.",
+      title: "Nuestra Historia",
+      description1: "Fundada con la visión de facilitar el acceso a la tecnología y movilidad en Ecuador, ElectroFlores se ha consolidado como un referente en la venta de electrodomésticos y motocicletas.",
+      description2: "Nos enorgullece ofrecer no solo productos de alta calidad, sino también soluciones financieras accesibles que permiten a nuestros clientes mejorar su calidad de vida.",
       image: "/placeholder.webp",
       features: [
-        "Innovación constante",
-        "Transparencia total",
-        "Compromiso con la calidad",
-        "Resultados medibles",
+        "Crédito Directo",
+        "Marcas Garantizadas",
+        "Atención Personalizada",
+        "Respaldo Técnico",
       ]
     },
     values: {
-      title: "Nuestros Pilares",
-      description: "Lo que nos impulsa cada día a ser mejores.",
+      title: "Nuestros Valores",
+      description: "Los principios que guían nuestro servicio cada día.",
       items: [
-         { title: "Misión", description: "Empoderar a empresas de todos los tamaños con herramientas digitales accesibles, potentes y personalizadas.", icon: "Target" },
-         { title: "Visión", description: "Ser el referente líder en transformación digital, reconocidos por nuestra innovación y calidad humana.", icon: "Eye" },
-         { title: "Valores", description: "Integridad, pasión por la excelencia, aprendizaje continuo y un profundo respeto por nuestros clientes y equipo.", icon: "Heart" }
+         { title: "Honestidad", description: "Transparencia total en nuestros precios y planes de financiamiento.", icon: "Target" },
+         { title: "Servicio", description: "Estamos para asesorarte y acompañarte en tu compra y post-venta.", icon: "Heart" },
+         { title: "Calidad", description: "Solo trabajamos con marcas reconocidas que garantizan durabilidad.", icon: "Shield" }
       ]
     },
-    description: "Somos importadores directos de las mejores marcas de electrodomésticos. Nuestra misión es llevar tecnología y confort a tu hogar con productos originales y garantía garantizada.",
+    description: "Somos distribuidores autorizados de las mejores marcas. Nuestra misión es llevar confort y movilidad a tu vida.",
     features: [
         "Productos 100% Originales",
-        "Garantía Directa de Fábrica",
-        "Envíos Seguros a Todo el País",
-        "Los Mejores Precios del Mercado",
+        "Garantía de Fábrica",
+        "Crédito Fácil y Rápido",
+        "Entrega a Domicilio",
     ],
     image: "/placeholder.webp",
   },
@@ -112,30 +112,30 @@ export const siteConfig = {
   services_page: {
      hero: {
        badge: "Nuestros Servicios",
-       title_prefix: "Soluciones integrales para",
-       title_suffix: "Tu Crecimiento",
-       description: "Explora nuestra gama completa de servicios diseñados para potenciar cada aspecto de tu negocio, desde la estrategia hasta la ejecución."
+       title_prefix: "Soluciones completas para",
+       title_suffix: "Tu Hogar",
+       description: "Descubre nuestra variedad de productos y facilidades de pago diseñadas para ti."
      },
      process: {
-       title: "Nuestro Proceso de Trabajo",
-       description: "Un enfoque estructurado y transparente para garantizar el éxito de tu proyecto."
+       title: "Cómo Comprar",
+       description: "Adquirir tus productos en ElectroFlores es fácil y rápido."
      },
      pricing: {
-       title: "Planes y Precios",
-       description: "Elige el plan que mejor se adapte a tus necesidades. Sin costos ocultos."
+       title: "Planes de Financiamiento",
+       description: "Elige la forma de pago que más te convenga."
      }
   },
 
   cta_section: {
-     title: "¿Listo para equipar tu hogar con lo mejor?",
-     description: "Descubre la calidad, tecnología y diseño que solo nosotros podemos ofrecerte. Productos exclusivos al mejor precio.",
-     button_primary: "Llamar ahora",
+     title: "¿Listo para estrenar?",
+     description: "Visítanos o contáctanos hoy mismo para conocer nuestras promociones vigentes en motos y electrodomésticos.",
+     button_primary: "Contactar por WhatsApp",
   },
 
   auth: {
      login: {
        title: "Iniciar sesión",
-       description: "Ingresa tu correo electrónico para acceder a tu cuenta",
+       description: "Ingresa a tu cuenta para ver el estado de tu crédito",
        email_label: "Correo electrónico",
        password_label: "Contraseña",
        forgot_password: "¿Olvidaste tu contraseña?",
@@ -199,11 +199,11 @@ export const siteConfig = {
 
   // Social Links
   social: {
-    facebook: "https://facebook.com",
+    facebook: "https://facebook.com/ElectroFlores", // Inferring from screenshot content
     instagram: "https://instagram.com",
     twitter: "https://twitter.com",
     linkedin: "https://linkedin.com",
-    whatsapp: "https://wa.me/593997196340",
+    whatsapp: "https://wa.me/593997564415",
   },
 
   // Content Sections (Maintaining existing data structure)
@@ -269,91 +269,71 @@ export const siteConfig = {
   ],
   process: [
     {
-      title: "Consulta Inicial",
-      description: "Nos reunimos para entender a fondo tus necesidades y objetivos comerciales.",
-      icon: "MessageCircle",
+      title: "Elige tu Producto",
+      description: "Visita nuestro local o revisa nuestro catálogo en línea.",
+      icon: "ShoppingBag",
     },
     {
-      title: "Estrategia",
-      description: "Diseñamos un plan de acción personalizado para tu negocio.",
-      icon: "Lightbulb",
+      title: "Solicita tu Crédito",
+      description: "Evaluación inmediata con mínimos requisitos.",
+      icon: "FileText",
     },
     {
-      title: "Ejecución",
-      description: "Implementamos las soluciones con los más altos estándares de calidad.",
-      icon: "Hammer",
+      title: "Aprobación y Entrega",
+      description: "Firmas, recibes tu producto y empiezas a disfrutar.",
+      icon: "CheckCircle",
     },
     {
-      title: "Optimización",
-      description: "Monitoreamos y mejoramos continuamente para asegurar resultados.",
-      icon: "TrendingUp",
+      title: "Soporte Continuo",
+      description: "Estamos contigo para cualquier consulta o garantía.",
+      icon: "Headset",
     },
   ],
   pricing: [
     {
-      name: "Básico",
-      price: "€499",
-      description: "Perfecto para pequeños negocios que están empezando.",
-      features: ["Diseño Web Básico", "3 Páginas", "Contacto por Email", "SEO Básico"],
-      cta: "Empezar",
+      name: "Contado",
+      price: "Mejor Precio",
+      description: "Obtén descuentos especiales por pagos en efectivo o transferencia.",
+      features: ["Descuento Inmediato", "Entrega Rápida", "Garantía Completa", "Sin intereses"],
+      cta: "Consultar",
       popular: false,
     },
     {
-      name: "Profesional",
-      price: "€999",
-      description: "La mejor opción para negocios en crecimiento.",
-      features: ["Diseño Premium", "Hasta 10 Páginas", "Soporte Prioritario", "SEO Avanzado", "Integración CMS"],
-      cta: "Elegir Profesional",
+      name: "Crédito Directo",
+      price: "Cuotas Bajas",
+      description: "Plan de pagos semanal o mensual ajustado a tu presupuesto.",
+      features: ["Sin entrada*", "Aprobación Rápida", "Pagos Flexibles", "Mínimos Requisitos"],
+      cta: "Solicitar",
       popular: true,
     },
     {
-      name: "Empresarial",
-      price: "Consultar",
-      description: "Soluciones a medida para grandes organizaciones.",
-      features: ["Desarrollo a Medida", "Páginas Ilimitadas", "Soporte 24/7", "Auditoría SEO Mensual", "E-commerce"],
-      cta: "Contactar",
+      name: "Tarjeta de Crédito",
+      price: "Diferido",
+      description: "Aceptamos todas las tarjetas de crédito.",
+      features: ["Hasta 24 meses", "Sin entrada", "Acumula Puntos", "Pagos Corrientes"],
+      cta: "Pagar",
       popular: false,
     },
   ],
   value_proposition: {
-    description: "Nos diferenciamos por ofrecer los mejores electrodomésticos importados, con precios competitivos y un servicio que prioriza tu satisfacción.",
+    description: "En ElectroFlores nos diferenciamos por ofrecer facilidad, variedad y respaldo en cada compra.",
     items: [
-        { icon: "Zap", title: "Entrega Inmediata", description: "Recibe tus productos en tiempo récord. Contamos con stock disponible para envío inmediato." },
-        { icon: "Shield", title: "Garantía Oficial", description: "Todos nuestros productos cuentan con garantía directa de fábrica. Compra con total confianza." },
-        { icon: "Target", title: "Asesoría Experta", description: "¿Dudas? Nuestro equipo de expertos te ayudará a elegir el electrodoméstico perfecto para ti." },
-        { icon: "Smile", title: "Atención Post-Venta", description: "Estamos contigo incluso después de tu compra. Soporte técnico y atención dedicada." },
+        { icon: "Zap", title: "Entrega Inmediata", description: "Lleva tu producto a casa el mismo día." },
+        { icon: "Shield", title: "Garantía Real", description: "Respaldo directo en tienda y con fabricantes." },
+        { icon: "CreditCard", title: "Crédito Fácil", description: "Planes de financiamiento que sí puedes pagar." },
+        { icon: "Smile", title: "Atención Amable", description: "Te tratamos como familia, siempre buscando lo mejor para ti." },
     ]
   },
 
   team: [
     {
-      name: "Ana García",
-      role: "CEO & Fundadora",
-      bio: "Con más de 15 años de experiencia liderando equipos y estrategias digitales.",
+      name: "Equipo de Ventas",
+      role: "Asesores Comerciales",
+      bio: "Listos para ayudarte a encontrar lo que necesitas.",
       image: "/placeholder.webp",
       social: { twitter: "#", linkedin: "#" }
     },
-    {
-      name: "Carlos Ruiz",
-      role: "Director Tecnológico",
-      bio: "Apasionado por la innovación y la arquitectura de software escalable.",
-      image: "/placeholder.webp",
-      social: { twitter: "#", linkedin: "#" }
-    },
-    {
-      name: "Laura Martínez",
-      role: "Directora de Diseño",
-      bio: "Creando experiencias visuales impactantes que conectan con los usuarios.",
-      image: "/placeholder.webp",
-      social: { twitter: "#", linkedin: "#" }
-    },
-    {
-      name: "David López",
-      role: "Lead Developer",
-      bio: "Experto en desarrollo full-stack y optimización de rendimiento.",
-      image: "/placeholder.webp",
-      social: { twitter: "#", linkedin: "#" }
-    }
+    // ... can add specific team members if known
   ],
 
   // UI Strings
@@ -366,8 +346,8 @@ export const siteConfig = {
       link_text: "Ver más",
     },
     categories: {
-      title: "Categorías que podrían interesarte",
-      link_text: "Ver todas las categorías",
+      title: "Todo lo que necesitas",
+      link_text: "Ver catálogo completo",
     },
     catalogo: {
         title: "Catálogo",
@@ -380,75 +360,69 @@ export const siteConfig = {
   pages: {
     about: {
         title: "Nosotros",
-        description: "Conoce nuestra historia, misión y el equipo detrás de nuestros servicios.",
+        description: "Conoce ElectroFlores, tu aliado en equipamiento para el hogar y transporte.",
     },
     contact: {
         title: "Contacto",
-        description: "Ponte en contacto con nosotros. Estamos aquí para responder tus preguntas.",
+        description: "Visítanos en nuestra sucursal o escríbenos.",
     },
     services: {
-        title: "Nuestros Servicios",
-        description: "Descubre cómo podemos ayudarte a potenciar tu negocio con nuestros servicios especializados.",
+        title: "Servicios y Crédito",
+        description: "Descubre nuestras facilidades de pago y garantías.",
     },
     catalogo: {
         title: "Catálogo",
-        description: "Explora nuestro catálogo de productos.",
+        description: "Electrodomésticos y Motocicletas a tu alcance.",
     }
   },
 
   // Component Specific Configs
   filter_sidebar: {
     title: "Filtros",
-    save_button: "Guardar",
-    clear_button: "Limpiar",
-    search_placeholder: "Buscar...",
+    save_button: "Aplicar",
+    clear_button: "Borrar",
+    search_placeholder: "Buscar marca o producto...",
     sections: {
         category: "Categoría",
         price: "Precio",
-        shipping: "Envío Global",
-        rating: "Calificación",
+        shipping: "Entrega",
+        rating: "Valoración",
     },
-    view_all: "Ver todo",
+    view_all: "Ver más",
     price_from: "Desde",
     price_to: "Hasta",
     rating_or_more: "o más",
     categories: [
-        { id: "apple", label: "Apple", count: 56 },
-        { id: "microsoft", label: "Microsoft", count: 45 },
-        { id: "logitech", label: "Logitech", count: 97 },
-        { id: "sony", label: "Sony", count: 234 },
-        { id: "asus", label: "Asus", count: 97 },
-        { id: "dell", label: "Dell", count: 56 },
-        { id: "msi", label: "MSI", count: 97 },
-        { id: "canon", label: "Canon", count: 49 },
-        { id: "benq", label: "BenQ", count: 23 },
-        { id: "razor", label: "Razor", count: 49 },
+        { id: "kitchen", label: "Cocina", count: 120 },
+        { id: "laundry", label: "Lavado", count: 45 },
+        { id: "refrigeration", label: "Refrigeración", count: 30 },
+        { id: "motorcycles", label: "Motos", count: 15 },
+        { id: "tv_audio", label: "TV y Audio", count: 50 },
     ],
     shipping_regions: [
-        { id: "na", label: "Norteamérica" },
-        { id: "sa", label: "Sudamérica" },
-        { id: "asia", label: "Asia" },
-        { id: "aus", label: "Australia" },
-        { id: "eur", label: "Europa" },
+        { id: "uio_norte", label: "Quito Norte" },
+        { id: "uio_sur", label: "Quito Sur" },
+        { id: "uio_centro", label: "Quito Centro" },
+        { id: "valles", label: "Valles" },
     ]
   },
 
   team_section: {
-      title: "Conoce al Equipo",
-      description: "Mentes creativas y técnicas trabajando juntas por tu éxito.",
+      title: "Nuestro Equipo",
+      description: "Comprometidos con brindarte la mejor experiencia de compra.",
   },
 
   pricing_section: {
-      popular_badge: "Más Popular",
-      per_project: "/proyecto",
+      popular_badge: "Recomendado",
+      per_project: "",
   },
 
   // Footer
   footer: {
-    links_title: "Enlaces",
-    contact_title: "Contacto",
-    hours_title: "Horario",
-    rights_text: "Todos los derechos reservados.",
+    links_title: "Navegación",
+    contact_title: "Visítanos",
+    hours_title: "Atención",
+    rights_text: "ElectroFlores. Todos los derechos reservados.",
   },
 
   // Contact Form

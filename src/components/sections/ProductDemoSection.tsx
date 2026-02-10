@@ -1,11 +1,12 @@
-"use client";
-
 import { ProductCard } from "@/components/product-card";
 import { siteConfig } from "@/config/site";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { getBestBuyProducts } from "@/data/bestbuy";
 
-export function ProductDemoSection() {
+export async function ProductDemoSection() {
+  const { products } = await getBestBuyProducts({ pageSize: 4 });
+
   return (
     <section className="bg-background">
       <div className="mx-auto max-w-7xl px-4 2xl:px-0">
@@ -22,14 +23,8 @@ export function ProductDemoSection() {
           </Link>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
-          {siteConfig.products.slice(0, 4).map((product) => (
-            <ProductCard
-              key={product.id}
-              product={product}
-              onAddToCart={(p) => alert(`Added ${p.name} to cart`)}
-              onQuickLook={(p) => alert(`Quick look for ${p.name}`)}
-              onToggleFavorite={(p) => alert(`Toggled favorite for ${p.name}`)}
-            />
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </div>

@@ -126,7 +126,7 @@ export function ProductCard({
 
   return (
     <Card className="rounded-lg border border-gray-200 bg-muted/60 p-6 shadow-sm dark:border-neutral-700">
-      <div className="h-56 w-full relative">
+      <div className="h-56 w-full relative bg-white rounded-lg">
         <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
           {/* Light Mode Image */}
           <img
@@ -237,7 +237,7 @@ export function ProductCard({
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white"
+          className="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white line-clamp-2"
         >
           {product.name}
         </a>

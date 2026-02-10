@@ -1,10 +1,9 @@
 import { ProductCard } from "@/components/product-card";
 import { FilterSidebar } from "@/components/catalog/FilterSidebar";
 import { siteConfig } from "@/config/site";
-
-const { products } = siteConfig;
-
 import { Suspense } from "react";
+import { getBestBuyProducts } from "@/data/bestbuy";
+import { CatalogPagination } from "@/components/catalog/CatalogPagination";
 
 export default async function CatalogoPage({
   searchParams,
@@ -26,13 +25,28 @@ export default async function CatalogoPage({
     typeof resolvedSearchParams.rating === "string"
       ? parseFloat(resolvedSearchParams.rating)
       : undefined;
+  const page =
+    typeof resolvedSearchParams.page === "string"
+      ? parseInt(resolvedSearchParams.page)
+      : 1;
+  // const category =
+  //   typeof resolvedSearchParams.category === "string"
+  //     ? resolvedSearchParams.category
+  //     : undefined;
+  // Note: category logic in sidebar uses IDs like "apple", but Best Buy needs category IDs.
+  // The sidebar needs to be updated to map these IDs to Best Buy IDs if we want category filtering to work with the API.
+  // For now, we'll pass the category param, buy getBestBuyProducts defaults to abcat0900000 if not provided or just a keyword.
+  // Actually, let's keep it simple for now and rely on the default category if none is valid,
+  // or pass the category if it matches Best Buy format.
+  // The user asked for "electrodomesticos" which is abcat0900000.
 
-  // Filter products
-  const filteredProducts = products.filter((product) => {
-    if (minPrice !== undefined && product.price < minPrice) return false;
-    if (maxPrice !== undefined && product.price > maxPrice) return false;
-    if (rating !== undefined && product.rating < rating) return false;
-    return true;
+  // Fetch Best Buy products with filters
+  const { products, currentPage, totalPages } = await getBestBuyProducts({
+    page,
+    minPrice,
+    maxPrice,
+    rating,
+    // category: category // TODO: Map local category IDs to Best Buy IDs
   });
 
   return (
@@ -56,12 +70,18 @@ export default async function CatalogoPage({
           </Suspense>
 
           <div className="flex-1">
-            {filteredProducts.length > 0 ? (
-              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                {filteredProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
-                ))}
-              </div>
+            {products.length > 0 ? (
+              <>
+                <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                  {products.map((product) => (
+                    <ProductCard key={product.id} product={product} />
+                  ))}
+                </div>
+                <CatalogPagination
+                  currentPage={currentPage}
+                  totalPages={totalPages}
+                />
+              </>
             ) : (
               <div className="flex h-64 flex-col items-center justify-center rounded-lg border border-dashed border-gray-300 bg-white p-12 text-center dark:border-gray-700 dark:bg-gray-800">
                 <svg
