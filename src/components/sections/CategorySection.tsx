@@ -11,13 +11,13 @@ export function CategorySection() {
       <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
         <div className="mb-4 flex flex-col md:flex-row md:items-center justify-between gap-4 md:mb-8">
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">
-            Categorías que podrían interesarte
+            {siteConfig.ui.categories.title}
           </h2>
           <Link
             href="/catalogo"
             className="flex gap-2 items-center text-base font-medium text-primary-700 hover:underline dark:text-primary-500"
           >
-            Ver todas las categorías
+            {siteConfig.ui.categories.link_text}
             <ArrowRight />
           </Link>
         </div>

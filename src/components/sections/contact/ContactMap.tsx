@@ -54,7 +54,7 @@ export function ContactMap() {
                 rel="noopener noreferrer"
                 className="text-primary hover:underline font-medium flex items-center gap-1"
               >
-                Cómo llegar ↗
+                {siteConfig.ui.how_to_get_there}
               </a>
             </div>
           </div>

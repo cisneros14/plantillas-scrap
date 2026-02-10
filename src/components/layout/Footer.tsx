@@ -51,7 +51,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-semibold">Enlaces</h3>
+            <h3 className="mb-4 text-sm font-semibold">
+              {siteConfig.footer.links_title}
+            </h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               {siteConfig.nav_items.map((item) => (
                 <li key={item.href}>
@@ -64,7 +66,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-semibold">Contacto</h3>
+            <h3 className="mb-4 text-sm font-semibold">
+              {siteConfig.footer.contact_title}
+            </h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>{siteConfig.business.address}</li>
               <li>
@@ -87,7 +91,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-semibold">Horario</h3>
+            <h3 className="mb-4 text-sm font-semibold">
+              {siteConfig.footer.hours_title}
+            </h3>
             <p className="text-sm text-muted-foreground">
               {siteConfig.business.operating_hours}
             </p>
@@ -98,8 +104,8 @@ export function Footer() {
 
         <div className="text-center text-sm text-muted-foreground">
           <p>
-            &copy; {new Date().getFullYear()} {siteConfig.business.name}. Todos
-            los derechos reservados.
+            &copy; {new Date().getFullYear()} {siteConfig.business.name}.{" "}
+            {siteConfig.footer.rights_text}
           </p>
         </div>
       </div>

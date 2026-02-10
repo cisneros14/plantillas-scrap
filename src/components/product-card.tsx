@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 
 interface ProductFeature {
   label: string;
-  iconType: "fast-delivery" | "best-price" | "best-seller" | "default";
+  iconType: string;
 }
 
 export interface Product {
@@ -48,7 +48,7 @@ const StarIcon = () => (
   </svg>
 );
 
-const FeatureIcon = ({ type }: { type: ProductFeature["iconType"] }) => {
+const FeatureIcon = ({ type }: { type: string }) => {
   switch (type) {
     case "fast-delivery":
       return (
@@ -162,7 +162,9 @@ export function ProductCard({
               data-tooltip-target={`tooltip-quick-look-${product.id}`}
               className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             >
-              <span className="sr-only">Vista rápida</span>
+              <span className="sr-only">
+                {siteConfig.product_card.quick_look}
+              </span>
               <svg
                 className="h-5 w-5"
                 aria-hidden="true"
@@ -190,7 +192,7 @@ export function ProductCard({
               className="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
               data-popper-placement="top"
             >
-              Vista rápida
+              {siteConfig.product_card.quick_look}
               <div className="tooltip-arrow" data-popper-arrow=""></div>
             </div>
 
@@ -200,7 +202,9 @@ export function ProductCard({
               data-tooltip-target={`tooltip-add-to-favorites-${product.id}`}
               className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             >
-              <span className="sr-only">Añadir a favoritos</span>
+              <span className="sr-only">
+                {siteConfig.product_card.add_to_favorites}
+              </span>
               <svg
                 className="h-5 w-5"
                 aria-hidden="true"
@@ -223,7 +227,7 @@ export function ProductCard({
               className="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
               data-popper-placement="top"
             >
-              Añadir a favoritos
+              {siteConfig.product_card.add_to_favorites}
               <div className="tooltip-arrow" data-popper-arrow=""></div>
             </div>
           </div>
@@ -300,7 +304,7 @@ export function ProductCard({
                   d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
                 />
               </svg>
-              Comprar
+              {siteConfig.product_card.buy_button}
             </a>
           </Button>
         </div>

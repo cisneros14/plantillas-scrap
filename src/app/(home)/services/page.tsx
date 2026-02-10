@@ -2,10 +2,11 @@ import { ServicesHero } from "@/components/sections/services/ServicesHero";
 import dynamic from "next/dynamic";
 import { Metadata } from "next";
 
+import { siteConfig } from "@/config/site";
+
 export const metadata: Metadata = {
-  title: "Nuestros Servicios",
-  description:
-    "Descubre cómo podemos ayudarte a potenciar tu negocio con nuestros servicios especializados.",
+  title: siteConfig.pages.services.title,
+  description: siteConfig.pages.services.description,
 };
 
 // Dynamic imports for optimized loading

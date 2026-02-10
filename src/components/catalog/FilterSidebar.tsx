@@ -1,5 +1,5 @@
 "use client";
-
+import { siteConfig } from "@/config/site";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Search, Star } from "lucide-react";
@@ -11,42 +11,33 @@ import {
 } from "@/components/ui/accordion";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 
-const categories = [
-  { id: "apple", label: "Apple", count: 56 },
-  { id: "microsoft", label: "Microsoft", count: 45 },
-  { id: "logitech", label: "Logitech", count: 97 },
-  { id: "sony", label: "Sony", count: 234 },
-  { id: "asus", label: "Asus", count: 97 },
-  { id: "dell", label: "Dell", count: 56 },
-  { id: "msi", label: "MSI", count: 97 },
-  { id: "canon", label: "Canon", count: 49 },
-  { id: "benq", label: "BenQ", count: 23 },
-  { id: "razor", label: "Razor", count: 49 },
-];
+const categories = siteConfig.filter_sidebar.categories;
 
-const shippingRegions = [
-  { id: "na", label: "Norteamérica" },
-  { id: "sa", label: "Sudamérica" },
-  { id: "asia", label: "Asia" },
-  { id: "aus", label: "Australia" },
-  { id: "eur", label: "Europa" },
-];
+const shippingRegions = siteConfig.filter_sidebar.shipping_regions;
 
 export function FilterSidebar() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
   // State
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [rating, setRating] = useState<string>("");
-  const [minPrice, setMinPrice] = useState("");
-  const [maxPrice, setMaxPrice] = useState("");
-  const [shipping, setShipping] = useState<string[]>([]);
+  // Initialize state directly from searchParams to avoid sync warnings
+  const [selectedCategories, setSelectedCategories] = useState<string[]>(
+    searchParams.getAll("category"),
+  );
+  const [rating, setRating] = useState<string>(
+    searchParams.get("rating") || "",
+  );
+  const [minPrice, setMinPrice] = useState(searchParams.get("minPrice") || "");
+  const [maxPrice, setMaxPrice] = useState(searchParams.get("maxPrice") || "");
+  const [shipping, setShipping] = useState<string[]>(
+    searchParams.getAll("shipping"),
+  );
 
   // Sync with URL
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     setSelectedCategories(searchParams.getAll("category"));
     setRating(searchParams.get("rating") || "");
     setMinPrice(searchParams.get("minPrice") || "");
@@ -96,21 +87,21 @@ export function FilterSidebar() {
   };
 
   return (
-    <Card className="w-full lg:w-72 bg-muted/60 border-gray-200 dark:border-neutral-700 shadow-sm p-4 !h-fit">
+    <Card className="w-full lg:w-72 bg-muted/60 border-gray-200 dark:border-neutral-700 shadow-sm p-4 h-fit!">
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
-          Filtros
+          {siteConfig.filter_sidebar.title}
         </h2>
         <div className="flex gap-2">
           <button className="text-sm font-medium text-primary hover:text-primary/80">
-            Guardar
+            {siteConfig.filter_sidebar.save_button}
           </button>
           <button
             onClick={clearAll}
             className="text-sm font-medium text-primary hover:text-primary/80"
           >
-            Limpiar
+            {siteConfig.filter_sidebar.clear_button}
           </button>
         </div>
       </div>
@@ -119,7 +110,7 @@ export function FilterSidebar() {
       <div className="relative">
         <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
         <Input
-          placeholder="Buscar..."
+          placeholder={siteConfig.filter_sidebar.search_placeholder}
           className="pl-9 bg-background border-input"
         />
       </div>
@@ -128,7 +119,7 @@ export function FilterSidebar() {
         {/* Category */}
         <AccordionItem value="category" className="border-border">
           <AccordionTrigger className="text-gray-900 dark:text-gray-200 hover:text-primary hover:no-underline">
-            Categoría
+            {siteConfig.filter_sidebar.sections.category}
           </AccordionTrigger>
           <AccordionContent>
             <div className="space-y-2 max-h-60 overflow-y-auto pr-2 custom-scrollbar">
@@ -153,7 +144,7 @@ export function FilterSidebar() {
                 </div>
               ))}
               <button className="text-sm text-primary hover:text-primary/80 mt-2 font-medium">
-                Ver todo
+                {siteConfig.filter_sidebar.view_all}
               </button>
             </div>
           </AccordionContent>
@@ -162,7 +153,7 @@ export function FilterSidebar() {
         {/* Price */}
         <AccordionItem value="price" className="border-border">
           <AccordionTrigger className="text-gray-900 dark:text-gray-200 hover:text-primary hover:no-underline">
-            Precio
+            {siteConfig.filter_sidebar.sections.price}
           </AccordionTrigger>
           <AccordionContent>
             <div className="flex gap-4">
@@ -181,7 +172,9 @@ export function FilterSidebar() {
                   }}
                   className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                 >
-                  <option value="">Desde</option>
+                  <option value="">
+                    {siteConfig.filter_sidebar.price_from}
+                  </option>
                   <option value="100">$100</option>
                   <option value="500">$500</option>
                   <option value="1000">$1000</option>
@@ -202,7 +195,7 @@ export function FilterSidebar() {
                   }}
                   className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                 >
-                  <option value="">Hasta</option>
+                  <option value="">{siteConfig.filter_sidebar.price_to}</option>
                   <option value="500">$500</option>
                   <option value="1000">$1000</option>
                   <option value="5000">$5000</option>
@@ -215,7 +208,7 @@ export function FilterSidebar() {
         {/* Worldwide Shipping */}
         <AccordionItem value="shipping" className="border-border">
           <AccordionTrigger className="text-gray-900 dark:text-gray-200 hover:text-primary hover:no-underline">
-            Envío Global
+            {siteConfig.filter_sidebar.sections.shipping}
           </AccordionTrigger>
           <AccordionContent>
             <div className="space-y-3">
@@ -247,7 +240,7 @@ export function FilterSidebar() {
         {/* Rating */}
         <AccordionItem value="rating" className="border-none">
           <AccordionTrigger className="text-gray-900 dark:text-gray-200 hover:text-primary hover:no-underline">
-            Calificación
+            {siteConfig.filter_sidebar.sections.rating}
           </AccordionTrigger>
           <AccordionContent>
             <div className="space-y-2">
@@ -278,7 +271,7 @@ export function FilterSidebar() {
                       ))}
                     </div>
                     <span className="ml-2 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300">
-                      o más
+                      {siteConfig.filter_sidebar.rating_or_more}
                     </span>
                   </label>
                 </div>

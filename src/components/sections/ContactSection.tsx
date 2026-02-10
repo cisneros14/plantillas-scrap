@@ -64,8 +64,8 @@ export function ContactSection() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     // In a real app, you would send this to your API
     console.log(values);
-    toast.success("Mensaje enviado correctamente", {
-      description: "Nos pondremos en contacto contigo pronto.",
+    toast.success(siteConfig.contact_form.success_message, {
+      description: siteConfig.contact_form.success_description,
     });
     form.reset();
   }
@@ -178,9 +178,9 @@ export function ContactSection() {
           <div>
             <Card>
               <CardHeader>
-                <CardTitle>Envíanos un mensaje</CardTitle>
+                <CardTitle>{siteConfig.contact_form.title}</CardTitle>
                 <CardDescription>
-                  Completa el formulario y te responderemos lo antes posible.
+                  {siteConfig.contact_form.description}
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -194,9 +194,16 @@ export function ContactSection() {
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Nombre</FormLabel>
+                          <FormLabel>
+                            {siteConfig.contact_form.name_label}
+                          </FormLabel>
                           <FormControl>
-                            <Input placeholder="Tu nombre" {...field} />
+                            <Input
+                              placeholder={
+                                siteConfig.contact_form.name_placeholder
+                              }
+                              {...field}
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -207,10 +214,14 @@ export function ContactSection() {
                       name="identification"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Cédula / RUC</FormLabel>
+                          <FormLabel>
+                            {siteConfig.contact_form.id_label}
+                          </FormLabel>
                           <FormControl>
                             <Input
-                              placeholder="Ingresa tu número de identificación"
+                              placeholder={
+                                siteConfig.contact_form.id_placeholder
+                              }
                               {...field}
                               onChange={(e) => {
                                 const value = e.target.value.replace(
@@ -231,9 +242,16 @@ export function ContactSection() {
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Email</FormLabel>
+                          <FormLabel>
+                            {siteConfig.contact_form.email_label}
+                          </FormLabel>
                           <FormControl>
-                            <Input placeholder="tu@email.com" {...field} />
+                            <Input
+                              placeholder={
+                                siteConfig.contact_form.email_placeholder
+                              }
+                              {...field}
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -244,10 +262,14 @@ export function ContactSection() {
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Mensaje</FormLabel>
+                          <FormLabel>
+                            {siteConfig.contact_form.message_label}
+                          </FormLabel>
                           <FormControl>
                             <Textarea
-                              placeholder="¿En qué podemos ayudarte?"
+                              placeholder={
+                                siteConfig.contact_form.message_placeholder
+                              }
                               className="min-h-[120px]"
                               {...field}
                             />
@@ -257,7 +279,7 @@ export function ContactSection() {
                       )}
                     />
                     <Button type="submit" className="w-full">
-                      Enviar Mensaje
+                      {siteConfig.contact_form.submit_button}
                     </Button>
                   </form>
                 </Form>

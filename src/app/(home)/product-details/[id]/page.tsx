@@ -1,4 +1,6 @@
-import { products } from "@/data/products";
+import { siteConfig } from "@/config/site";
+
+const { products } = siteConfig;
 import { notFound } from "next/navigation";
 import ProductContent from "./product-content";
 

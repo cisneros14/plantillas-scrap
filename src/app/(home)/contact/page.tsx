@@ -3,10 +3,11 @@ import { Metadata } from "next";
 
 import { constructMetadata } from "@/lib/seo";
 
+import { siteConfig } from "@/config/site";
+
 export const metadata: Metadata = constructMetadata({
-  title: "Contacto",
-  description:
-    "Ponte en contacto con nosotros. Estamos aquí para responder tus preguntas.",
+  title: siteConfig.pages.contact.title,
+  description: siteConfig.pages.contact.description,
 });
 
 // Reuse the exact same section from the home page

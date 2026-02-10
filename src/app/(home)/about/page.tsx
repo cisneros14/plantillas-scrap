@@ -2,10 +2,11 @@ import { AboutHero } from "@/components/sections/about/AboutHero";
 import dynamic from "next/dynamic";
 import { Metadata } from "next";
 
+import { siteConfig } from "@/config/site";
+
 export const metadata: Metadata = {
-  title: "Nosotros",
-  description:
-    "Conoce nuestra historia, misión y el equipo detrás de nuestros servicios.",
+  title: siteConfig.pages.about.title,
+  description: siteConfig.pages.about.description,
 };
 
 // Dynamic imports for optimized loading
@@ -28,7 +29,6 @@ const ValuesSection = dynamic(
     loading: () => <div className="h-96 w-full animate-pulse bg-muted/20" />,
   },
 );
-
 
 const TestimonialsSection = dynamic(
   () =>

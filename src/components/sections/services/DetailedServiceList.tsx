@@ -40,7 +40,7 @@ export function DetailedServiceList() {
                     variant="ghost"
                     className="group/btn p-0 hover:bg-transparent text-primary"
                   >
-                    Más información
+                    {siteConfig.ui.more_info}
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                   </Button>
                 </CardContent>

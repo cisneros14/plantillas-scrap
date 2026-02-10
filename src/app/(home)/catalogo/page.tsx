@@ -1,6 +1,8 @@
 import { ProductCard } from "@/components/product-card";
 import { FilterSidebar } from "@/components/catalog/FilterSidebar";
-import { products } from "@/data/products";
+import { siteConfig } from "@/config/site";
+
+const { products } = siteConfig;
 
 import { Suspense } from "react";
 
@@ -39,7 +41,7 @@ export default async function CatalogoPage({
         <div className="mb-4 items-end justify-between space-y-4 sm:flex sm:space-y-0 md:mb-8">
           <div>
             <h2 className="mt-3 text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">
-              Catálogo
+              {siteConfig.ui.catalogo.title}
             </h2>
           </div>
         </div>
@@ -78,10 +80,10 @@ export default async function CatalogoPage({
                   />
                 </svg>
                 <h3 className="mb-1 text-lg font-medium text-gray-900 dark:text-white">
-                  No se encontraron productos
+                  {siteConfig.ui.catalogo.no_products_title}
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400">
-                  Intenta ajustar tus filtros para encontrar lo que buscas.
+                  {siteConfig.ui.catalogo.no_products_desc}
                 </p>
               </div>
             )}

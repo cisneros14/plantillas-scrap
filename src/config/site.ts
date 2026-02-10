@@ -355,4 +355,207 @@ export const siteConfig = {
       social: { twitter: "#", linkedin: "#" }
     }
   ],
+
+  // UI Strings
+  ui: {
+    view_more: "Ver más",
+    more_info: "Más información",
+    how_to_get_there: "Cómo llegar ↗",
+    featured_products: {
+      title: "Productos Destacados",
+      link_text: "Ver más",
+    },
+    categories: {
+      title: "Categorías que podrían interesarte",
+      link_text: "Ver todas las categorías",
+    },
+    catalogo: {
+        title: "Catálogo",
+        no_products_title: "No se encontraron productos",
+        no_products_desc: "Intenta ajustar tus filtros para encontrar lo que buscas.",
+    }
+  },
+
+  // Pages Metadata & Content
+  pages: {
+    about: {
+        title: "Nosotros",
+        description: "Conoce nuestra historia, misión y el equipo detrás de nuestros servicios.",
+    },
+    contact: {
+        title: "Contacto",
+        description: "Ponte en contacto con nosotros. Estamos aquí para responder tus preguntas.",
+    },
+    services: {
+        title: "Nuestros Servicios",
+        description: "Descubre cómo podemos ayudarte a potenciar tu negocio con nuestros servicios especializados.",
+    },
+    catalogo: {
+        title: "Catálogo",
+        description: "Explora nuestro catálogo de productos.",
+    }
+  },
+
+  // Component Specific Configs
+  filter_sidebar: {
+    title: "Filtros",
+    save_button: "Guardar",
+    clear_button: "Limpiar",
+    search_placeholder: "Buscar...",
+    sections: {
+        category: "Categoría",
+        price: "Precio",
+        shipping: "Envío Global",
+        rating: "Calificación",
+    },
+    view_all: "Ver todo",
+    price_from: "Desde",
+    price_to: "Hasta",
+    rating_or_more: "o más",
+    categories: [
+        { id: "apple", label: "Apple", count: 56 },
+        { id: "microsoft", label: "Microsoft", count: 45 },
+        { id: "logitech", label: "Logitech", count: 97 },
+        { id: "sony", label: "Sony", count: 234 },
+        { id: "asus", label: "Asus", count: 97 },
+        { id: "dell", label: "Dell", count: 56 },
+        { id: "msi", label: "MSI", count: 97 },
+        { id: "canon", label: "Canon", count: 49 },
+        { id: "benq", label: "BenQ", count: 23 },
+        { id: "razor", label: "Razor", count: 49 },
+    ],
+    shipping_regions: [
+        { id: "na", label: "Norteamérica" },
+        { id: "sa", label: "Sudamérica" },
+        { id: "asia", label: "Asia" },
+        { id: "aus", label: "Australia" },
+        { id: "eur", label: "Europa" },
+    ]
+  },
+
+  team_section: {
+      title: "Conoce al Equipo",
+      description: "Mentes creativas y técnicas trabajando juntas por tu éxito.",
+  },
+
+  pricing_section: {
+      popular_badge: "Más Popular",
+      per_project: "/proyecto",
+  },
+
+  // Footer
+  footer: {
+    links_title: "Enlaces",
+    contact_title: "Contacto",
+    hours_title: "Horario",
+    rights_text: "Todos los derechos reservados.",
+  },
+
+  // Contact Form
+  contact_form: {
+    title: "Envíanos un mensaje",
+    description: "Completa el formulario y te responderemos lo antes posible.",
+    name_label: "Nombre",
+    name_placeholder: "Tu nombre",
+    id_label: "Cédula / RUC",
+    id_placeholder: "Ingresa tu número de identificación",
+    email_label: "Email",
+    email_placeholder: "tu@email.com",
+    message_label: "Mensaje",
+    message_placeholder: "¿En qué podemos ayudarte?",
+    submit_button: "Enviar Mensaje",
+    success_message: "Mensaje enviado correctamente",
+    success_description: "Nos pondremos en contacto contigo pronto.",
+  },
+
+  // Product Card
+  product_card: {
+    quick_look: "Vista rápida",
+    add_to_favorites: "Añadir a favoritos",
+    buy_button: "Comprar",
+  },
+  
+  // Products Data
+  products: [
+      {
+        id: "9",
+        name: "Ninja Foodi Smart XL Parrilla 4 en 1 para interiores",
+        price: 249.99,
+        rating: 4.8,
+        reviewsCount: 156,
+        imageLight: "/ninjaProductos/foodi-smart.png",
+        imageDark: "/ninjaProductos/foodi-smart.png",
+        discountBadge: "New Arrival",
+        features: [
+          { label: "4-in-1", iconType: "default" },
+          { label: "Smart Cook", iconType: "best-seller" },
+        ],
+        images: ["/ninjaProductos/foodi-smart.png"],
+        description: "Asa, asa al aire, hornea y asa todas tus comidas y lados favoritos para toda tu familia con este aparato de encimera 4 en 1 reacondicionado. Cuenta con un sistema de cocción inteligente con 4 ajustes de proteínas inteligentes y 9 niveles de preparación personalizables.",
+      },
+      {
+        id: "10",
+        name: "Horno eléctrico con Air Fryer XL Pro 10 en 1 - Ninja Foodi",
+        price: 299.99,
+        rating: 4.9,
+        reviewsCount: 89,
+        imageLight: "/ninjaProductos/horno-electrico.png",
+        imageDark: "/ninjaProductos/horno-electrico.png",
+        discountBadge: "Best Seller",
+        features: [
+          { label: "10-in-1", iconType: "default" },
+          { label: "XL Capacity", iconType: "fast-delivery" },
+        ],
+        images: ["/ninjaProductos/horno-electrico.png"],
+        description: "El horno con freidora de aire Ninja Foodi XL Pro, fríe o asa con aire, hornea, tuesta, deshidrata y más. Hasta 10 veces más potente que un horno eléctrico de convección tradicional, con resultados 30% más crujientes.",
+      },
+      {
+        id: "11",
+        name: "Shark Steam Mop - Limpiador a Vapor",
+        price: 79.99,
+        rating: 4.6,
+        reviewsCount: 230,
+        imageLight: "/ninjaProductos/mop.png",
+        imageDark: "/ninjaProductos/mop.png",
+        discountBadge: "Eco Friendly",
+        features: [
+          { label: "Steam Power", iconType: "default" },
+          { label: "Chemical Free", iconType: "best-price" },
+        ],
+        images: ["/ninjaProductos/mop.png"],
+        description: "Limpia sin esfuerzo con el poder del vapor. Con solo agua, corta rápidamente los desastres atascados, sin productos químicos y sin residuos. Diseñado pensando en la facilidad, el trapeador de vapor Shark es ligero y maniobrable.",
+      },
+      {
+        id: "12",
+        name: "Ninja Foodi Freidora de Aire 2 Cestas Independientes",
+        price: 179.99,
+        rating: 4.9,
+        reviewsCount: 412,
+        imageLight: "/ninjaProductos/horno.png",
+        imageDark: "/ninjaProductos/horno.png",
+        discountBadge: "DualZone",
+        features: [
+          { label: "2 Baskets", iconType: "default" },
+          { label: "DualZone", iconType: "fast-delivery" },
+        ],
+        images: ["/ninjaProductos/horno.png"],
+        description: "Como por arte de magia: crea un banquete para toda tu familia al preparar 2 comidas distintas en nuestra freidora. Esto es posible porque creamos la primera freidora de aire con 2 cestas independientes.",
+      },
+      {
+        id: "13",
+        name: "Olla de presión multiusos Tecnología Tender Crisp Ninja Foodi",
+        price: 199.99,
+        rating: 4.8,
+        reviewsCount: 320,
+        imageLight: "/ninjaProductos/olla.png",
+        imageDark: "/ninjaProductos/olla.png",
+        discountBadge: "All-in-One",
+        features: [
+          { label: "6-in-1", iconType: "default" },
+          { label: "TenderCrisp", iconType: "best-seller" },
+        ],
+        images: ["/ninjaProductos/olla.png"],
+        description: "Versátil en tu cocina y prepara lo que quieras en ella. Podrás tener hasta 6 diferentes aparatos en UNO SOLO, cocina múltiples platillos en cuestión de minutos. Con ella podrás: Cocinar a presión, Cocinar en modo lento, Freír, Dorar, Rostizar, Hornear.",
+      },
+  ],
 };

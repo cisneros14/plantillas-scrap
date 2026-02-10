@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { ScrollAnimation } from "@/components/ui/scroll-animation";
 import Hero from "@/components/hero";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { AboutSection } from "@/components/sections/AboutSection";
@@ -43,34 +44,57 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Static Shell: Immediate LCP */}
-      <Hero />
-      <CategorySection />
-      <ProductDemoSection />
-      <ValuePropositionSection />
+      <ScrollAnimation variant="fade">
+        <Hero />
+      </ScrollAnimation>
+
+      <ScrollAnimation variant="slideUp" delay={0.2}>
+        <CategorySection />
+      </ScrollAnimation>
+
+      <ScrollAnimation variant="slideUp">
+        <ProductDemoSection />
+      </ScrollAnimation>
+
+      <ScrollAnimation variant="fade">
+        <ValuePropositionSection />
+      </ScrollAnimation>
 
       {/* Streaming Content */}
       <Suspense fallback={<SectionSkeleton />}>
-        <ServicesSection />
+        <ScrollAnimation variant="slideUp">
+          <ServicesSection />
+        </ScrollAnimation>
       </Suspense>
 
       <Suspense fallback={<SectionSkeleton />}>
-        <CTASection />
+        <ScrollAnimation variant="slideUp">
+          <CTASection />
+        </ScrollAnimation>
       </Suspense>
 
       <Suspense fallback={<SectionSkeleton />}>
-        <AboutSection />
+        <ScrollAnimation variant="fade">
+          <AboutSection />
+        </ScrollAnimation>
       </Suspense>
 
       <Suspense fallback={<SectionSkeleton />}>
-        <TestimonialsSection />
+        <ScrollAnimation variant="slideUp">
+          <TestimonialsSection />
+        </ScrollAnimation>
       </Suspense>
 
       <Suspense fallback={<SectionSkeleton />}>
-        <FAQSection />
+        <ScrollAnimation variant="slideUp">
+          <FAQSection />
+        </ScrollAnimation>
       </Suspense>
 
       <Suspense fallback={<SectionSkeleton />}>
-        <ContactSection />
+        <ScrollAnimation variant="fade">
+          <ContactSection />
+        </ScrollAnimation>
       </Suspense>
     </div>
   );

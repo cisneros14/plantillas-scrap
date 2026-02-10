@@ -51,7 +51,7 @@ export function PricingSection() {
                 {plan.popular && (
                   <div className="absolute top-0 right-0 left-0 -mt-4 flex justify-center">
                     <span className="bg-primary text-primary-foreground text-sm font-medium px-4 py-1 rounded-full shadow-sm">
-                      Más Popular
+                      {siteConfig.pricing_section.popular_badge}
                     </span>
                   </div>
                 )}
@@ -63,7 +63,9 @@ export function PricingSection() {
                   <div className="mb-6">
                     <span className="text-4xl font-bold">{plan.price}</span>
                     {plan.price !== "Consultar" && (
-                      <span className="text-muted-foreground">/proyecto</span>
+                      <span className="text-muted-foreground">
+                        {siteConfig.pricing_section.per_project}
+                      </span>
                     )}
                   </div>
                   <ul className="space-y-3">
