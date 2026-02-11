@@ -36,8 +36,8 @@ export function ServicesSection() {
                 className="border border-gray-200 dark:border-neutral-700 dark:bg-neutral-900 shadow transition-shadow"
               >
                 <CardHeader>
-                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    <IconComponent className="h-6 w-6" />
+                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 dark:bg-primary/70 text-primary">
+                    <IconComponent className="h-6 w-6 dark:text-white" />
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                 </CardHeader>

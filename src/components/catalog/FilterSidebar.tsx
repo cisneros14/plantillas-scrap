@@ -87,19 +87,19 @@ export function FilterSidebar() {
   };
 
   return (
-    <Card className="w-full lg:w-72 bg-muted/60 border-gray-200 dark:border-neutral-700 shadow-sm p-4 h-fit!">
+    <Card className="w-full lg:w-72 bg-white dark:bg-neutral-900 border-gray-200 dark:border-neutral-700 shadow-sm p-4 h-fit!">
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
           {siteConfig.filter_sidebar.title}
         </h2>
         <div className="flex gap-2">
-          <button className="text-sm font-medium text-primary hover:text-primary/80">
+          <button className="text-sm font-medium text-primary hover:text-primary/80 dark:text-white">
             {siteConfig.filter_sidebar.save_button}
           </button>
           <button
             onClick={clearAll}
-            className="text-sm font-medium text-primary hover:text-primary/80"
+            className="text-sm font-medium text-primary hover:text-primary/80 dark:text-white"
           >
             {siteConfig.filter_sidebar.clear_button}
           </button>

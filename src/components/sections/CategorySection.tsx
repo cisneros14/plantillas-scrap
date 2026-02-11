@@ -7,7 +7,7 @@ import { LucideIcon, ArrowRight } from "lucide-react";
 
 export function CategorySection() {
   return (
-    <section className="bg-muted/60">
+    <section className="bg-white dark:bg-background">
       <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
         <div className="mb-4 flex flex-col md:flex-row md:items-center justify-between gap-4 md:mb-8">
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">
@@ -35,7 +35,7 @@ export function CategorySection() {
                 className="group flex flex-col items-center justify-center rounded-lg border border-gray-200 bg-background dark:bg-neutral-900 px-4 py-8 text-center dark:border-neutral-700  dark:hover:bg-neutral-700"
               >
                 <span className="!text-primary">
-                  <IconComponent className="h-8 w-8 mb-4 text-primary" />
+                  <IconComponent className="h-8 w-8 mb-4 text-primary dark:text-white" />
                 </span>
                 <span className="text-lg font-bold text-gray-900 group-hover:text-primary-700 dark:text-white dark:group-hover:text-primary-500">
                   {category.name}

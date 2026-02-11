@@ -8,7 +8,7 @@ import {
 
 export function FAQSection() {
   return (
-    <section className="bg-background">
+    <section className="bg-white dark:bg-background">
       <div className="container px-4 mx-auto max-w-3xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">

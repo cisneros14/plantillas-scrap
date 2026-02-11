@@ -84,6 +84,12 @@ export default function Home() {
           <TestimonialsSection />
         </ScrollAnimation>
       </Suspense>
+     
+      <Suspense fallback={<SectionSkeleton />}>
+        <ScrollAnimation variant="fade">
+          <ContactSection />
+        </ScrollAnimation>
+      </Suspense>
 
       <Suspense fallback={<SectionSkeleton />}>
         <ScrollAnimation variant="slideUp">
@@ -91,11 +97,6 @@ export default function Home() {
         </ScrollAnimation>
       </Suspense>
 
-      <Suspense fallback={<SectionSkeleton />}>
-        <ScrollAnimation variant="fade">
-          <ContactSection />
-        </ScrollAnimation>
-      </Suspense>
     </div>
   );
 }

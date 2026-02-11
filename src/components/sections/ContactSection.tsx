@@ -71,11 +71,11 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contacto" className="bg-muted/50 py-16">
+    <section id="contacto" className="dark:bg-neutral-900 py-16">
       <div className="container px-4 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-8">
-            <Card>
+            <Card className="dark:bg-background">
               <CardHeader>
                 <CardTitle>Información de Contacto</CardTitle>
                 <CardDescription>
@@ -84,7 +84,7 @@ export function ContactSection() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <MapPin className="h-6 w-6 text-primary shrink-0" />
+                  <MapPin className="h-6 w-6 text-primary shrink-0 dark:text-white" />
                   <div>
                     <h3 className="font-medium">Dirección</h3>
                     <p className="text-muted-foreground">
@@ -94,7 +94,7 @@ export function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <Phone className="h-6 w-6 text-primary shrink-0" />
+                  <Phone className="h-6 w-6 text-primary shrink-0 dark:text-white" />
                   <div>
                     <h3 className="font-medium">Teléfono</h3>
                     <a
@@ -110,7 +110,7 @@ export function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <Mail className="h-6 w-6 text-primary shrink-0" />
+                  <Mail className="h-6 w-6 text-primary shrink-0 dark:text-white" />
                   <div>
                     <h3 className="font-medium">Email</h3>
                     <a
@@ -123,7 +123,7 @@ export function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <Clock className="h-6 w-6 text-primary shrink-0" />
+                  <Clock className="h-6 w-6 text-primary shrink-0 dark:text-white" />
                   <div>
                     <h3 className="font-medium">Horario</h3>
                     <p className="text-muted-foreground">
@@ -176,7 +176,7 @@ export function ContactSection() {
           </div>
 
           <div>
-            <Card>
+            <Card className="dark:bg-background">
               <CardHeader>
                 <CardTitle>{siteConfig.contact_form.title}</CardTitle>
                 <CardDescription>
@@ -199,6 +199,7 @@ export function ContactSection() {
                           </FormLabel>
                           <FormControl>
                             <Input
+                              className="dark:bg-neutral-900"
                               placeholder={
                                 siteConfig.contact_form.name_placeholder
                               }
@@ -219,6 +220,7 @@ export function ContactSection() {
                           </FormLabel>
                           <FormControl>
                             <Input
+                              className="dark:bg-neutral-900"
                               placeholder={
                                 siteConfig.contact_form.id_placeholder
                               }
@@ -247,6 +249,7 @@ export function ContactSection() {
                           </FormLabel>
                           <FormControl>
                             <Input
+                              className="dark:bg-neutral-900"
                               placeholder={
                                 siteConfig.contact_form.email_placeholder
                               }
@@ -267,10 +270,10 @@ export function ContactSection() {
                           </FormLabel>
                           <FormControl>
                             <Textarea
+                              className="dark:bg-neutral-900 min-h-[120px]"
                               placeholder={
                                 siteConfig.contact_form.message_placeholder
                               }
-                              className="min-h-[120px]"
                               {...field}
                             />
                           </FormControl>

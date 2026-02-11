@@ -9,7 +9,7 @@ const ContactDialog = dynamic(() =>
 
 export function AboutSection() {
   return (
-    <section id="nosotros" className="bg-background">
+    <section id="nosotros" className="bg-background dark:bg-neutral-900">
       <div className="container px-4 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
@@ -23,7 +23,7 @@ export function AboutSection() {
             <div className="space-y-4">
               {siteConfig.about.features.map((item) => (
                 <div key={item} className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary" />
+                  <CheckCircle2 className="h-5 w-5 text-primary dark:text-white" />
                   <span className="text-muted-foreground">{item}</span>
                 </div>
               ))}

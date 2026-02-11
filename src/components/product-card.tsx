@@ -125,7 +125,7 @@ export function ProductCard({
   const whatsappLink = createWhatsAppLink(product.name);
 
   return (
-    <Card className="rounded-lg border border-gray-200 bg-muted/60 p-6 shadow-sm dark:border-neutral-700">
+    <Card className="bg-white dark:bg-neutral-900 rounded-lg border border-gray-200 p-6 shadow-sm dark:border-neutral-700">
       <div className="h-56 w-full relative">
         <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
           {/* Light Mode Image */}
