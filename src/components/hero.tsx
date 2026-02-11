@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center bg-background overflow-hidden">
       <div className="max-w-7xl w-full mx-auto grid lg:grid-cols-2 gap-12 px-6 py-12 lg:py-20">
-        <div className="space-y-6 animate-in fade-in zoom-in duration-500">
+        <div className="space-y-4 flex flex-col justify-center animate-in fade-in zoom-in duration-500">
           <Badge
             variant="secondary"
             className="rounded-full py-1 border-border"
@@ -69,14 +69,14 @@ export default function Hero() {
             })}
           </div>
         </div>
-          <Image
-            width={1000}
-            height={1000}
-            src={siteConfig.branding.logo_hero}
-            alt="hero"
-            priority
-            className="w-full max-w-sm mx-auto lg:max-w-md !rounded-xl !overflow-hidden h-auto object-contain animate-in fade-in zoom-in duration-700 delay-100"
-          />
+        <Image
+          width={1000}
+          height={1000}
+          src={siteConfig.branding.logo_hero}
+          alt="hero"
+          priority
+          className="w-full m-auto p-4 md:p-6 bg-white max-w-md mx-auto lg:max-w-xl border shadow !rounded-xl !overflow-hidden h-auto object-contain animate-in fade-in zoom-in duration-700 delay-100"
+        />
       </div>
     </div>
   );

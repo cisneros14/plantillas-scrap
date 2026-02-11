@@ -22,7 +22,7 @@ export function CategorySection() {
           </Link>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {siteConfig.categories.map((category) => {
             const IconComponent =
               (Icons[category.icon as keyof typeof Icons] as LucideIcon) ||

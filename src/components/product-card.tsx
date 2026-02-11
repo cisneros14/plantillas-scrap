@@ -125,27 +125,32 @@ export function ProductCard({
   const whatsappLink = createWhatsAppLink(product.name);
 
   return (
-    <Card className="bg-white dark:bg-neutral-900 rounded-lg border border-gray-200 p-6 shadow-sm dark:border-neutral-700">
+    <Card className="bg-white dark:bg-neutral-900 rounded-lg border border-gray-200 p-6 shadow-sm dark:border-neutral-700 flex flex-col h-full">
+      {" "}
       <div className="h-56 w-full relative">
-        <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+        <a
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block h-full w-full"
+        >
           {/* Light Mode Image */}
           <img
-            className={`mx-auto h-full ${product.imageDark ? "dark:hidden" : ""}`}
+            className={`mx-auto h-full w-full object-contain ${product.imageDark ? "dark:hidden" : ""}`}
             src={product.imageLight}
             alt={product.name}
           />
           {/* Dark Mode Image */}
           {product.imageDark && (
             <img
-              className="mx-auto hidden h-full dark:block"
+              className="mx-auto hidden h-full w-full object-contain dark:block"
               src={product.imageDark}
               alt={product.name}
             />
           )}
         </a>
       </div>
-
-      <div className="pt-6">
+      <div className="pt-6 flex flex-col flex-1">
         <div className="mb-4 flex items-center justify-between gap-4">
           {product.discountBadge ? (
             <span className="me-2 rounded bg-primary-100 pe-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300">
@@ -270,7 +275,7 @@ export function ProductCard({
           </ul>
         )}
 
-        <div className="mt-4 flex items-center justify-between gap-4">
+        <div className="mt-auto flex items-center justify-between gap-4 pt-4">
           <p className="text-2xl font-extrabold leading-tight text-gray-900 dark:text-white">
             ${product.price}
           </p>

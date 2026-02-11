@@ -1,359 +1,387 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Tu Negocio Local",
-  description: "Electrodomésticos de alta gama al por mayor y menor, directo a tus manos.",
-  url: "https://riscasa.com",
-  ogImage: "https://riscasa.com/og.jpg",
+  name: "Power Drone Ec",
+  description: "Venta de drones y accesorios DJI. Servicio técnico confiable y transparente en Quito.",
+  url: "https://instagram.com/powerdronec",
+  ogImage: "https://instagram.com/powerdronec/og.jpg",
   author: {
-    name: "Riscasa",
-    url: "https://riscasa.com",
-    twitter: "@riscasa",
+    name: "Power Drone Ec",
+    url: "https://instagram.com/powerdronec",
+    twitter: "@powerdronec",
   },
-  keywords: ["electrodomésticos", "hogar", "cocina", "ninja", "shark", "ofertas"],
-  applicationName: "RiscasaStore",
-  creator: "Riscasa",
+  keywords: ["drones", "dji", "servicio técnico", "reparación drones", "quito", "accesorios drones", "mavic", "mini", "air"],
+  applicationName: "PowerDroneApp",
+  creator: "Power Drone Ec",
   language: "es",
   
   // Business Specifics for JSON-LD and Contact Info
   business: {
-    name: "Distribuidora RISCASA",
-    phone: "+593 99 719 6340",
-    whatsapp: "593997196340",
-    address: "Centro Comercial Polaris, Isidro Ayora Cueva, Guayaquil, Ecuador",
+    name: "Power Drone Ec",
+    phone: "+593 98 749 2302",
+    whatsapp: "593987492302",
+    address: "Av. 6 de Diciembre y La Niña, Centro Comercial Multicentro, Subsuelo, Local 2#, Quito, Ecuador, EC 170517",
     coordinates: {
-      lat: -2.1188,
-      long: -79.90135,
+      lat: -0.2057, // CC Multicentro approx
+      long: -78.4859,
     },
-    email: "ventas@riscasa.com",
-    operating_hours: "Lu-Sa 09:00-18:00",
+    email: "airdronec.sa@gmail.com",
+    operating_hours: "Lu-Vi 10:30-19:00, Sá 11:00-14:00",
   },
 
   // Navigation
   nav_items: [
     { label: "Inicio", href: "/" },
     { label: "Catálogo", href: "/catalogo" },
+    { label: "Servicios", href: "/services" },
     { label: "Nosotros", href: "/about" },
     { label: "Contacto", href: "/contact" },
   ],
 
   // Branding & Design System
   branding: {
-    primary: "#123679", 
-    primary_foreground: "0 0% 98%",
-    secondary: "#1e40af", // Added secondary color
-    secondary_foreground: "0 0% 98%",
+    primary: "#245f7d", // Cyan/Teal from logo
+    primary_foreground: "#ffffff",
+    secondary: "#77cdc4", // Darker Cyan
+    secondary_foreground: "#ffffff",
     font_sans: "font-sans",
-    logo_text: "RISCASA",
-    logo: "/logoR.png",
-    logo_hero: "/logoR2.png",
+    logo_text: "POWER DRONE EC",
+    logo: "/logoDrone222.png",
+    logo_hero: "/logoDrone22.png",
   },
 
   hero: {
     badge: {
-        text: "Just released v1.0.0",
-        href: "#",
+        text: "¡Tu experto en Drones DJI!",
+        href: "/services",
     },
-    title: "Importadores Directos de las Mejores Marcas para tu Hogar",
-    description: "¿Buscas calidad y buen precio? Somos la solución que estabas esperando. Electrodomésticos de alta gama al por mayor y menor, directo a tus manos.",
+    title: "Servicio Técnico Confiable y Venta de Drones DJI",
+    description: "Te ofrecemos un servicio transparente. Venta de drones, accesorios y asesoramiento personalizado GRATIS para que vueles con confianza.",
     actions: [
         { label: "Ver Productos", href: "/catalogo", variant: "default", icon: "ArrowUpRight" },
-        { label: "Cotizar al Por Mayor", href: "#", variant: "outline", icon: "CirclePlay" }
+        { label: "Cotizar Reparación", href: "/contact", variant: "outline", icon: "Wrench" }
     ]
   },
 
   about: {
     hero: {
-      badge: "Nuestra Historia",
-      title_prefix: "Impulsando el futuro de",
-      title_suffix: "Tu Negocio",
-      description: "Conoce a las personas y los valores que hacen posible nuestra misión de transformar ideas en realidades digitales exitosas."
+      badge: "Sobre Nosotros",
+      title_prefix: "Pasión por volar,",
+      title_suffix: "Compromiso contigo",
+      description: "Somos especialistas en la tecnología DJI, dedicados a ofrecerte las mejores soluciones aéreas y soporte técnico en Quito."
     },
     story: {
-      title: "Quiénes Somos",
-      description1: "creemos en el poder de la tecnología para resolver problemas reales. Fundada con la visión de ayudar a empresas locales a competir en un mundo global, hemos crecido gracias a la confianza de nuestros clientes.",
-      description2: "Nuestro enfoque combina creatividad, estrategia y excelencia técnica. No solo entregamos proyectos; construimos relaciones duraderas basadas en resultados tangibles.",
-      image: "/placeholder.webp",
+      title: "Nuestra Historia",
+      description1: "Power Drone Ec nace de la necesidad de contar con un servicio técnico especializado y confiable para drones en Ecuador.",
+      description2: "Nos hemos consolidado como un referente en el mercado gracias a nuestra transparencia, honestidad y la calidad de nuestro trabajo garantizado.",
+      image: "/acercaDe.jpg",
       features: [
-        "Innovación constante",
-        "Transparencia total",
-        "Compromiso con la calidad",
-        "Resultados medibles",
+        "Transparencia total en reparaciones",
+        "Diagnósticos precisos",
+        "Repuestos originales",
+        "Atención personalizada",
       ]
     },
-    values: {
-      title: "Nuestros Pilares",
-      description: "Lo que nos impulsa cada día a ser mejores.",
-      items: [
-         { title: "Misión", description: "Empoderar a empresas de todos los tamaños con herramientas digitales accesibles, potentes y personalizadas.", icon: "Target" },
-         { title: "Visión", description: "Ser el referente líder en transformación digital, reconocidos por nuestra innovación y calidad humana.", icon: "Eye" },
-         { title: "Valores", description: "Integridad, pasión por la excelencia, aprendizaje continuo y un profundo respeto por nuestros clientes y equipo.", icon: "Heart" }
-      ]
-    },
-    description: "Somos importadores directos de las mejores marcas de electrodomésticos. Nuestra misión es llevar tecnología y confort a tu hogar con productos originales y garantía garantizada.",
+    description: "En Power Drone Ec, no solo reparamos drones, devolvemos la alegría de volar. Visítanos en el CC Multicentro.",
     features: [
-        "Productos 100% Originales",
-        "Garantía Directa de Fábrica",
-        "Envíos Seguros a Todo el País",
-        "Los Mejores Precios del Mercado",
+        "Diagnóstico Gratuito",
+        "Garantía en Reparaciones",
+        "Asesoría en Compra",
+        "Capacitación Básica",
     ],
-    image: "/placeholder.webp",
+    image: "/acercaDe.jpg",
+    values: {
+        title: "Nuestros Valores",
+        description: "Lo que nos define como tu mejor aliado en el aire.",
+        items: [
+           { title: "Confianza", description: "Diagnósticos honestos y claros desde el primer momento.", icon: "ShieldCheck" },
+           { title: "Calidad", description: "Usamos repuestos de alta calidad y técnicos certificados.", icon: "Star" },
+           { title: "Compromiso", description: "Tu satisfacción y el vuelo seguro de tu equipo son nuestra prioridad.", icon: "Heart" }
+        ]
+    }
   },
 
   contact_page: {
     hero: {
       badge: "Contáctanos",
-      title_prefix: "Estamos aquí para",
+      title_prefix: "Estamos listos para",
       title_suffix: "Ayudarte",
-      description: "¿Tienes alguna pregunta o necesitas más información? Envíanos un mensaje o visítanos."
+      description: "Visítanos en nuestro local o escríbenos. Estamos ubicados en el Centro Comercial Multicentro, Subsuelo, Local 2#."
     }
   },
 
   services_page: {
      hero: {
        badge: "Nuestros Servicios",
-       title_prefix: "Soluciones integrales para",
-       title_suffix: "Tu Crecimiento",
-       description: "Explora nuestra gama completa de servicios diseñados para potenciar cada aspecto de tu negocio, desde la estrategia hasta la ejecución."
+       title_prefix: "Soluciones Integrales para",
+       title_suffix: "Tu Drone",
+       description: "Desde mantenimiento preventivo hasta reparaciones complejas y venta de equipos nuevos."
      },
      process: {
-       title: "Nuestro Proceso de Trabajo",
-       description: "Un enfoque estructurado y transparente para garantizar el éxito de tu proyecto."
+       title: "Nuestro Proceso de Servicio",
+       description: "Simple, transparente y eficiente."
      },
      pricing: {
-       title: "Planes y Precios",
-       description: "Elige el plan que mejor se adapte a tus necesidades. Sin costos ocultos."
+       title: "Planes de Mantenimiento",
+       description: "Mantén tu drone en perfecto estado con nuestros paquetes."
      }
   },
 
   cta_section: {
-     title: "¿Listo para equipar tu hogar con lo mejor?",
-     description: "Descubre la calidad, tecnología y diseño que solo nosotros podemos ofrecerte. Productos exclusivos al mejor precio.",
-     button_primary: "Llamar ahora",
+     title: "¿Tu drone necesita reparación?",
+     description: "Trae tu equipo para un diagnóstico y asesoramiento personalizado GRATIS. ¡Volamos contigo!",
+     button_primary: "Contactar Ahora",
   },
 
   auth: {
-     login: {
        title: "Iniciar sesión",
-       description: "Ingresa tu correo electrónico para acceder a tu cuenta",
+       description: "Accede a tu cuenta de Power Drone Ec",
        email_label: "Correo electrónico",
        password_label: "Contraseña",
        forgot_password: "¿Olvidaste tu contraseña?",
-       submit_button: "Ingresar",
-       google_button: "Ingresar con Google",
-       register_text: "¿No tienes una cuenta?",
-       register_link: "Regístrate"
-     }
+       sign_in_button: "Iniciar sesión",
   },
   
+
+  team_section: {
+    title: "Nuestro Equipo",
+    description: "Conoce a los expertos detrás de cada reparación y asesoría."
+  },
+
+  // Restored for CategorySection.tsx compatibility
   categories: [
+      {
+        id: "drones",
+        name: "Drones",
+        icon: "Camera",
+        href: "/catalogo?category=drones",
+      },
+      {
+        id: "accesorios",
+        name: "Accesorios",
+        icon: "Package",
+        href: "/catalogo?category=accesorios",
+      },
+      {
+        id: "baterias",
+        name: "Baterías",
+        icon: "Battery",
+        href: "/catalogo?category=baterias",
+      },
+      {
+        id: "repuestos",
+        name: "Repuestos",
+        icon: "Wrench",
+        href: "/catalogo?category=repuestos",
+      },
+      {
+        id: "servicios",
+        name: "Servicios",
+        icon: "Settings",
+        href: "/catalogo?category=servicios",
+      },
+  ],
+
+  // Restored for ServicesSection.tsx compatibility
+  services: [
     {
-      id: "kitchen",
-      name: "Cocina",
-      icon: "Utensils",
-      href: "/catalogo?category=cocina",
+      title: "Servicio Técnico",
+      description: "Reparación especializada de drones DJI con garantía.",
+      icon: "Wrench",
     },
     {
-      id: "air-fryers",
-      name: "Freidoras de Aire",
-      icon: "Flame",
-      href: "/catalogo?category=freidoras",
+      title: "Venta de Equipos",
+      description: "Drones nuevos y accesorios originales 100% garantizados.",
+      icon: "ShoppingCart",
     },
     {
-      id: "cleaning",
-      name: "Limpieza",
-      icon: "Sparkles",
-      href: "/catalogo?category=limpieza",
+      title: "Asesoría Gratis",
+      description: "Te guiamos en la compra o reparación de tu equipo sin costo.",
+      icon: "MessageCircle",
     },
     {
-      id: "refrigeration",
-      name: "Refrigeración",
-      icon: "Snowflake",
-      href: "/catalogo?category=refrigeracion",
-    },
-    {
-      id: "climate",
-      name: "Calefacción y Ventilación",
-      icon: "Wind",
-      href: "/catalogo?category=climatizacion",
-    },
-    {
-      id: "small-appliances",
-      name: "Pequeños Electrodomésticos",
-      icon: "Coffee",
-      href: "/catalogo?category=pequenos",
-    },
-    {
-      id: "ovens",
-      name: "Hornos",
-      icon: "ChefHat",
-      href: "/catalogo?category=hornos",
-    },
-    {
-      id: "deals",
-      name: "Ofertas",
-      icon: "Tag",
-      href: "/catalogo?category=ofertas",
+      title: "Ubicación Céntrica",
+      description: "Encuéntranos fácilmente en el CC Multicentro, Quito.",
+      icon: "MapPin",
     },
   ],
 
-  // Social Links
-  social: {
-    facebook: "https://facebook.com",
-    instagram: "https://instagram.com",
-    twitter: "https://twitter.com",
-    linkedin: "https://linkedin.com",
-    whatsapp: "https://wa.me/593997196340",
+  catalog: {
+    categories: [
+      {
+        id: "drones",
+        name: "Drones",
+        icon: "Camera",
+        href: "/catalogo?category=drones",
+      },
+      {
+        id: "accesorios",
+        name: "Accesorios",
+        icon: "Package",
+        href: "/catalogo?category=accesorios",
+      },
+      {
+        id: "baterias",
+        name: "Baterías",
+        icon: "Battery",
+        href: "/catalogo?category=baterias",
+      },
+      {
+        id: "repuestos",
+        name: "Repuestos",
+        icon: "Wrench",
+        href: "/catalogo?category=repuestos",
+      },
+      {
+        id: "servicios",
+        name: "Servicios",
+        icon: "Settings",
+        href: "/catalogo?category=servicios",
+      },
+    ],
+    shippingRegions: [
+        { id: "quito", label: "Quito D.M." },
+        { id: "valles", label: "Cumbayá / Tumbaco" },
+        { id: "nacional", label: "Envíos Nacionales" },
+    ]
   },
 
-  // Content Sections (Maintaining existing data structure)
-  services: [
+  social: {
+    facebook: "https://facebook.com/powerdronec",
+    instagram: "https://www.instagram.com/powerdronec/",
+    tiktok: "https://www.tiktok.com/@powerdronec",
+    whatsapp: "https://wa.me/593987492302",
+    twitter: "https://twitter.com/powerdronec", // Placeholder to fix type error
+    linkedin: "https://linkedin.com", // Placeholder to fix type error
+  },
+
+  // Content Sections
+  highlights: [
     {
-      title: "Envíos a Todo el País",
-      description: "Llevamos tus productos a cualquier ciudad del país con total seguridad.",
-      icon: "Truck", 
+      title: "Servicio Técnico",
+      description: "Reparación especializada de drones DJI con garantía.",
+      icon: "Wrench", 
     },
     {
-      title: "Garantía Garantizada",
-      description: "Todos nuestros productos cuentan con garantía de fábrica para tu tranquilidad.",
-      icon: "ShieldCheck",
+      title: "Venta de Equipos",
+      description: "Drones nuevos y accesorios originales 100% garantizados.",
+      icon: "ShoppingCart",
     },
     {
-      title: "Precios de Mayorista",
-      description: "Ofrecemos los mejores precios del mercado en ventas al por mayor y menor.",
-      icon: "DollarSign",
+      title: "Asesoría Gratis",
+      description: "Te guiamos en la compra o reparación de tu equipo sin costo.",
+      icon: "MessageCircle",
     },
     {
-      title: "Soporte Personalizado",
-      description: "Te asesoramos en tu compra para que elijas el producto ideal para ti.",
-      icon: "Headset",
+      title: "Ubicación Céntrica",
+      description: "Encuéntranos fácilmente en el CC Multicentro, Quito.",
+      icon: "MapPin",
     },
   ],
   testimonials: [
     {
-      name: "María García",
-      role: "CEO, TechStart",
-      content: "El servicio fue excepcional. Transformaron completamente nuestra presencia digital y los resultados fueron inmediatos.",
+      name: "Carlos M.",
+      role: "Fotógrafo Aéreo",
+      content: "Excelente servicio, repararon mi Mavic 3 en tiempo récord y quedó perfecto. 100% recomendados.",
       avatar: "/avatars/01.png",
     },
     {
-      name: "Carlos Rodríguez",
-      role: "Director, MarketingPro",
-      content: "Profesionales, rápidos y eficientes. La mejor inversión que hemos hecho para nuestro negocio este año.",
+      name: "Andrea V.",
+      role: "Aficionada",
+      content: "La asesoría para comprar mi primer drone fue genial. Me explicaron todo con paciencia.",
       avatar: "/avatars/02.png",
     },
     {
-      name: "Ana Martínez",
-      role: "Dueña, Boutique Local",
-      content: "Me ayudaron a entender qué necesitaba mi negocio y lo ejecutaron a la perfección. Totalmente recomendados.",
+      name: "Esteban R.",
+      role: "Cliente",
+      content: "Gente seria y transparente. Me mostraron el problema de mi drone y la solución fue económica.",
       avatar: "/avatars/03.png",
     },
   ],
   faq: [
     {
-      question: "¿Cuáles son sus horarios de atención?",
-      answer: "Nuestro horario de atención es de lunes a viernes de 9:00 a 18:00. Sin embargo, ofrecemos soporte de emergencia para clientes con planes premium.",
+      question: "¿Dónde están ubicados?",
+      answer: "Estamos en la Av. 6 de Diciembre y La Niña, Centro Comercial Multicentro, Subsuelo, Local 2#, Quito.",
     },
     {
-      question: "¿Ofrecen servicios personalizados?",
-      answer: "Sí, todos nuestros planes se adaptan a las necesidades específicas de cada cliente. Realizamos una consultoría inicial para entender tus requerimientos.",
+      question: "¿Cuál es el horario de atención?",
+      answer: "Lunes a Viernes: 10:30 a.m - 1:00 p.m y 1:30 p.m - 7:00 p.m. Sábados: 11:00 a.m - 2:00 p.m.",
     },
     {
-      question: "¿Cuál es el tiempo de entrega promedio?",
-      answer: "Depende del proyecto. Para sitios web corporativos, el tiempo promedio es de 2 a 3 semanas. Para proyectos más complejos, definimos un cronograma detallado.",
+      question: "¿El diagnóstico tiene costo?",
+      answer: "No, ofrecemos asesoramiento y diagnóstico personalizado GRATIS.",
     },
     {
-      question: "¿Ofrecen garantía de satisfacción?",
-      answer: "Absolutamente. Nos aseguramos de que estés 100% satisfecho con el resultado final antes de cerrar el proyecto.",
+      question: "¿Venden repuestos originales?",
+      answer: "Sí, todos nuestros repuestos y accesorios son originales y garantizados.",
     },
   ],
   process: [
     {
-      title: "Consulta Inicial",
-      description: "Nos reunimos para entender a fondo tus necesidades y objetivos comerciales.",
+      title: "Contáctanos",
+      description: "Escríbenos o visítanos con tu equipo.",
       icon: "MessageCircle",
     },
     {
-      title: "Estrategia",
-      description: "Diseñamos un plan de acción personalizado para tu negocio.",
-      icon: "Lightbulb",
+      title: "Diagnóstico",
+      description: "Revisamos tu drone y te damos un diagnóstico gratuito.",
+      icon: "Search",
     },
     {
-      title: "Ejecución",
-      description: "Implementamos las soluciones con los más altos estándares de calidad.",
-      icon: "Hammer",
+      title: "Propuesta",
+      description: "Te presentamos el presupuesto de reparación o venta.",
+      icon: "FileText",
     },
     {
-      title: "Optimización",
-      description: "Monitoreamos y mejoramos continuamente para asegurar resultados.",
-      icon: "TrendingUp",
+      title: "Solución",
+      description: "Reparamos tu equipo o te entregamos tu producto nuevo listo para volar.",
+      icon: "CheckCircle",
     },
   ],
   pricing: [
     {
-      name: "Básico",
-      price: "€499",
-      description: "Perfecto para pequeños negocios que están empezando.",
-      features: ["Diseño Web Básico", "3 Páginas", "Contacto por Email", "SEO Básico"],
-      cta: "Empezar",
+      name: "Mantenimiento Básico",
+      price: "Consultar",
+      description: "Limpieza general, calibración de sensores y actualización de firmware.",
+      features: ["Limpieza Externa", "Calibración IMU/Compass", "Actualización Firmware", "Prueba de Vuelo"],
+      cta: "Agendar Cita",
       popular: false,
     },
     {
-      name: "Profesional",
-      price: "€999",
-      description: "La mejor opción para negocios en crecimiento.",
-      features: ["Diseño Premium", "Hasta 10 Páginas", "Soporte Prioritario", "SEO Avanzado", "Integración CMS"],
-      cta: "Elegir Profesional",
+      name: "Mantenimiento Profundo",
+      price: "Consultar",
+      description: "Desarme completo, limpieza de motores y placas, lubricación.",
+      features: ["Limpieza Interna", "Revisión de Motores", "Cambio de Pasta Térmica", "Informe Técnico"],
+      cta: "Agendar Cita",
       popular: true,
     },
     {
-      name: "Empresarial",
-      price: "Consultar",
-      description: "Soluciones a medida para grandes organizaciones.",
-      features: ["Desarrollo a Medida", "Páginas Ilimitadas", "Soporte 24/7", "Auditoría SEO Mensual", "E-commerce"],
-      cta: "Contactar",
+      name: "Reparación de Gimbal",
+      price: "Cotizar",
+      description: "Reparación de cable flex, motores de gimbal y estabilización.",
+      features: ["Cambio de Flex", "Alineación", "Calibación", "Prueba de Estabilidad"],
+      cta: "Cotizar",
       popular: false,
     },
   ],
   value_proposition: {
-    description: "Nos diferenciamos por ofrecer los mejores electrodomésticos importados, con precios competitivos y un servicio que prioriza tu satisfacción.",
+    description: "En Power Drone Ec nos dedicamos a mantener tus equipos volando alto con seguridad y confianza.",
     items: [
-        { icon: "Zap", title: "Entrega Inmediata", description: "Recibe tus productos en tiempo récord. Contamos con stock disponible para envío inmediato." },
-        { icon: "Shield", title: "Garantía Oficial", description: "Todos nuestros productos cuentan con garantía directa de fábrica. Compra con total confianza." },
-        { icon: "Target", title: "Asesoría Experta", description: "¿Dudas? Nuestro equipo de expertos te ayudará a elegir el electrodoméstico perfecto para ti." },
-        { icon: "Smile", title: "Atención Post-Venta", description: "Estamos contigo incluso después de tu compra. Soporte técnico y atención dedicada." },
+        { icon: "Shield", title: "Garantía Real", description: "Todos nuestros trabajos y productos cuentan con garantía." },
+        { icon: "Clock", title: "Rapidez", description: "Entendemos que necesitas tu equipo operativo cuanto antes." },
+        { icon: "User", title: "Trato Personalizado", description: "Hablamos tu idioma y te explicamos cada detalle." },
+        { icon: "MapPin", title: "Ubicación Segura", description: "Local físico en centro comercial con parqueadero y seguridad." },
     ]
   },
 
   team: [
     {
-      name: "Ana García",
-      role: "CEO & Fundadora",
-      bio: "Con más de 15 años de experiencia liderando equipos y estrategias digitales.",
+      name: "Equipo Técnico",
+      role: "Especialistas DJI",
+      bio: "Personal capacitado para resolver cualquier inconveniente con tu drone.",
       image: "/placeholder.webp",
       social: { twitter: "#", linkedin: "#" }
     },
-    {
-      name: "Carlos Ruiz",
-      role: "Director Tecnológico",
-      bio: "Apasionado por la innovación y la arquitectura de software escalable.",
-      image: "/placeholder.webp",
-      social: { twitter: "#", linkedin: "#" }
-    },
-    {
-      name: "Laura Martínez",
-      role: "Directora de Diseño",
-      bio: "Creando experiencias visuales impactantes que conectan con los usuarios.",
-      image: "/placeholder.webp",
-      social: { twitter: "#", linkedin: "#" }
-    },
-    {
-      name: "David López",
-      role: "Lead Developer",
-      bio: "Experto en desarrollo full-stack y optimización de rendimiento.",
-      image: "/placeholder.webp",
-      social: { twitter: "#", linkedin: "#" }
-    }
   ],
 
   // UI Strings
@@ -362,50 +390,48 @@ export const siteConfig = {
     more_info: "Más información",
     how_to_get_there: "Cómo llegar ↗",
     featured_products: {
-      title: "Productos Destacados",
-      link_text: "Ver más",
+      title: "Drones y Accesorios Destacados",
+      link_text: "Ver catálogo completo",
     },
     categories: {
-      title: "Categorías que podrían interesarte",
-      link_text: "Ver todas las categorías",
+      title: "Nuestras Categorías",
+      link_text: "Ver todas",
     },
     catalogo: {
         title: "Catálogo",
         no_products_title: "No se encontraron productos",
-        no_products_desc: "Intenta ajustar tus filtros para encontrar lo que buscas.",
+        no_products_desc: "Intenta ajustar tus filtros o contáctanos para repuestos específicos.",
     }
   },
 
-  // Pages Metadata & Content
   pages: {
     about: {
-        title: "Nosotros",
-        description: "Conoce nuestra historia, misión y el equipo detrás de nuestros servicios.",
+        title: "Sobre Power Drone Ec",
+        description: "Tu socio confiable para el mundo de los drones.",
     },
     contact: {
         title: "Contacto",
-        description: "Ponte en contacto con nosotros. Estamos aquí para responder tus preguntas.",
+        description: "Estamos aquí para responder tus preguntas y ayudarte.",
     },
     services: {
         title: "Nuestros Servicios",
-        description: "Descubre cómo podemos ayudarte a potenciar tu negocio con nuestros servicios especializados.",
+        description: "Soluciones profesionales para tus equipos aéreos.",
     },
     catalogo: {
         title: "Catálogo",
-        description: "Explora nuestro catálogo de productos.",
+        description: "Encuentra el drone ideal y los accesorios que necesitas.",
     }
   },
 
-  // Component Specific Configs
   filter_sidebar: {
     title: "Filtros",
-    save_button: "Guardar",
+    save_button: "Filtrar",
     clear_button: "Limpiar",
     search_placeholder: "Buscar...",
     sections: {
         category: "Categoría",
         price: "Precio",
-        shipping: "Envío Global",
+        shipping: "Disponibilidad",
         rating: "Calificación",
     },
     view_all: "Ver todo",
@@ -413,149 +439,142 @@ export const siteConfig = {
     price_to: "Hasta",
     rating_or_more: "o más",
     categories: [
-        { id: "apple", label: "Apple", count: 56 },
-        { id: "microsoft", label: "Microsoft", count: 45 },
-        { id: "logitech", label: "Logitech", count: 97 },
-        { id: "sony", label: "Sony", count: 234 },
-        { id: "asus", label: "Asus", count: 97 },
-        { id: "dell", label: "Dell", count: 56 },
-        { id: "msi", label: "MSI", count: 97 },
-        { id: "canon", label: "Canon", count: 49 },
-        { id: "benq", label: "BenQ", count: 23 },
-        { id: "razor", label: "Razor", count: 49 },
+        { id: "drones", label: "Drones", count: 12 },
+        { id: "baterias", label: "Baterías", count: 8 },
+        { id: "helices", label: "Hélices", count: 15 },
+        { id: "estuches", label: "Estuches", count: 5 },
+        { id: "cargadores", label: "Cargadores", count: 7 },
     ],
     shipping_regions: [
-        { id: "na", label: "Norteamérica" },
-        { id: "sa", label: "Sudamérica" },
-        { id: "asia", label: "Asia" },
-        { id: "aus", label: "Australia" },
-        { id: "eur", label: "Europa" },
+        { id: "stock", label: "En Stock" },
+        { id: "pedido", label: "Bajo Pedido" },
     ]
   },
 
-  team_section: {
-      title: "Conoce al Equipo",
-      description: "Mentes creativas y técnicas trabajando juntas por tu éxito.",
+  intro: {
+      title: "Bienvenido a Power Drone Ec",
+      description: "Expertos en Drones DJI",
   },
 
   pricing_section: {
-      popular_badge: "Más Popular",
-      per_project: "/proyecto",
+      popular_badge: "Más Solicitado",
+      per_project: "",
   },
 
   // Footer
   footer: {
     links_title: "Enlaces",
-    contact_title: "Contacto",
+    contact_title: "Visítanos",
     hours_title: "Horario",
     rights_text: "Todos los derechos reservados.",
   },
 
   // Contact Form
   contact_form: {
-    title: "Envíanos un mensaje",
-    description: "Completa el formulario y te responderemos lo antes posible.",
+    title: "Escríbenos",
+    description: "Déjanos tu mensaje y te responderemos a la brevedad.",
     name_label: "Nombre",
     name_placeholder: "Tu nombre",
-    id_label: "Cédula / RUC",
-    id_placeholder: "Ingresa tu número de identificación",
+    id_label: "Teléfono",
+    id_placeholder: "099...",
     email_label: "Email",
     email_placeholder: "tu@email.com",
     message_label: "Mensaje",
-    message_placeholder: "¿En qué podemos ayudarte?",
+    message_placeholder: "Consulta sobre reparación, compra...",
     submit_button: "Enviar Mensaje",
-    success_message: "Mensaje enviado correctamente",
-    success_description: "Nos pondremos en contacto contigo pronto.",
+    success_message: "Mensaje enviado",
+    success_description: "Pronto nos pondremos en contacto.",
   },
 
   // Product Card
   product_card: {
-    quick_look: "Vista rápida",
-    add_to_favorites: "Añadir a favoritos",
-    buy_button: "Comprar",
+    quick_look: "Ver detalles",
+    add_to_favorites: "Favorito",
+    buy_button: "Cotizar / Comprar",
   },
   
-  // Products Data
+  // Products Data (Placeholders matched to new business)
   products: [
       {
-        id: "9",
-        name: "Ninja Foodi Smart XL Parrilla 4 en 1 para interiores",
-        price: 249.99,
+        id: "1",
+        name: "Control Remoto RC-N1",
+        price: 120.00,
         rating: 4.8,
-        reviewsCount: 156,
-        imageLight: "/ninjaProductos/foodi-smart.png",
-        imageDark: "/ninjaProductos/foodi-smart.png",
-        discountBadge: "New Arrival",
+        reviewsCount: 85,
+        imageLight: "/productos/controlRcN1.jpg",
+        imageDark: "/productos/controlRcN1.jpg",
+        discountBadge: "Stock Limitado",
         features: [
-          { label: "4-in-1", iconType: "default" },
-          { label: "Smart Cook", iconType: "best-seller" },
+          { label: "OcuSync 2.0", iconType: "default" },
+          { label: "Larga Duración", iconType: "best-seller" },
         ],
-        images: ["/ninjaProductos/foodi-smart.png"],
-        description: "Asa, asa al aire, hornea y asa todas tus comidas y lados favoritos para toda tu familia con este aparato de encimera 4 en 1 reacondicionado. Cuenta con un sistema de cocción inteligente con 4 ajustes de proteínas inteligentes y 9 niveles de preparación personalizables.",
+        images: ["/productos/controlRcN1.jpg"],
+        description: "Control remoto estándar compatible con DJI Mini 2, Mini 3, Mavic Air 2, Air 2S y Mavic 3. Alcance de transmisión confiable.",
+        specs: [{ label: "Compatibilidad", value: "Multi-modelo" }, { label: "Batería", value: "5200 mAh" }]
       },
       {
-        id: "10",
-        name: "Horno eléctrico con Air Fryer XL Pro 10 en 1 - Ninja Foodi",
-        price: 299.99,
-        rating: 4.9,
-        reviewsCount: 89,
-        imageLight: "/ninjaProductos/horno-electrico.png",
-        imageDark: "/ninjaProductos/horno-electrico.png",
-        discountBadge: "Best Seller",
-        features: [
-          { label: "10-in-1", iconType: "default" },
-          { label: "XL Capacity", iconType: "fast-delivery" },
-        ],
-        images: ["/ninjaProductos/horno-electrico.png"],
-        description: "El horno con freidora de aire Ninja Foodi XL Pro, fríe o asa con aire, hornea, tuesta, deshidrata y más. Hasta 10 veces más potente que un horno eléctrico de convección tradicional, con resultados 30% más crujientes.",
-      },
-      {
-        id: "11",
-        name: "Shark Steam Mop - Limpiador a Vapor",
-        price: 79.99,
+        id: "2",
+        name: "Control Mavic Mini",
+        price: 85.00,
         rating: 4.6,
-        reviewsCount: 230,
-        imageLight: "/ninjaProductos/mop.png",
-        imageDark: "/ninjaProductos/mop.png",
-        discountBadge: "Eco Friendly",
+        reviewsCount: 42,
+        imageLight: "/productos/controlMavic.jpg",
+        imageDark: "/productos/controlMavic.jpg",
+        discountBadge: "Repuesto",
         features: [
-          { label: "Steam Power", iconType: "default" },
-          { label: "Chemical Free", iconType: "best-price" },
+          { label: "Original", iconType: "default" },
+          { label: "Compacto", iconType: "fast-delivery" },
         ],
-        images: ["/ninjaProductos/mop.png"],
-        description: "Limpia sin esfuerzo con el poder del vapor. Con solo agua, corta rápidamente los desastres atascados, sin productos químicos y sin residuos. Diseñado pensando en la facilidad, el trapeador de vapor Shark es ligero y maniobrable.",
+        images: ["/productos/controlMavic.jpg"],
+        description: "Control remoto de repuesto original para Mavic Mini y Mini SE. Diseño plegable y ergonómico.",
       },
       {
-        id: "12",
-        name: "Ninja Foodi Freidora de Aire 2 Cestas Independientes",
-        price: 179.99,
+        id: "3",
+        name: "Hub de Carga Bidireccional",
+        price: 45.00,
+        rating: 5.0,
+        reviewsCount: 156,
+        imageLight: "/productos/hubsCarga.jpg",
+        imageDark: "/productos/hubsCarga.jpg",
+        discountBadge: "Esencial",
+        features: [
+          { label: "Carga 3 Baterías", iconType: "default" },
+          { label: "Power Bank", iconType: "best-price" },
+        ],
+        images: ["/productos/hubsCarga.jpg"],
+        description: "Carga hasta tres baterías en secuencia. También puede usarse como fuente de energía para cargar dispositivos móviles.",
+      },
+      {
+        id: "4",
+        name: "Batería de Vuelo Inteligente",
+        price: 65.00,
         rating: 4.9,
-        reviewsCount: 412,
-        imageLight: "/ninjaProductos/horno.png",
-        imageDark: "/ninjaProductos/horno.png",
-        discountBadge: "DualZone",
+        reviewsCount: 310,
+        imageLight: "/productos/baterias.jpg",
+        imageDark: "/productos/baterias.jpg",
+        discountBadge: "Original",
         features: [
-          { label: "2 Baskets", iconType: "default" },
-          { label: "DualZone", iconType: "fast-delivery" },
+          { label: "30+ Min Vuelo", iconType: "default" },
+          { label: "Seguridad DJI", iconType: "best-seller" },
         ],
-        images: ["/ninjaProductos/horno.png"],
-        description: "Como por arte de magia: crea un banquete para toda tu familia al preparar 2 comidas distintas en nuestra freidora. Esto es posible porque creamos la primera freidora de aire con 2 cestas independientes.",
+        images: ["/productos/baterias.jpg"],
+        description: "Batería original de alta capacidad. Sistema de gestión inteligente que monitorea el estado de la batería en tiempo real.",
       },
       {
-        id: "13",
-        name: "Olla de presión multiusos Tecnología Tender Crisp Ninja Foodi",
-        price: 199.99,
-        rating: 4.8,
-        reviewsCount: 320,
-        imageLight: "/ninjaProductos/olla.png",
-        imageDark: "/ninjaProductos/olla.png",
-        discountBadge: "All-in-One",
+        id: "5",
+        name: "Protector de Gimbal",
+        price: 15.00,
+        rating: 4.5,
+        reviewsCount: 67,
+        imageLight: "/productos/protectorGimbal.jpg",
+        imageDark: "/productos/protectorGimbal.jpg",
+        discountBadge: "Protección",
         features: [
-          { label: "6-in-1", iconType: "default" },
-          { label: "TenderCrisp", iconType: "best-seller" },
+          { label: "Ajuste Perfecto", iconType: "default" },
+          { label: "Policarbonato", iconType: "best-price" },
         ],
-        images: ["/ninjaProductos/olla.png"],
-        description: "Versátil en tu cocina y prepara lo que quieras en ella. Podrás tener hasta 6 diferentes aparatos en UNO SOLO, cocina múltiples platillos en cuestión de minutos. Con ella podrás: Cocinar a presión, Cocinar en modo lento, Freír, Dorar, Rostizar, Hornear.",
+        images: ["/productos/protectorGimbal.jpg"],
+        description: "Protege la cámara y el estabilizador de tu drone contra golpes y polvo durante el transporte. Indispensable.",
       },
   ],
 };

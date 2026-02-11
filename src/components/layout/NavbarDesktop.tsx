@@ -35,9 +35,8 @@ export function NavbarDesktop() {
             <Image
               src={siteConfig.branding.logo}
               alt={siteConfig.branding.logo_text}
-              width={0}
-              height={0}
-              sizes="100vw"
+              width={140}
+              height={50}
               className="w-32 h-auto object-contain rounded-md"
             />
           </Link>

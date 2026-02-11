@@ -13,8 +13,8 @@ export function AboutSection() {
       <div className="container px-4 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Sobre {siteConfig.business.name}
+            <h2 className="text-3xl font-bold tracking-tight sm:text-5xl">
+              Sobre <span className="text-primary">{siteConfig.business.name}</span>
             </h2>
             <p className="text-lg text-muted-foreground">
               {siteConfig.about.description}
