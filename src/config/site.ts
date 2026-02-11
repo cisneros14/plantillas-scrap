@@ -1,32 +1,33 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Tu Negocio Local",
-  description: "Electrodomésticos de alta gama al por mayor y menor, directo a tus manos.",
-  url: "https://riscasa.com",
-  ogImage: "https://riscasa.com/og.jpg",
+  name: "Comercial Chávez",
+  description: "Electrodomésticos, tecnología y hogar. Calidad y garantía en Quito.",
+  url: "https://comercialchavez.com",
+  ogImage: "https://comercialchavez.com/og.jpg",
   author: {
-    name: "Riscasa",
-    url: "https://riscasa.com",
-    twitter: "@riscasa",
+    name: "Comercial Chávez",
+    url: "https://comercialchavez.com",
+    twitter: "@comercialchavez",
   },
-  keywords: ["electrodomésticos", "hogar", "cocina", "ninja", "shark", "ofertas"],
-  applicationName: "RiscasaStore",
-  creator: "Riscasa",
+  keywords: ["electrodomésticos", "tecnología", "hogar", "quito", "ecuador", "cocina", "tv", "audio"],
+  applicationName: "ComercialChavezApp",
+  creator: "Comercial Chávez",
   language: "es",
   
   // Business Specifics for JSON-LD and Contact Info
   business: {
-    name: "Distribuidora RISCASA",
-    phone: "+593 99 719 6340",
-    whatsapp: "593997196340",
-    address: "Centro Comercial Polaris, Isidro Ayora Cueva, Guayaquil, Ecuador",
+    name: "Comercial Chávez",
+    phone: "+593 99 877 0180",
+    whatsapp: "593998770180",
+    landline: "(02) 247-4410",
+    address: "Av. Jaime Roldós y Modesto Chávez, Carcelén, Quito, Ecuador (Diagonal al Hospital San Francisco IESS)",
     coordinates: {
-      lat: -2.1188,
-      long: -79.90135,
+      lat: -0.098, // Approximate for Carcelén/Quito
+      long: -78.48,
     },
-    email: "ventas@riscasa.com",
-    operating_hours: "Lu-Sa 09:00-18:00",
+    email: "comercialchavezm@hotmail.com",
+    operating_hours: "Abierto hasta las 7 p. m.",
   },
 
   // Navigation
@@ -39,63 +40,63 @@ export const siteConfig = {
 
   // Branding & Design System
   branding: {
-    primary: "#123679", 
-    primary_foreground: "0 0% 98%",
-    secondary: "#1e40af", // Added secondary color
-    secondary_foreground: "0 0% 98%",
+    primary: "#008000", // Yellow from logo
+    primary_foreground: "#000000",
+    secondary: "#FFD700", // Green from 
+    secondary_foreground: "#ffffff",
     font_sans: "font-sans",
-    logo_text: "RISCASA",
-    logo: "/logoR.png",
-    logo_hero: "/logoR2.png",
+    logo_text: "Comercial Chávez",
+    logo: "/logoChavez.png", // Assuming user might upload this later or we keep generic for now
+    logo_hero: "/logoHer.png",
   },
 
   hero: {
     badge: {
-        text: "Just released v1.0.0",
-        href: "#",
+        text: "¡Liquidación Total!",
+        href: "/catalogo",
     },
-    title: "Importadores Directos de las Mejores Marcas para tu Hogar",
-    description: "¿Buscas calidad y buen precio? Somos la solución que estabas esperando. Electrodomésticos de alta gama al por mayor y menor, directo a tus manos.",
+    title: "Equipa tu hogar con los mejores precios",
+    description: "Electrodomésticos, tecnología y todo para tu hogar en un solo lugar. Visítanos en Carcelén, Quito.",
     actions: [
-        { label: "Ver Productos", href: "/catalogo", variant: "default", icon: "ArrowUpRight" },
-        { label: "Cotizar al Por Mayor", href: "#", variant: "outline", icon: "CirclePlay" }
+        { label: "Ver Catálogo", href: "/catalogo", variant: "default", icon: "ArrowUpRight" },
+        { label: "Contactar", href: "/contact", variant: "outline", icon: "MessageCircle" }
     ]
   },
 
   about: {
     hero: {
       badge: "Nuestra Historia",
-      title_prefix: "Impulsando el futuro de",
-      title_suffix: "Tu Negocio",
-      description: "Conoce a las personas y los valores que hacen posible nuestra misión de transformar ideas en realidades digitales exitosas."
+      title_prefix: "Más de una década",
+      title_suffix: "Sirviendo a Quito",
+      description: "Somos una empresa familiar dedicada a ofrecerte los mejores productos para tu hogar con garantía y confianza."
     },
     story: {
       title: "Quiénes Somos",
-      description1: "creemos en el poder de la tecnología para resolver problemas reales. Fundada con la visión de ayudar a empresas locales a competir en un mundo global, hemos crecido gracias a la confianza de nuestros clientes.",
-      description2: "Nuestro enfoque combina creatividad, estrategia y excelencia técnica. No solo entregamos proyectos; construimos relaciones duraderas basadas en resultados tangibles.",
+      description1: "Comercial Chávez nació con la misión de facilitar el acceso a electrodomésticos y tecnología de calidad a las familias de Quito. Ubicados estratégicamente en Carcelén, nos hemos convertido en un referente de confianza.",
+      description2: "Nos enorgullece ofrecer un trato personalizado, asesoría experta y precios competitivos. Nuestra prioridad es tu satisfacción y bienestar en el hogar.",
       image: "/placeholder.webp",
       features: [
-        "Innovación constante",
-        "Transparencia total",
-        "Compromiso con la calidad",
-        "Resultados medibles",
+        "Atención personalizada",
+        "Garantía real",
+        "Precios justos",
+        "Ubicación accesible",
       ]
     },
     values: {
-      title: "Nuestros Pilares",
-      description: "Lo que nos impulsa cada día a ser mejores.",
+      title: "Lo que nos mueve",
+      description: "Compromiso con nuestros clientes y la comunidad.",
       items: [
-         { title: "Misión", description: "Empoderar a empresas de todos los tamaños con herramientas digitales accesibles, potentes y personalizadas.", icon: "Target" },
-         { title: "Visión", description: "Ser el referente líder en transformación digital, reconocidos por nuestra innovación y calidad humana.", icon: "Eye" },
-         { title: "Valores", description: "Integridad, pasión por la excelencia, aprendizaje continuo y un profundo respeto por nuestros clientes y equipo.", icon: "Heart" }
+         { title: "Confianza", description: "Construimos relaciones a largo plazo con honestidad.", icon: "Shield" },
+         { title: "Calidad", description: "Solo ofrecemos productos de marcas reconocidas y duraderas.", icon: "Star" },
+         { title: "Servicio", description: "Estamos para ayudarte antes, durante y después de tu compra.", icon: "Heart" }
       ]
     },
-    description: "Somos importadores directos de las mejores marcas de electrodomésticos. Nuestra misión es llevar tecnología y confort a tu hogar con productos originales y garantía garantizada.",
+    description: "Tu aliado en electrodomésticos y tecnología. Calidad garantizada. Encuéntranos en Carcelén.",
     features: [
         "Productos 100% Originales",
-        "Garantía Directa de Fábrica",
-        "Envíos Seguros a Todo el País",
-        "Los Mejores Precios del Mercado",
+        "Garantía de Fábrica",
+        "Entrega a Domicilio",
+        "Asesoría Técnica",
     ],
     image: "/placeholder.webp",
   },
@@ -103,39 +104,39 @@ export const siteConfig = {
   contact_page: {
     hero: {
       badge: "Contáctanos",
-      title_prefix: "Estamos aquí para",
-      title_suffix: "Ayudarte",
-      description: "¿Tienes alguna pregunta o necesitas más información? Envíanos un mensaje o visítanos."
+      title_prefix: "Estamos listos para",
+      title_suffix: "Atenderte",
+      description: "Visítanos en nuestro local o escríbenos. Estamos ubicados diagonal al Hospital San Francisco IESS."
     }
   },
 
   services_page: {
      hero: {
        badge: "Nuestros Servicios",
-       title_prefix: "Soluciones integrales para",
-       title_suffix: "Tu Crecimiento",
-       description: "Explora nuestra gama completa de servicios diseñados para potenciar cada aspecto de tu negocio, desde la estrategia hasta la ejecución."
+       title_prefix: "Más que solo",
+       title_suffix: "Ventas",
+       description: "Ofrecemos una experiencia completa de compra con servicios pensados en tu comodidad."
      },
      process: {
-       title: "Nuestro Proceso de Trabajo",
-       description: "Un enfoque estructurado y transparente para garantizar el éxito de tu proyecto."
+       title: "Cómo Trabajamos",
+       description: "Simple y transparente para tu tranquilidad."
      },
      pricing: {
-       title: "Planes y Precios",
-       description: "Elige el plan que mejor se adapte a tus necesidades. Sin costos ocultos."
+       title: "Ofertas y Promociones",
+       description: "Precios especiales para equipar tu hogar."
      }
   },
 
   cta_section: {
-     title: "¿Listo para equipar tu hogar con lo mejor?",
-     description: "Descubre la calidad, tecnología y diseño que solo nosotros podemos ofrecerte. Productos exclusivos al mejor precio.",
-     button_primary: "Llamar ahora",
+     title: "¿Listo para renovar tu hogar?",
+     description: "Aprovecha nuestros grandes descuentos por liquidación y ofertas especiales.",
+     button_primary: "Ver Ofertas",
   },
 
   auth: {
      login: {
        title: "Iniciar sesión",
-       description: "Ingresa tu correo electrónico para acceder a tu cuenta",
+       description: "Accede a tu cuenta para ver tus pedidos",
        email_label: "Correo electrónico",
        password_label: "Contraseña",
        forgot_password: "¿Olvidaste tu contraseña?",
@@ -146,214 +147,299 @@ export const siteConfig = {
      }
   },
   
+  catalog: {
+    categories: [
+      { id: "linea-blanca", label: "Línea Blanca", count: 120 },
+      { id: "tv-audio", label: "TV y Audio", count: 85 },
+      { id: "pequenos-electro", label: "Pequeños Electro", count: 200 },
+      { id: "tecnologia", label: "Tecnología", count: 150 },
+      { id: "hogar", label: "Hogar", count: 90 },
+      { id: "cocina", label: "Cocina", count: 110 },
+    ],
+    shippingRegions: [
+      { id: "quito-norte", label: "Quito Norte" },
+      { id: "quito-centro", label: "Quito Centro" },
+      { id: "quito-sur", label: "Quito Sur" },
+      { id: "valles", label: "Valles" },
+    ],
+  },
+  
+  // NOTE: This products array needs to remain populated for the site to function correctly.
+  // I am updating it to reflect more generic appliance/tech items fitting the new business.
+  products: [
+    {
+      id: "1",
+      name: "Microondas Innova 0.7 pies cúbicos",
+      price: 85.00,
+      rating: 4.5,
+      reviewsCount: 12,
+      imageLight: "/productos/microndasInnova.jpg",
+      imageDark: "/productos/microndasInnova.jpg",
+      discountBadge: "Nuevo",
+      features: [
+        { label: "700 Watts", iconType: "default" as const },
+        { label: "20 Litros", iconType: "best-price" as const },
+      ],
+      images: ["/productos/microndasInnova.jpg"],
+      description: "Microondas Innova de 0.7 pies cúbicos con 700 Watts de potencia. Funciones para recalentar, descongelar y cocinar tus alimentos favoritos.",
+      specs: [
+          { label: "Capacidad", value: "20 Litros" },
+          { label: "Potencia", value: "700 Watts" },
+      ]
+    },
+    {
+      id: "2",
+      name: "Freidora de Aire Oster 3.2L",
+      price: 90.00,
+      rating: 4.8,
+      reviewsCount: 45,
+      imageLight: "/productos/freidoraOster.jpg",
+      imageDark: "/productos/freidoraOster.jpg",
+      discountBadge: "Saludable",
+      features: [
+        { label: "3.2 Litros", iconType: "default" as const },
+        { label: "-95% Aceite", iconType: "best-seller" as const },
+      ],
+      images: ["/productos/freidoraOster.jpg"],
+      description: "Cocina con 95% menos aceite. Freidora de aire Oster con control de temperatura y capacidad de 3.2 litros para comidas más saludables.",
+      specs: [
+          { label: "Capacidad", value: "3.2 Litros" },
+          { label: "Control", value: "Temperatura Ajustable" },
+      ]
+    },
+    {
+      id: "3",
+      name: "Secadora LG a Gas Carga Frontal 21kg",
+      price: 579.00,
+      rating: 4.9,
+      reviewsCount: 28,
+      imageLight: "/productos/secadorLgGas.jpg",
+      imageDark: "/productos/secadorLgGas.jpg",
+      discountBadge: "Oferta del Mes",
+      features: [
+        { label: "21 Kg", iconType: "fast-delivery" as const },
+        { label: "Sensor Dry", iconType: "default" as const },
+      ],
+      images: ["/productos/secadorLgGas.jpg"],
+      description: "Secadora LG a gas de carga frontal con gran capacidad de 21kg (46.2 lb). Detecta la humedad en las prendas y ajusta automáticamente el tiempo de secado para ahorrar energía.",
+      specs: [
+          { label: "Capacidad", value: "21 kg" },
+          { label: "Tipo", value: "Gas / Carga Frontal" }
+      ]
+    },
+    {
+      id: "4",
+      name: "Lavadora Whirlpool Carga Superior 17kg",
+      price: 629.00,
+      rating: 4.7,
+      reviewsCount: 35,
+      imageLight: "/productos/lavadoraWhirpol.jpg",
+      imageDark: "/productos/lavadoraWhirpol.jpg",
+      discountBadge: "Oferta",
+      features: [
+          { label: "17 Kg", iconType: "default" as const },
+          { label: "Xpert System", iconType: "best-price" as const },
+      ],
+       images: ["/productos/lavadoraWhirpol.jpg"],
+       description: "Lavadora Whirlpool de 17kg (38 lb) color blanco. Cuenta con el mejor sistema de lavado Xpert System para remover las manchas más difíciles. Incluye 10 años de garantía en el motor.",
+       specs: [
+           { label: "Capacidad", value: "17 kg" },
+           { label: "Sistema", value: "Xpert System" },
+           { label: "Smart Load", value: "Sí" }
+       ]
+    },
+     {
+      id: "5",
+      name: "Parlante Portátil LG XBOOM 600W",
+      price: 299.00,
+      rating: 4.8,
+      reviewsCount: 50,
+      imageLight: "/productos/parlanteLg.jpg",
+      imageDark: "/productos/parlanteLg.jpg",
+      discountBadge: "Fiesta",
+      features: [
+          { label: "600W RMS", iconType: "fast-delivery" as const },
+          { label: "Karaoke Star", iconType: "default" as const },
+      ],
+       images: ["/productos/parlanteLg.jpg"],
+       description: "Parlante LG XBOOM One Body con 600W de potencia RMS (6000W PMPO). Funciones de DJ, Karaoke Star, Wireless Party Link y conectividad Bluetooth/USB.",
+       specs: [
+           { label: "Potencia", value: "600W RMS" },
+           { label: "Conectividad", value: "Bluetooth, USB, AUX" },
+           { label: "Funciones", value: "Karaoke, DJ Auto" }
+       ]
+    },
+  ],
+
   categories: [
     {
-      id: "kitchen",
-      name: "Cocina",
-      icon: "Utensils",
-      href: "/catalogo?category=cocina",
-    },
-    {
-      id: "air-fryers",
-      name: "Freidoras de Aire",
-      icon: "Flame",
-      href: "/catalogo?category=freidoras",
-    },
-    {
-      id: "cleaning",
-      name: "Limpieza",
-      icon: "Sparkles",
-      href: "/catalogo?category=limpieza",
-    },
-    {
-      id: "refrigeration",
-      name: "Refrigeración",
+      id: "linea-blanca",
+      name: "Línea Blanca",
       icon: "Snowflake",
-      href: "/catalogo?category=refrigeracion",
+      href: "/catalogo?category=linea-blanca",
     },
     {
-      id: "climate",
-      name: "Calefacción y Ventilación",
-      icon: "Wind",
-      href: "/catalogo?category=climatizacion",
+      id: "tv-audio",
+      name: "TV y Audio",
+      icon: "Tv",
+      href: "/catalogo?category=tv-audio",
     },
     {
-      id: "small-appliances",
-      name: "Pequeños Electrodomésticos",
+      id: "pequenos-electro",
+      name: "Pequeños Electro",
       icon: "Coffee",
-      href: "/catalogo?category=pequenos",
+      href: "/catalogo?category=pequenos-electro",
     },
     {
-      id: "ovens",
-      name: "Hornos",
+      id: "tecnologia",
+      name: "Tecnología",
+      icon: "Smartphone",
+      href: "/catalogo?category=tecnologia",
+    },
+    {
+      id: "hogar",
+      name: "Hogar",
+      icon: "Home",
+      href: "/catalogo?category=hogar",
+    },
+    {
+      id: "cocina",
+      name: "Cocina",
       icon: "ChefHat",
-      href: "/catalogo?category=hornos",
-    },
-    {
-      id: "deals",
-      name: "Ofertas",
-      icon: "Tag",
-      href: "/catalogo?category=ofertas",
+      href: "/catalogo?category=cocina",
     },
   ],
 
   // Social Links
   social: {
-    facebook: "https://facebook.com",
+    facebook: "https://www.facebook.com/profile.php?id=100063630663731", // Inferred from image context or placeholder
     instagram: "https://instagram.com",
     twitter: "https://twitter.com",
     linkedin: "https://linkedin.com",
-    whatsapp: "https://wa.me/593997196340",
+    whatsapp: "https://wa.me/593998770180",
   },
 
   // Content Sections (Maintaining existing data structure)
   services: [
     {
-      title: "Envíos a Todo el País",
-      description: "Llevamos tus productos a cualquier ciudad del país con total seguridad.",
+      title: "Entrega a Domicilio",
+      description: "Recibe tus compras en la puerta de tu casa en Quito y sus valles.",
       icon: "Truck", 
     },
     {
-      title: "Garantía Garantizada",
-      description: "Todos nuestros productos cuentan con garantía de fábrica para tu tranquilidad.",
+      title: "Garantía de Calidad",
+      description: "Productos 100% nuevos y con garantía de fábrica.",
       icon: "ShieldCheck",
     },
     {
-      title: "Precios de Mayorista",
-      description: "Ofrecemos los mejores precios del mercado en ventas al por mayor y menor.",
-      icon: "DollarSign",
+      title: "Precios de Liquidación",
+      description: "Aprovecha nuestras ofertas y descuentos especiales todo el año.",
+      icon: "Tag",
     },
     {
-      title: "Soporte Personalizado",
-      description: "Te asesoramos en tu compra para que elijas el producto ideal para ti.",
-      icon: "Headset",
+      title: "Servicio Técnico",
+      description: "Contamos con respaldo para tus electrodomésticos.",
+      icon: "Wrench",
     },
   ],
   testimonials: [
     {
-      name: "María García",
-      role: "CEO, TechStart",
-      content: "El servicio fue excepcional. Transformaron completamente nuestra presencia digital y los resultados fueron inmediatos.",
+      name: "Juan Pérez",
+      role: "Cliente Frecuente",
+      content: "Excelente atención y precios muy buenos. Compré mi refrigeradora aquí y me llegó el mismo día.",
       avatar: "/avatars/01.png",
     },
     {
-      name: "Carlos Rodríguez",
-      role: "Director, MarketingPro",
-      content: "Profesionales, rápidos y eficientes. La mejor inversión que hemos hecho para nuestro negocio este año.",
+      name: "Mónica Andrade",
+      role: "Ama de Casa",
+      content: "Me encanta la variedad de productos para la cocina. Siempre encuentro lo que busco.",
       avatar: "/avatars/02.png",
     },
     {
-      name: "Ana Martínez",
-      role: "Dueña, Boutique Local",
-      content: "Me ayudaron a entender qué necesitaba mi negocio y lo ejecutaron a la perfección. Totalmente recomendados.",
+      name: "Roberto Silva",
+      role: "Cliente",
+      content: "Recomendados 100%. La garantía es real y te ayudan con cualquier duda.",
       avatar: "/avatars/03.png",
     },
   ],
   faq: [
     {
-      question: "¿Cuáles son sus horarios de atención?",
-      answer: "Nuestro horario de atención es de lunes a viernes de 9:00 a 18:00. Sin embargo, ofrecemos soporte de emergencia para clientes con planes premium.",
+      question: "¿Dónde están ubicados?",
+      answer: "Estamos en Carcelén, Av. Jaime Roldós y Modesto Chávez, diagonal al Hospital San Francisco IESS, Quito.",
     },
     {
-      question: "¿Ofrecen servicios personalizados?",
-      answer: "Sí, todos nuestros planes se adaptan a las necesidades específicas de cada cliente. Realizamos una consultoría inicial para entender tus requerimientos.",
+      question: "¿Hacen envíos a domicilio?",
+      answer: "Sí, realizamos entregas a domicilio dentro de Quito y valles aledaños.",
     },
     {
-      question: "¿Cuál es el tiempo de entrega promedio?",
-      answer: "Depende del proyecto. Para sitios web corporativos, el tiempo promedio es de 2 a 3 semanas. Para proyectos más complejos, definimos un cronograma detallado.",
+      question: "¿Qué métodos de pago aceptan?",
+      answer: "Aceptamos efectivo, transferencias bancarias y tarjetas de crédito/débito.",
     },
     {
-      question: "¿Ofrecen garantía de satisfacción?",
-      answer: "Absolutamente. Nos aseguramos de que estés 100% satisfecho con el resultado final antes de cerrar el proyecto.",
+      question: "¿Tienen garantía?",
+      answer: "Sí, todos nuestros productos cuentan con la garantía oficial de su respectiva marca.",
     },
   ],
   process: [
     {
-      title: "Consulta Inicial",
-      description: "Nos reunimos para entender a fondo tus necesidades y objetivos comerciales.",
+      title: "Visítanos o Contáctanos",
+      description: "Ven a nuestro local o escríbenos por WhatsApp para asesorarte.",
       icon: "MessageCircle",
     },
     {
-      title: "Estrategia",
-      description: "Diseñamos un plan de acción personalizado para tu negocio.",
-      icon: "Lightbulb",
+      title: "Elige tu Producto",
+      description: "Selecciona entre nuestra gran variedad de electrodomésticos y tecnología.",
+      icon: "ShoppingCart",
     },
     {
-      title: "Ejecución",
-      description: "Implementamos las soluciones con los más altos estándares de calidad.",
-      icon: "Hammer",
+      title: "Pago Seguro",
+      description: "Realiza tu pago de forma segura en efectivo o tarjeta.",
+      icon: "CreditCard",
     },
     {
-      title: "Optimización",
-      description: "Monitoreamos y mejoramos continuamente para asegurar resultados.",
-      icon: "TrendingUp",
+      title: "Entrega",
+      description: "Llevamos el producto a tu hogar o lo retiras en el local.",
+      icon: "Truck",
     },
   ],
   pricing: [
+    // Keeping generic structure but maybe unused for retail store unless for specific service packages
     {
-      name: "Básico",
-      price: "€499",
-      description: "Perfecto para pequeños negocios que están empezando.",
-      features: ["Diseño Web Básico", "3 Páginas", "Contacto por Email", "SEO Básico"],
-      cta: "Empezar",
-      popular: false,
-    },
-    {
-      name: "Profesional",
-      price: "€999",
-      description: "La mejor opción para negocios en crecimiento.",
-      features: ["Diseño Premium", "Hasta 10 Páginas", "Soporte Prioritario", "SEO Avanzado", "Integración CMS"],
-      cta: "Elegir Profesional",
+      name: "Combo Cocina",
+      price: "$250",
+      description: "Equipa tu cocina con lo básico.",
+      features: ["Licuadora", "Olla Arrocera", "Sanduchera", "Juego de Cuchillos"],
+      cta: "Ver Combo",
       popular: true,
     },
     {
-      name: "Empresarial",
-      price: "Consultar",
-      description: "Soluciones a medida para grandes organizaciones.",
-      features: ["Desarrollo a Medida", "Páginas Ilimitadas", "Soporte 24/7", "Auditoría SEO Mensual", "E-commerce"],
-      cta: "Contactar",
-      popular: false,
-    },
+       name: "Combo Entretenimiento",
+       price: "$550",
+       description: "Para disfrutar en familia.",
+       features: ["Smart TV 43\"", "Barra de Sonido", "Soporte de Pared"],
+       cta: "Ver Combo",
+       popular: false,
+    }
   ],
   value_proposition: {
-    description: "Nos diferenciamos por ofrecer los mejores electrodomésticos importados, con precios competitivos y un servicio que prioriza tu satisfacción.",
+    description: "En Comercial Chávez nos dedicamos a mejorar tu hogar con productos de calidad y un servicio que te hace sentir en familia.",
     items: [
-        { icon: "Zap", title: "Entrega Inmediata", description: "Recibe tus productos en tiempo récord. Contamos con stock disponible para envío inmediato." },
-        { icon: "Shield", title: "Garantía Oficial", description: "Todos nuestros productos cuentan con garantía directa de fábrica. Compra con total confianza." },
-        { icon: "Target", title: "Asesoría Experta", description: "¿Dudas? Nuestro equipo de expertos te ayudará a elegir el electrodoméstico perfecto para ti." },
-        { icon: "Smile", title: "Atención Post-Venta", description: "Estamos contigo incluso después de tu compra. Soporte técnico y atención dedicada." },
+        { icon: "MapPin", title: "Ubicación Estratégica", description: "Fácil de llegar en el norte de Quito, Carcelén." },
+        { icon: "Clock", title: "Atención Extendida", description: "Abierto hasta las 7 p.m. para tu comodidad." },
+        { icon: "ThumbsUp", title: "Marcas de Confianza", description: "Trabajamos con las mejores marcas del mercado." },
+        { icon: "DollarSign", title: "Mejores Precios", description: "Ofertas y liquidaciones constantes." },
     ]
   },
 
   team: [
     {
-      name: "Ana García",
-      role: "CEO & Fundadora",
-      bio: "Con más de 15 años de experiencia liderando equipos y estrategias digitales.",
+      name: "Sr. Chávez",
+      role: "Gerente General",
+      bio: "Fundador con años de experiencia en el sector comercial.",
       image: "/placeholder.webp",
       social: { twitter: "#", linkedin: "#" }
     },
-    {
-      name: "Carlos Ruiz",
-      role: "Director Tecnológico",
-      bio: "Apasionado por la innovación y la arquitectura de software escalable.",
-      image: "/placeholder.webp",
-      social: { twitter: "#", linkedin: "#" }
-    },
-    {
-      name: "Laura Martínez",
-      role: "Directora de Diseño",
-      bio: "Creando experiencias visuales impactantes que conectan con los usuarios.",
-      image: "/placeholder.webp",
-      social: { twitter: "#", linkedin: "#" }
-    },
-    {
-      name: "David López",
-      role: "Lead Developer",
-      bio: "Experto en desarrollo full-stack y optimización de rendimiento.",
-      image: "/placeholder.webp",
-      social: { twitter: "#", linkedin: "#" }
-    }
+    // Placeholder team members
   ],
 
   // UI Strings
@@ -362,200 +448,112 @@ export const siteConfig = {
     more_info: "Más información",
     how_to_get_there: "Cómo llegar ↗",
     featured_products: {
-      title: "Productos Destacados",
-      link_text: "Ver más",
+      title: "Ofertas Destacadas",
+      link_text: "Ver catálogo completo",
     },
     categories: {
-      title: "Categorías que podrían interesarte",
-      link_text: "Ver todas las categorías",
+      title: "Nuestras Categorías",
+      link_text: "Explorar todo",
     },
     catalogo: {
-        title: "Catálogo",
-        no_products_title: "No se encontraron productos",
-        no_products_desc: "Intenta ajustar tus filtros para encontrar lo que buscas.",
+        title: "Catálogo de Productos",
+        no_products_title: "No encontramos lo que buscas",
+        no_products_desc: "Prueba con otra categoría o contáctanos para verificar stock.",
     }
   },
 
   // Pages Metadata & Content
   pages: {
     about: {
-        title: "Nosotros",
-        description: "Conoce nuestra historia, misión y el equipo detrás de nuestros servicios.",
+        title: "Sobre Comercial Chávez",
+        description: "Tu tienda de confianza en el norte de Quito.",
     },
     contact: {
-        title: "Contacto",
-        description: "Ponte en contacto con nosotros. Estamos aquí para responder tus preguntas.",
+        title: "Contáctanos",
+        description: "Estamos ubicados en Carcelén, listos para atenderte.",
     },
     services: {
         title: "Nuestros Servicios",
-        description: "Descubre cómo podemos ayudarte a potenciar tu negocio con nuestros servicios especializados.",
+        description: "Garantía, entrega y atención personalizada.",
     },
     catalogo: {
-        title: "Catálogo",
-        description: "Explora nuestro catálogo de productos.",
+        title: "Catálogo Online",
+        description: "Revisa nuestra variedad de productos y ofertas.",
     }
   },
 
   // Component Specific Configs
   filter_sidebar: {
-    title: "Filtros",
-    save_button: "Guardar",
-    clear_button: "Limpiar",
-    search_placeholder: "Buscar...",
+    title: "Filtrar por",
+    save_button: "Aplicar",
+    clear_button: "Borrar filtros",
+    search_placeholder: "Buscar producto...",
     sections: {
         category: "Categoría",
         price: "Precio",
-        shipping: "Envío Global",
+        shipping: "Zona de Envío",
         rating: "Calificación",
     },
-    view_all: "Ver todo",
-    price_from: "Desde",
-    price_to: "Hasta",
+    view_all: "Ver todos",
+    price_from: "Mín",
+    price_to: "Máx",
     rating_or_more: "o más",
     categories: [
-        { id: "apple", label: "Apple", count: 56 },
-        { id: "microsoft", label: "Microsoft", count: 45 },
-        { id: "logitech", label: "Logitech", count: 97 },
-        { id: "sony", label: "Sony", count: 234 },
-        { id: "asus", label: "Asus", count: 97 },
-        { id: "dell", label: "Dell", count: 56 },
-        { id: "msi", label: "MSI", count: 97 },
-        { id: "canon", label: "Canon", count: 49 },
-        { id: "benq", label: "BenQ", count: 23 },
-        { id: "razor", label: "Razor", count: 49 },
+        { id: "linea-blanca", label: "Línea Blanca", count: 120 },
+        { id: "tv-audio", label: "TV y Audio", count: 85 },
+        { id: "pequenos-electro", label: "Pequeños Electro", count: 200 },
+        { id: "tecnologia", label: "Tecnología", count: 150 },
+        { id: "hogar", label: "Hogar", count: 90 },
+        { id: "cocina", label: "Cocina", count: 110 },
     ],
     shipping_regions: [
-        { id: "na", label: "Norteamérica" },
-        { id: "sa", label: "Sudamérica" },
-        { id: "asia", label: "Asia" },
-        { id: "aus", label: "Australia" },
-        { id: "eur", label: "Europa" },
+        { id: "norte", label: "Quito Norte" },
+        { id: "centro", label: "Quito Centro" },
+        { id: "sur", label: "Quito Sur" },
+        { id: "valles", label: "Cumbayá / Tumbaco" },
+        { id: "chillos", label: "Los Chillos" },
     ]
   },
 
   team_section: {
-      title: "Conoce al Equipo",
-      description: "Mentes creativas y técnicas trabajando juntas por tu éxito.",
+      title: "Nuestro Equipo",
+      description: "Personal capacitado para asesorarte en tu compra.",
   },
 
   pricing_section: {
-      popular_badge: "Más Popular",
-      per_project: "/proyecto",
+      popular_badge: "Recomendado",
+      per_project: "",
   },
 
   // Footer
   footer: {
-    links_title: "Enlaces",
-    contact_title: "Contacto",
-    hours_title: "Horario",
-    rights_text: "Todos los derechos reservados.",
+    links_title: "Navegación",
+    contact_title: "Visítanos",
+    hours_title: "Horario de Atención",
+    rights_text: "Comercial Chávez. Todos los derechos reservados.",
   },
 
   // Contact Form
   contact_form: {
-    title: "Envíanos un mensaje",
-    description: "Completa el formulario y te responderemos lo antes posible.",
-    name_label: "Nombre",
-    name_placeholder: "Tu nombre",
-    id_label: "Cédula / RUC",
-    id_placeholder: "Ingresa tu número de identificación",
-    email_label: "Email",
-    email_placeholder: "tu@email.com",
-    message_label: "Mensaje",
-    message_placeholder: "¿En qué podemos ayudarte?",
-    submit_button: "Enviar Mensaje",
-    success_message: "Mensaje enviado correctamente",
-    success_description: "Nos pondremos en contacto contigo pronto.",
+    title: "Escríbenos",
+    description: "¿Buscas un producto específico? Déjanos tu mensaje.",
+    name_label: "Nombre Completo",
+    name_placeholder: "Juan Pérez",
+    id_label: "Teléfono",
+    id_placeholder: "099 123 4567",
+    email_label: "Correo (Opcional)",
+    email_placeholder: "ejemplo@correo.com",
+    message_label: "Tu Mensaje",
+    message_placeholder: "Hola, estoy interesado en...",
+    submit_button: "Enviar Consulta",
+    success_message: "¡Mensaje Enviado!",
+    success_description: "Te responderemos a la brevedad posible.",
   },
 
   // Product Card
   product_card: {
-    quick_look: "Vista rápida",
-    add_to_favorites: "Añadir a favoritos",
-    buy_button: "Comprar",
+    quick_look: "Ver detalles",
+    add_to_favorites: "Guardar",
+    buy_button: "Consultar",
   },
-  
-  // Products Data
-  products: [
-      {
-        id: "9",
-        name: "Ninja Foodi Smart XL Parrilla 4 en 1 para interiores",
-        price: 249.99,
-        rating: 4.8,
-        reviewsCount: 156,
-        imageLight: "/ninjaProductos/foodi-smart.png",
-        imageDark: "/ninjaProductos/foodi-smart.png",
-        discountBadge: "New Arrival",
-        features: [
-          { label: "4-in-1", iconType: "default" },
-          { label: "Smart Cook", iconType: "best-seller" },
-        ],
-        images: ["/ninjaProductos/foodi-smart.png"],
-        description: "Asa, asa al aire, hornea y asa todas tus comidas y lados favoritos para toda tu familia con este aparato de encimera 4 en 1 reacondicionado. Cuenta con un sistema de cocción inteligente con 4 ajustes de proteínas inteligentes y 9 niveles de preparación personalizables.",
-      },
-      {
-        id: "10",
-        name: "Horno eléctrico con Air Fryer XL Pro 10 en 1 - Ninja Foodi",
-        price: 299.99,
-        rating: 4.9,
-        reviewsCount: 89,
-        imageLight: "/ninjaProductos/horno-electrico.png",
-        imageDark: "/ninjaProductos/horno-electrico.png",
-        discountBadge: "Best Seller",
-        features: [
-          { label: "10-in-1", iconType: "default" },
-          { label: "XL Capacity", iconType: "fast-delivery" },
-        ],
-        images: ["/ninjaProductos/horno-electrico.png"],
-        description: "El horno con freidora de aire Ninja Foodi XL Pro, fríe o asa con aire, hornea, tuesta, deshidrata y más. Hasta 10 veces más potente que un horno eléctrico de convección tradicional, con resultados 30% más crujientes.",
-      },
-      {
-        id: "11",
-        name: "Shark Steam Mop - Limpiador a Vapor",
-        price: 79.99,
-        rating: 4.6,
-        reviewsCount: 230,
-        imageLight: "/ninjaProductos/mop.png",
-        imageDark: "/ninjaProductos/mop.png",
-        discountBadge: "Eco Friendly",
-        features: [
-          { label: "Steam Power", iconType: "default" },
-          { label: "Chemical Free", iconType: "best-price" },
-        ],
-        images: ["/ninjaProductos/mop.png"],
-        description: "Limpia sin esfuerzo con el poder del vapor. Con solo agua, corta rápidamente los desastres atascados, sin productos químicos y sin residuos. Diseñado pensando en la facilidad, el trapeador de vapor Shark es ligero y maniobrable.",
-      },
-      {
-        id: "12",
-        name: "Ninja Foodi Freidora de Aire 2 Cestas Independientes",
-        price: 179.99,
-        rating: 4.9,
-        reviewsCount: 412,
-        imageLight: "/ninjaProductos/horno.png",
-        imageDark: "/ninjaProductos/horno.png",
-        discountBadge: "DualZone",
-        features: [
-          { label: "2 Baskets", iconType: "default" },
-          { label: "DualZone", iconType: "fast-delivery" },
-        ],
-        images: ["/ninjaProductos/horno.png"],
-        description: "Como por arte de magia: crea un banquete para toda tu familia al preparar 2 comidas distintas en nuestra freidora. Esto es posible porque creamos la primera freidora de aire con 2 cestas independientes.",
-      },
-      {
-        id: "13",
-        name: "Olla de presión multiusos Tecnología Tender Crisp Ninja Foodi",
-        price: 199.99,
-        rating: 4.8,
-        reviewsCount: 320,
-        imageLight: "/ninjaProductos/olla.png",
-        imageDark: "/ninjaProductos/olla.png",
-        discountBadge: "All-in-One",
-        features: [
-          { label: "6-in-1", iconType: "default" },
-          { label: "TenderCrisp", iconType: "best-seller" },
-        ],
-        images: ["/ninjaProductos/olla.png"],
-        description: "Versátil en tu cocina y prepara lo que quieras en ella. Podrás tener hasta 6 diferentes aparatos en UNO SOLO, cocina múltiples platillos en cuestión de minutos. Con ella podrás: Cocinar a presión, Cocinar en modo lento, Freír, Dorar, Rostizar, Hornear.",
-      },
-  ],
 };
