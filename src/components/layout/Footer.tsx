@@ -16,10 +16,10 @@ export function Footer() {
                 alt={siteConfig.branding.logo_text}
                 width={100}
                 height={100}
-                className="w-34 object-cover"
+                className="w-34 object-cover rounded-lg"
               />
             </Link>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground mt-4">
               {siteConfig.description}
             </p>
             <div className="flex gap-4">

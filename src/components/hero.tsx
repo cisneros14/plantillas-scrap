@@ -69,16 +69,14 @@ export default function Hero() {
             })}
           </div>
         </div>
-        <div className="mt-8 lg:mt-0 flex justify-center">
           <Image
             width={1000}
             height={1000}
             src={siteConfig.branding.logo_hero}
             alt="hero"
             priority
-            className="w-full max-w-sm lg:max-w-md h-auto object-contain animate-in fade-in zoom-in duration-700 delay-100"
+            className="w-full max-w-sm mx-auto lg:max-w-md !rounded-xl !overflow-hidden h-auto object-contain animate-in fade-in zoom-in duration-700 delay-100"
           />
-        </div>
       </div>
     </div>
   );
