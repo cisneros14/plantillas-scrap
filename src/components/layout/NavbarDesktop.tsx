@@ -11,7 +11,8 @@ import {
 } from "@/components/ui/navigation-menu";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Facebook, Instagram } from "lucide-react";
-import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
+import { FaWhatsapp } from "react-icons/fa";
+
 import dynamic from "next/dynamic";
 import Image from "next/image";
 
@@ -66,7 +67,7 @@ export function NavbarDesktop() {
             <Instagram className="h-4 w-4 text-muted-foreground" />
           </a>
           <a href={siteConfig.social.whatsapp}>
-            <WhatsappIcon className="h-4 w-4 text-muted-foreground" />
+            <FaWhatsapp className="h-4 w-4 text-muted-foreground" />
           </a>
 
           <ContactDialog />

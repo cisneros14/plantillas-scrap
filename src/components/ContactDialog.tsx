@@ -9,7 +9,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, Instagram, Facebook } from "lucide-react";
 import { siteConfig } from "@/config/site";
-import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
+import { FaWhatsapp } from "react-icons/fa";
+
 
 export function ContactDialog() {
   return (
@@ -54,7 +55,7 @@ export function ContactDialog() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <WhatsappIcon className="h-5 w-5" />
+              <FaWhatsapp className="h-5 w-5" />
               <div className="flex flex-col items-start">
                 <span className="font-medium">WhatsApp</span>
                 <span className="text-xs text-muted-foreground">
