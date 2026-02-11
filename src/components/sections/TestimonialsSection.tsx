@@ -16,11 +16,10 @@ export function TestimonialsSection() {
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Lo que dicen nuestros clientes
+            {siteConfig.sectionTitles.testimonials.title}
           </h2>
           <p className="text-lg text-muted-foreground mx-auto">
-            La satisfacción de nuestros clientes es nuestra mejor carta de
-            presentación.
+            {siteConfig.sectionTitles.testimonials.description}
           </p>
         </div>
 

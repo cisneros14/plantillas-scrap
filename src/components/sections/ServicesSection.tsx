@@ -15,11 +15,10 @@ export function ServicesSection() {
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Nuestros Servicios
+            {siteConfig.sectionTitles.services.title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Soluciones integrales diseñadas para impulsar tu negocio al
-            siguiente nivel.
+            {siteConfig.sectionTitles.services.description}
           </p>
         </div>
 

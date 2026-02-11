@@ -11,41 +11,28 @@ import {
 } from "@/components/ui/accordion";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 
-const categories = [
-  { id: "apple", label: "Apple", count: 56 },
-  { id: "microsoft", label: "Microsoft", count: 45 },
-  { id: "logitech", label: "Logitech", count: 97 },
-  { id: "sony", label: "Sony", count: 234 },
-  { id: "asus", label: "Asus", count: 97 },
-  { id: "dell", label: "Dell", count: 56 },
-  { id: "msi", label: "MSI", count: 97 },
-  { id: "canon", label: "Canon", count: 49 },
-  { id: "benq", label: "BenQ", count: 23 },
-  { id: "razor", label: "Razor", count: 49 },
-];
-
-const shippingRegions = [
-  { id: "na", label: "Norteamérica" },
-  { id: "sa", label: "Sudamérica" },
-  { id: "asia", label: "Asia" },
-  { id: "aus", label: "Australia" },
-  { id: "eur", label: "Europa" },
-];
+import { siteConfig } from "@/config/site";
 
 export function FilterSidebar() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
   // State
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [rating, setRating] = useState<string>("");
-  const [minPrice, setMinPrice] = useState("");
-  const [maxPrice, setMaxPrice] = useState("");
-  const [shipping, setShipping] = useState<string[]>([]);
+  // State initialized from URL
+  const [selectedCategories, setSelectedCategories] = useState<string[]>(
+    searchParams.getAll("category"),
+  );
+  const [rating, setRating] = useState<string>(
+    searchParams.get("rating") || "",
+  );
+  const [minPrice, setMinPrice] = useState(searchParams.get("minPrice") || "");
+  const [maxPrice, setMaxPrice] = useState(searchParams.get("maxPrice") || "");
+  const [shipping, setShipping] = useState<string[]>(
+    searchParams.getAll("shipping"),
+  );
 
-  // Sync with URL
+  // Sync state when URL changes (e.g. back button)
   useEffect(() => {
     setSelectedCategories(searchParams.getAll("category"));
     setRating(searchParams.get("rating") || "");
@@ -96,7 +83,7 @@ export function FilterSidebar() {
   };
 
   return (
-    <Card className="w-full lg:w-72 bg-muted/60 border-gray-200 dark:border-neutral-700 shadow-sm p-4 !h-fit">
+    <Card className="w-full lg:w-72 bg-muted/60 border-gray-200 dark:border-neutral-700 shadow-sm p-4 h-fit!">
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -132,7 +119,7 @@ export function FilterSidebar() {
           </AccordionTrigger>
           <AccordionContent>
             <div className="space-y-2 max-h-60 overflow-y-auto pr-2 custom-scrollbar">
-              {categories.map((cat) => (
+              {siteConfig.catalog.categories.map((cat) => (
                 <div key={cat.id} className="flex items-center space-x-2">
                   <input
                     type="checkbox"
@@ -219,7 +206,7 @@ export function FilterSidebar() {
           </AccordionTrigger>
           <AccordionContent>
             <div className="space-y-3">
-              {shippingRegions.map((region) => (
+              {siteConfig.catalog.shippingRegions.map((region) => (
                 <div
                   key={region.id}
                   className="flex items-center justify-between"

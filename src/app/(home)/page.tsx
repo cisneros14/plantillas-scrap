@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import ScrollAnimationWrapper from "@/components/ui/scroll-animation-wrapper";
 import Hero from "@/components/hero";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { AboutSection } from "@/components/sections/AboutSection";
@@ -43,34 +44,54 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Static Shell: Immediate LCP */}
-      <Hero />
-      <CategorySection />
-      <ProductDemoSection />
-      <ValuePropositionSection />
+      <ScrollAnimationWrapper>
+        <Hero />
+      </ScrollAnimationWrapper>
+      <ScrollAnimationWrapper>
+        <CategorySection />
+      </ScrollAnimationWrapper>
+      <ScrollAnimationWrapper>
+        <ProductDemoSection />
+      </ScrollAnimationWrapper>
+      <ScrollAnimationWrapper>
+        <ValuePropositionSection />
+      </ScrollAnimationWrapper>
 
       {/* Streaming Content */}
       <Suspense fallback={<SectionSkeleton />}>
-        <ServicesSection />
+        <ScrollAnimationWrapper>
+          <ServicesSection />
+        </ScrollAnimationWrapper>
       </Suspense>
 
       <Suspense fallback={<SectionSkeleton />}>
-        <CTASection />
+        <ScrollAnimationWrapper>
+          <CTASection />
+        </ScrollAnimationWrapper>
       </Suspense>
 
       <Suspense fallback={<SectionSkeleton />}>
-        <AboutSection />
+        <ScrollAnimationWrapper>
+          <AboutSection />
+        </ScrollAnimationWrapper>
       </Suspense>
 
       <Suspense fallback={<SectionSkeleton />}>
-        <TestimonialsSection />
+        <ScrollAnimationWrapper>
+          <TestimonialsSection />
+        </ScrollAnimationWrapper>
       </Suspense>
 
       <Suspense fallback={<SectionSkeleton />}>
-        <FAQSection />
+        <ScrollAnimationWrapper>
+          <FAQSection />
+        </ScrollAnimationWrapper>
       </Suspense>
 
       <Suspense fallback={<SectionSkeleton />}>
-        <ContactSection />
+        <ScrollAnimationWrapper>
+          <ContactSection />
+        </ScrollAnimationWrapper>
       </Suspense>
     </div>
   );

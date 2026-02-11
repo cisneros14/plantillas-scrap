@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import ScrollAnimationWrapper from "@/components/ui/scroll-animation-wrapper";
 import { Metadata } from "next";
 
 import { constructMetadata } from "@/lib/seo";
@@ -35,9 +36,15 @@ import { ContactHero } from "@/components/sections/contact/ContactHero";
 export default function ContactPage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <ContactHero />
-      <ContactSection />
-      <ContactMap />
+      <ScrollAnimationWrapper>
+        <ContactHero />
+      </ScrollAnimationWrapper>
+      <ScrollAnimationWrapper>
+        <ContactSection />
+      </ScrollAnimationWrapper>
+      <ScrollAnimationWrapper>
+        <ContactMap />
+      </ScrollAnimationWrapper>
     </div>
   );
 }

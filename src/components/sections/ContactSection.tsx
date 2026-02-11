@@ -77,9 +77,9 @@ export function ContactSection() {
           <div className="space-y-8">
             <Card>
               <CardHeader>
-                <CardTitle>Información de Contacto</CardTitle>
+                <CardTitle>{siteConfig.sectionTitles.contact.title}</CardTitle>
                 <CardDescription>
-                  Encuéntranos en nuestras oficinas o contáctanos directamente.
+                  {siteConfig.sectionTitles.contact.description}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -178,9 +178,11 @@ export function ContactSection() {
           <div>
             <Card>
               <CardHeader>
-                <CardTitle>Envíanos un mensaje</CardTitle>
+                <CardTitle>
+                  {siteConfig.sectionTitles.contact.formTitle}
+                </CardTitle>
                 <CardDescription>
-                  Completa el formulario y te responderemos lo antes posible.
+                  {siteConfig.sectionTitles.contact.formDescription}
                 </CardDescription>
               </CardHeader>
               <CardContent>

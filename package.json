@@ -23,6 +23,7 @@
     "clsx": "^2.1.1",
     "colord": "^2.9.3",
     "embla-carousel-react": "^8.6.0",
+    "framer-motion": "^12.34.0",
     "lucide-react": "^0.562.0",
     "next": "16.1.1",
     "next-auth": "^5.0.0-beta.30",

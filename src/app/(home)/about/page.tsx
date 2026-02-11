@@ -1,4 +1,5 @@
 import { AboutHero } from "@/components/sections/about/AboutHero";
+import ScrollAnimationWrapper from "@/components/ui/scroll-animation-wrapper";
 import dynamic from "next/dynamic";
 import { Metadata } from "next";
 
@@ -28,7 +29,6 @@ const ValuesSection = dynamic(
     loading: () => <div className="h-96 w-full animate-pulse bg-muted/20" />,
   },
 );
-
 
 const TestimonialsSection = dynamic(
   () =>
@@ -69,13 +69,27 @@ const CTASection = dynamic(
 export default function AboutPage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <AboutHero />
-      <StorySection />
-      <ValuesSection />
-      <FAQSection />
-      <TestimonialsSection />
-      <TeamSection />
-      <CTASection />
+      <ScrollAnimationWrapper>
+        <AboutHero />
+      </ScrollAnimationWrapper>
+      <ScrollAnimationWrapper>
+        <StorySection />
+      </ScrollAnimationWrapper>
+      <ScrollAnimationWrapper>
+        <ValuesSection />
+      </ScrollAnimationWrapper>
+      <ScrollAnimationWrapper>
+        <FAQSection />
+      </ScrollAnimationWrapper>
+      <ScrollAnimationWrapper>
+        <TestimonialsSection />
+      </ScrollAnimationWrapper>
+      <ScrollAnimationWrapper>
+        <TeamSection />
+      </ScrollAnimationWrapper>
+      <ScrollAnimationWrapper>
+        <CTASection />
+      </ScrollAnimationWrapper>
     </div>
   );
 }
