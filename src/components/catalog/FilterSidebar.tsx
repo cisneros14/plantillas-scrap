@@ -83,7 +83,7 @@ export function FilterSidebar() {
   };
 
   return (
-    <Card className="w-full lg:w-72 bg-muted/60 border-gray-200 dark:border-neutral-700 shadow-sm p-4 h-fit!">
+    <Card className="w-full lg:w-72 bg-background/70 border-y border-gray-200 dark:border-neutral-700 shadow-sm p-4 h-fit!">
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-lg font-semibold text-gray-900 dark:text-white">

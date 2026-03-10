@@ -49,12 +49,20 @@ export function generatePalette(baseColor: string): ColorPalette {
   return p;
 }
 
-export function generateThemeVariables(primaryColorHex: string, secondaryColorHex?: string): string {
+export function generateThemeVariables(
+  primaryColorHex: string,
+  secondaryColorHex?: string,
+  backgroundColorHex?: string,
+): string {
     const palette = generatePalette(primaryColorHex);
     const secondaryPalette = secondaryColorHex ? generatePalette(secondaryColorHex) : null;
     
     let css = ":root {\n";
     
+    if (backgroundColorHex) {
+        css += `  --background: ${backgroundColorHex};\n`;
+    }
+
     // Main Primary
     css += `  --primary: ${palette[500]};\n`; 
     css += `  --primary-foreground: ${palette.foreground};\n`;

@@ -7,6 +7,7 @@ import { ValuePropositionSection } from "@/components/sections/ValuePropositionS
 import { ProductDemoSection } from "@/components/sections/ProductDemoSection";
 import { CategorySection } from "@/components/sections/CategorySection";
 import dynamic from "next/dynamic";
+import Hero2 from "@/components/hero2";
 
 // Dynamic imports for heavy below-the-fold sections
 const CTASection = dynamic(
@@ -21,6 +22,14 @@ const TestimonialsSection = dynamic(
     ),
   { loading: () => <SectionSkeleton /> },
 );
+const NuestroEquipoSection = dynamic(
+  () =>
+    import("@/components/sections/NuestroEquipoSection").then(
+      (mod) => mod.NuestroEquipoSection,
+    ),
+  { loading: () => <SectionSkeleton /> },
+);
+
 const FAQSection = dynamic(
   () =>
     import("@/components/sections/FAQSection").then((mod) => mod.FAQSection),
@@ -45,30 +54,12 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Static Shell: Immediate LCP */}
       <ScrollAnimationWrapper>
-        <Hero />
+        <Hero2 />
       </ScrollAnimationWrapper>
+
       <ScrollAnimationWrapper>
         <CategorySection />
       </ScrollAnimationWrapper>
-      <ScrollAnimationWrapper>
-        <ProductDemoSection />
-      </ScrollAnimationWrapper>
-      <ScrollAnimationWrapper>
-        <ValuePropositionSection />
-      </ScrollAnimationWrapper>
-
-      {/* Streaming Content */}
-      <Suspense fallback={<SectionSkeleton />}>
-        <ScrollAnimationWrapper>
-          <ServicesSection />
-        </ScrollAnimationWrapper>
-      </Suspense>
-
-      <Suspense fallback={<SectionSkeleton />}>
-        <ScrollAnimationWrapper>
-          <CTASection />
-        </ScrollAnimationWrapper>
-      </Suspense>
 
       <Suspense fallback={<SectionSkeleton />}>
         <ScrollAnimationWrapper>
@@ -79,6 +70,19 @@ export default function Home() {
       <Suspense fallback={<SectionSkeleton />}>
         <ScrollAnimationWrapper>
           <TestimonialsSection />
+        </ScrollAnimationWrapper>
+      </Suspense>
+
+      {/* Streaming Content */}
+      <Suspense fallback={<SectionSkeleton />}>
+        <ScrollAnimationWrapper>
+          <NuestroEquipoSection />
+        </ScrollAnimationWrapper>
+      </Suspense>
+
+      <Suspense fallback={<SectionSkeleton />}>
+        <ScrollAnimationWrapper>
+          <CTASection />
         </ScrollAnimationWrapper>
       </Suspense>
 

@@ -2,6 +2,7 @@
 
 import { MapPin, Phone, Mail } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import {
   Sheet,
@@ -9,7 +10,6 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-import { ModeToggle } from "@/components/mode-toggle";
 
 interface MobileSheetProps {
   isOpen: boolean;
@@ -22,7 +22,13 @@ export function MobileSheet({ isOpen, onClose }: MobileSheetProps) {
       <SheetContent side="left" className="w-[300px] sm:w-[400px] px-4">
         <SheetHeader className="text-left mb-8">
           <SheetTitle className="text-xl font-bold text-primary">
-            {siteConfig.branding.logo_text}
+            <Image
+              src={siteConfig.branding.logo_nav_url}
+              alt={siteConfig.name}
+              width={120}
+              height={40}
+              className="h-8 w-auto object-contain"
+            />
           </SheetTitle>
         </SheetHeader>
 
@@ -40,10 +46,6 @@ export function MobileSheet({ isOpen, onClose }: MobileSheetProps) {
         </nav>
 
         <div className="space-y-4 pt-8 border-t">
-          <div className="flex items-center justify-between">
-            <span className="text-sm font-medium">Tema</span>
-            <ModeToggle />
-          </div>
           <div className="flex items-center gap-3 text-sm text-muted-foreground">
             <MapPin className="h-4 w-4" />
             <span>{siteConfig.business.address}</span>

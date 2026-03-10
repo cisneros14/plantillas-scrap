@@ -1,16 +1,23 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { Separator } from "@/components/ui/separator";
 
 export function Footer() {
   return (
-    <footer className="border-t bg-background">
+    <footer className="border-t bg-background/50 dark:bg-neutral-900/50">
       <div className="container py-12 md:py-16">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="space-y-4">
-            <span className="text-xl font-bold text-primary">
-              {siteConfig.branding.logo_text}
-            </span>
+            <Link href="/" className="inline-block">
+              <Image
+                src={siteConfig.branding.logo_nav_url}
+                alt={siteConfig.name}
+                width={150}
+                height={50}
+                className="h-10 w-auto object-contain"
+              />
+            </Link>
             <p className="text-sm text-muted-foreground">
               {siteConfig.description}
             </p>

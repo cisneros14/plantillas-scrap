@@ -4,7 +4,7 @@ import { ImageN } from "@/components/ui/image-with-skeleton";
 
 export function StorySection() {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 bg-background/70 border-y dark:bg-amber-950/20 dark:border-amber-900/30">
       <div className="container px-4 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1 relative">

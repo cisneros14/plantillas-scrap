@@ -52,7 +52,7 @@ export default function Hero() {
         <Image
           width={1000}
           height={1000}
-          src={siteConfig.hero.image.src}
+          src={siteConfig.branding.logo_hero_url}
           alt={siteConfig.hero.image.alt}
           priority
           className="w-full max-w-sm lg:max-w-xl h-auto object-contain animate-in fade-in zoom-in duration-700 delay-100"

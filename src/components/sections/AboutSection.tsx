@@ -9,11 +9,19 @@ const ContactDialog = dynamic(() =>
 
 export function AboutSection() {
   return (
-    <section id="nosotros" className="bg-background">
+    <section
+      id="nosotros"
+      className="bg-background/50 dark:bg-neutral-900 py-12 md:py-20"
+    >
       <div className="container px-4 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <div className="inline-block border-b-2 border-primary pb-1 mb-2">
+              <span className="text-primary uppercase tracking-widest font-semibold text-sm">
+                El Bufete
+              </span>
+            </div>
+            <h2 className="text-4xl font-serif font-medium tracking-tight sm:text-5xl">
               {siteConfig.about.title}
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -37,7 +45,7 @@ export function AboutSection() {
             height={1000}
             src={siteConfig.about.image}
             alt="about"
-            className="w-full border object-cover h-[400px] lg:h-[400px] rounded-2xl overflow-hidden"
+            className="w-full object-cover h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-lg"
           />
         </div>
       </div>

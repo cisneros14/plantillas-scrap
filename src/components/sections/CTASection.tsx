@@ -8,7 +8,7 @@ const ContactDialog = dynamic(() =>
 
 export function CTASection() {
   return (
-    <section className="">
+    <section className="bg-background border-y dark:bg-amber-950/20 dark:border-amber-900/30 py-12 md:py-16">
       <div className="container px-4 mx-auto text-center">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
           {siteConfig.cta.title}

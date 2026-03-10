@@ -1,6 +1,7 @@
 "use client";
 
 import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -50,7 +51,7 @@ const formSchema = z.object({
   }),
 });
 
-export function ContactSection() {
+export function ContactSection({ className }: { className?: string }) {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -71,20 +72,26 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contacto" className="bg-muted/50 py-16">
+    <section
+      id="contacto"
+      className={cn(
+        "bg-background border-y dark:bg-amber-950/20 dark:border-amber-900/30 py-12 md:py-20",
+        className,
+      )}
+    >
       <div className="container px-4 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-8">
             <Card>
               <CardHeader>
-                <CardTitle>{siteConfig.sectionTitles.contact.title}</CardTitle>
+                <CardTitle className="text-primary">{siteConfig.sectionTitles.contact.title}</CardTitle>
                 <CardDescription>
                   {siteConfig.sectionTitles.contact.description}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <MapPin className="h-6 w-6 text-primary shrink-0" />
+                  <MapPin className="h-6 w-6 shrink-0" />
                   <div>
                     <h3 className="font-medium">Dirección</h3>
                     <p className="text-muted-foreground">
@@ -94,7 +101,7 @@ export function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <Phone className="h-6 w-6 text-primary shrink-0" />
+                  <Phone className="h-6 w-6 shrink-0" />
                   <div>
                     <h3 className="font-medium">Teléfono</h3>
                     <a
@@ -110,7 +117,7 @@ export function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <Mail className="h-6 w-6 text-primary shrink-0" />
+                  <Mail className="h-6 w-6 shrink-0" />
                   <div>
                     <h3 className="font-medium">Email</h3>
                     <a
@@ -123,7 +130,7 @@ export function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <Clock className="h-6 w-6 text-primary shrink-0" />
+                  <Clock className="h-6 w-6 shrink-0" />
                   <div>
                     <h3 className="font-medium">Horario</h3>
                     <p className="text-muted-foreground">
@@ -178,7 +185,7 @@ export function ContactSection() {
           <div>
             <Card>
               <CardHeader>
-                <CardTitle>
+                <CardTitle className="text-primary">
                   {siteConfig.sectionTitles.contact.formTitle}
                 </CardTitle>
                 <CardDescription>

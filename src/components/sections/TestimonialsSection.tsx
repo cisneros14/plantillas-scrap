@@ -9,18 +9,24 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import dynamic from "next/dynamic";
+
+const ContactDialog = dynamic(() =>
+  import("../ContactDialog").then((mod) => mod.ContactDialog),
+);
 
 export function TestimonialsSection() {
   return (
-    <section className="bg-muted/60">
+    <section className="bg-background border-y dark:bg-amber-950/20 dark:border-amber-900/30 py-12 md:py-20">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
             {siteConfig.sectionTitles.testimonials.title}
           </h2>
-          <p className="text-lg text-muted-foreground mx-auto">
+          <p className="text-lg text-muted-foreground mx-auto mb-8">
             {siteConfig.sectionTitles.testimonials.description}
           </p>
+          
         </div>
 
         <div className="mx-auto">
@@ -67,6 +73,9 @@ export function TestimonialsSection() {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
+          <div className="mx-auto w-full flex justify-center items-center mt-6 md:mt-14">
+          <ContactDialog />
+          </div>
         </div>
       </div>
     </section>

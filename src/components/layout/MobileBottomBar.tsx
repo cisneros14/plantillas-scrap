@@ -1,11 +1,12 @@
 "use client";
 
-import { Home, Phone, MessageCircle, Menu } from "lucide-react";
+import { Home, Phone, Menu } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { siteConfig } from "@/config/site";
 import { MobileSheet } from "./MobileSheet";
 import { Button } from "@/components/ui/button";
+import { FaWhatsapp } from "react-icons/fa";
 
 export function MobileBottomBar() {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
@@ -46,7 +47,7 @@ export function MobileBottomBar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <MessageCircle className="h-5 w-5" />
+              <FaWhatsapp className="h-5 w-5" />
               <span className="text-[10px] font-normal">WhatsApp</span>
             </a>
           </Button>

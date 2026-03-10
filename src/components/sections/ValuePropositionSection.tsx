@@ -4,7 +4,7 @@ import { LucideIcon } from "lucide-react";
 
 export function ValuePropositionSection() {
   return (
-    <section className="bg-muted/60">
+    <section className="bg-background/70 border-y dark:bg-amber-950/20 dark:border-amber-900/30">
       <div className="container px-4 mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">

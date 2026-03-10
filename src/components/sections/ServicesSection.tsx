@@ -11,7 +11,7 @@ import { LucideIcon } from "lucide-react";
 
 export function ServicesSection() {
   return (
-    <section id="servicios" className="bg-background">
+    <section id="servicios" className="bg-background/50 dark:bg-neutral-900/50">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">

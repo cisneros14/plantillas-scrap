@@ -140,7 +140,7 @@ export function ProductCard({
   onToggleFavorite,
 }: ProductCardProps) {
   return (
-    <Card className="rounded-lg border border-gray-200 bg-muted/60 p-6 shadow-sm dark:border-neutral-700">
+    <Card className="rounded-lg border border-gray-200 bg-background/70 border-y p-6 shadow-sm dark:border-neutral-700">
       <div className="h-56 w-full relative">
         <Link href={`/product-details/${product.id}`}>
           {/* Light Mode Image */}

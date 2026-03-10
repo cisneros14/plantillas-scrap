@@ -6,28 +6,29 @@ export const viewport: Viewport = {
   maximumScale: 1,
   userScalable: false,
 };
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ThemeProvider } from "@/components/theme-provider";
 import { generateThemeVariables } from "@/lib/theme-generator";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-sans",
   subsets: ["latin"],
   display: "swap",
   adjustFontFallback: true,
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const playfair = Playfair_Display({
+  variable: "--font-serif",
   subsets: ["latin"],
   display: "swap",
   adjustFontFallback: true,
 });
 
 import { constructMetadata } from "@/lib/seo";
+import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 
 export const metadata: Metadata = constructMetadata();
 
@@ -39,6 +40,7 @@ export default function RootLayout({
   const themeCss = generateThemeVariables(
     siteConfig.branding.primary,
     siteConfig.branding.secondary,
+    siteConfig.branding.background,
   );
 
   return (
@@ -47,7 +49,7 @@ export default function RootLayout({
         <JsonLd />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden`}
+        className={`${inter.variable} ${playfair.variable} font-sans antialiased min-h-screen flex flex-col bg-white dark:bg-[#0a0a0a] text-foreground overflow-x-hidden`}
       >
         <style
           id="theme-styles"
@@ -55,11 +57,14 @@ export default function RootLayout({
         />
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
+          forcedTheme="light"
           disableTransitionOnChange
         >
           {children}
+          <div className="max-md:hidden">
+            <WhatsAppButton />
+          </div>
         </ThemeProvider>
       </body>
     </html>

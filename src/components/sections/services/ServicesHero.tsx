@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge";
 
 export function ServicesHero() {
   return (
-    <section className="relative overflow-hidden bg-background py-16 sm:py-16">
+    <section className="relative overflow-hidden bg-background/50 dark:bg-neutral-900/50 py-16 sm:py-16">
       {/* Background Pattern */}
       <div className="absolute inset-0 -z-10 opacity-10">
         <svg

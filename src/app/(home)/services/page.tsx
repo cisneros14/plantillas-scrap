@@ -1,6 +1,7 @@
 import { ServicesHero } from "@/components/sections/services/ServicesHero";
 import dynamic from "next/dynamic";
 import { Metadata } from "next";
+import { ContactSection } from "@/components/sections/ContactSection";
 
 export const metadata: Metadata = {
   title: "Nuestros Servicios",
@@ -13,26 +14,6 @@ const DetailedServiceList = dynamic(
   () =>
     import("@/components/sections/services/DetailedServiceList").then(
       (mod) => mod.DetailedServiceList,
-    ),
-  {
-    loading: () => <div className="h-96 w-full animate-pulse bg-muted/20" />,
-  },
-);
-
-const ProcessSection = dynamic(
-  () =>
-    import("@/components/sections/services/ProcessSection").then(
-      (mod) => mod.ProcessSection,
-    ),
-  {
-    loading: () => <div className="h-96 w-full animate-pulse bg-muted/20" />,
-  },
-);
-
-const PricingSection = dynamic(
-  () =>
-    import("@/components/sections/services/PricingSection").then(
-      (mod) => mod.PricingSection,
     ),
   {
     loading: () => <div className="h-96 w-full animate-pulse bg-muted/20" />,
@@ -52,9 +33,8 @@ export default function ServicesPage() {
     <div className="flex min-h-screen flex-col">
       <ServicesHero />
       <DetailedServiceList />
-      <ProcessSection />
-      <PricingSection />
       <CTASection />
+      <ContactSection className="bg-background/50 border-none dark:bg-neutral-900/50" />
     </div>
   );
 }
