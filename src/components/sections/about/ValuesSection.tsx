@@ -24,7 +24,7 @@ export function ValuesSection() {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-background/05">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
@@ -39,7 +39,7 @@ export function ValuesSection() {
           {values.map((item, index) => (
             <Card
               key={index}
-              className="text-center border-none shadow-md hover:shadow-lg transition-shadow bg-muted/20"
+              className="text-center border-none shadow-md hover:shadow transition-shadow bg-muted/20"
             >
               <CardHeader>
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">

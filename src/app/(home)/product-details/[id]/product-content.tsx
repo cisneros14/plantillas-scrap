@@ -142,7 +142,7 @@ export default function ProductContent({ product }: ProductContentProps) {
               <a href="#" className="text-blue-600 hover:underline">
                 authorized retailers
               </a>
-              , with optional Premium delivery for expedited shipping.
+              , with optional delivery for expedited shipping.
             </p>
 
             <hr className="h-px my-6 bg-gray-200 border-0 dark:bg-gray-700" />

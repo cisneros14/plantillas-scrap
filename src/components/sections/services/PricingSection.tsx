@@ -43,11 +43,10 @@ export function PricingSection() {
             ) => (
               <Card
                 key={index}
-                className={`flex flex-col relative ${
-                  plan.popular
-                    ? "border-primary shadow-lg scale-105 z-10"
+                className={`flex flex-col relative ${plan.popular
+                    ? "border-primary shadow scale-105 z-10"
                     : "border-border shadow-md"
-                }`}
+                  }`}
               >
                 {plan.popular && (
                   <div className="absolute top-0 right-0 left-0 -mt-4 flex justify-center">

@@ -10,8 +10,9 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { ModeToggle } from "@/components/mode-toggle";
-import { Facebook, Instagram } from "lucide-react";
+import { Facebook, Instagram, Sparkles } from "lucide-react";
 import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
+import { Button } from "@/components/ui/button";
 import dynamic from "next/dynamic";
 
 const ContactDialog = dynamic(() => import("../ContactDialog").then(mod => mod.ContactDialog), {
@@ -58,6 +59,12 @@ export function NavbarDesktop() {
             <WhatsappIcon className="h-4 w-4 text-muted-foreground" />
           </a>
 
+          <Link href="/early-access" passHref>
+            <Button variant="outline" className="border-primary/30 hover:bg-primary/10 text-primary gap-1.5 cursor-pointer">
+              <Sparkles className="w-4 h-4 text-primary" />
+              Gana Recompensas
+            </Button>
+          </Link>
           <ContactDialog />
           <ModeToggle />
         </div>

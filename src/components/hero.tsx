@@ -7,7 +7,7 @@ import { siteConfig } from "@/config/site";
 
 export default function Hero() {
   return (
-    <div className="md:min-h-screen flex items-center justify-center bg-background">
+    <div className="md:min-h-screen flex items-center justify-center bg-background/05">
       <div className="max-w-(--breakpoint-xl) w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 px-6 py-12">
         <div className="space-y-6 animate-in fade-in zoom-in duration-500">
           <Badge
@@ -55,7 +55,7 @@ export default function Hero() {
           src={siteConfig.hero.image.src}
           alt={siteConfig.hero.image.alt}
           priority
-          className="w-full max-w-sm lg:max-w-xl h-auto object-contain animate-in fade-in zoom-in duration-700 delay-100"
+          className="w-full rounded-3xl max-w-sm lg:max-w-md h-auto object-contain animate-in fade-in zoom-in duration-700 delay-100"
         />
       </div>
     </div>

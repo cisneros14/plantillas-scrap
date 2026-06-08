@@ -5,10 +5,10 @@ import { siteConfig } from "@/config/site";
 
 export function ProductDemoSection() {
   return (
-    <section className="bg-background">
+    <section className="bg-background/05">
       <div className="mx-auto max-w-7xl px-4 2xl:px-0">
-        <h2 className="mb-8 text-2xl font-bold text-gray-900 dark:text-white">
-          Planes Destacados
+        <h2 className="mb-8 text-2xl font-bold text-foreground">
+          Productos Destacados
         </h2>
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
           {siteConfig.featuredProducts.map((product) => (

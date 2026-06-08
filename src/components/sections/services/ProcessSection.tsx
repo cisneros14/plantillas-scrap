@@ -8,7 +8,7 @@ export function ProcessSection() {
   if (processes.length === 0) return null;
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-background/05">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
@@ -37,10 +37,10 @@ export function ProcessSection() {
                 return (
                   <div
                     key={index}
-                    className="flex flex-col items-center text-center bg-background"
+                    className="flex flex-col items-center text-center bg-background/05"
                   >
                     <div className="relative mb-6">
-                      <div className="flex h-24 w-24 items-center justify-center rounded-full border-4 border-background bg-primary text-primary-foreground shadow-lg z-10">
+                      <div className="flex h-24 w-24 items-center justify-center rounded-full border-4 border-background bg-primary text-primary-foreground shadow z-10">
                         <IconComponent className="h-10 w-10" />
                       </div>
                       {/* Number badge */}

@@ -140,7 +140,7 @@ export function ProductCard({
   onToggleFavorite,
 }: ProductCardProps) {
   return (
-    <Card className="rounded-lg border border-gray-200 bg-muted/60 p-6 shadow-sm dark:border-neutral-700">
+    <Card className="rounded-lg border border-border bg-card p-6 shadow-sm">
       <div className="h-56 w-full relative">
         <Link href={`/product-details/${product.id}`}>
           {/* Light Mode Image */}
@@ -163,7 +163,7 @@ export function ProductCard({
       <div className="pt-6">
         <div className="mb-4 flex items-center justify-between gap-4">
           {product.discountBadge ? (
-            <span className="me-2 rounded bg-primary-100 pe-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300">
+            <span className="me-2 rounded bg-primary/10 pe-2.5 py-0.5 text-xs font-medium text-primary">
               {product.discountBadge}
             </span>
           ) : (
@@ -175,7 +175,7 @@ export function ProductCard({
               type="button"
               onClick={() => onQuickLook?.(product)}
               data-tooltip-target={`tooltip-quick-look-${product.id}`}
-              className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              className="rounded-lg p-2 text-muted-foreground hover:bg-muted hover:text-foreground"
             >
               <span className="sr-only">Vista rápida</span>
               <svg
@@ -202,7 +202,7 @@ export function ProductCard({
             <div
               id={`tooltip-quick-look-${product.id}`}
               role="tooltip"
-              className="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
+              className="tooltip invisible absolute z-10 inline-block rounded-lg bg-popover border border-border px-3 py-2 text-sm font-medium text-popover-foreground opacity-0 shadow-sm transition-opacity duration-300"
               data-popper-placement="top"
             >
               Vista rápida
@@ -213,7 +213,7 @@ export function ProductCard({
               type="button"
               onClick={() => onToggleFavorite?.(product)}
               data-tooltip-target={`tooltip-add-to-favorites-${product.id}`}
-              className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              className="rounded-lg p-2 text-muted-foreground hover:bg-muted hover:text-foreground"
             >
               <span className="sr-only">Añadir a favoritos</span>
               <svg
@@ -235,7 +235,7 @@ export function ProductCard({
             <div
               id={`tooltip-add-to-favorites-${product.id}`}
               role="tooltip"
-              className="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
+              className="tooltip invisible absolute z-10 inline-block rounded-lg bg-popover border border-border px-3 py-2 text-sm font-medium text-popover-foreground opacity-0 shadow-sm transition-opacity duration-300"
               data-popper-placement="top"
             >
               Añadir a favoritos
@@ -246,7 +246,7 @@ export function ProductCard({
 
         <Link
           href={`/product-details/${product.id}`}
-          className="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white"
+          className="text-lg font-semibold leading-tight text-foreground hover:underline"
         >
           {product.name}
         </Link>
@@ -258,10 +258,10 @@ export function ProductCard({
             ))}
           </div>
 
-          <p className="text-sm font-medium text-gray-900 dark:text-white">
+          <p className="text-sm font-medium text-foreground">
             {product.rating}
           </p>
-          <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
+          <p className="text-sm font-medium text-muted-foreground">
             ({product.reviewsCount})
           </p>
         </div>
@@ -271,7 +271,7 @@ export function ProductCard({
             {product.features.map((feature, index) => (
               <li key={index} className="flex items-center gap-2">
                 <FeatureIcon type={feature.iconType} />
-                <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                <p className="text-sm font-medium text-muted-foreground">
                   {feature.label}
                 </p>
               </li>
@@ -280,7 +280,7 @@ export function ProductCard({
         )}
 
         <div className="mt-4 flex items-center justify-between gap-4">
-          <p className="text-2xl font-extrabold leading-tight text-gray-900 dark:text-white">
+          <p className="text-2xl font-extrabold leading-tight text-foreground">
             ${product.price}
           </p>
 
@@ -289,7 +289,7 @@ export function ProductCard({
             variant={"default"}
             type="button"
             onClick={() => onAddToCart?.(product)}
-            className="inline-flex items-center rounded-lg text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+            className="inline-flex items-center rounded-lg text-primary-foreground bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring"
           >
             <svg
               className="me-1 h-5 w-5"

@@ -24,7 +24,7 @@ export function ValuePropositionSection() {
             return (
               <div
                 key={index}
-                className="flex flex-col items-center text-center p-6 rounded-2xl bg-background border border-gray-200 dark:bg-neutral-900 shadow dark:border-neutral-700  dark:hover:bg-neutral-700 transition-colors duration-300"
+                className="flex flex-col items-center text-center p-6 rounded-2xl bg-card border border-border shadow hover:bg-muted/50 transition-colors duration-300"
               >
                 <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary">
                   <IconComponent className="h-6 w-6" />

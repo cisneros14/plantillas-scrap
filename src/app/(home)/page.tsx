@@ -46,13 +46,7 @@ export default function Home() {
       {/* Static Shell: Immediate LCP */}
       <ScrollAnimationWrapper>
         <Hero />
-      </ScrollAnimationWrapper>
-      <ScrollAnimationWrapper>
-        <CategorySection />
-      </ScrollAnimationWrapper>
-      <ScrollAnimationWrapper>
-        <ProductDemoSection />
-      </ScrollAnimationWrapper>
+      </ScrollAnimationWrapper> 
       <ScrollAnimationWrapper>
         <ValuePropositionSection />
       </ScrollAnimationWrapper>

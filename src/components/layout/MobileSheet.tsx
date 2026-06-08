@@ -1,6 +1,6 @@
 "use client";
 
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import {
@@ -37,6 +37,14 @@ export function MobileSheet({ isOpen, onClose }: MobileSheetProps) {
               {item.label}
             </Link>
           ))}
+          <Link
+            href="/early-access"
+            onClick={() => onClose(false)}
+            className="text-lg font-semibold text-primary hover:text-primary/80 transition-colors flex items-center gap-2 pt-2 border-t border-border/20"
+          >
+            <Sparkles className="h-5 w-5 text-primary" />
+            Gana Recompensas
+          </Link>
         </nav>
 
         <div className="space-y-4 pt-8 border-t">

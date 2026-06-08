@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -19,12 +19,14 @@
     "@radix-ui/react-separator": "^1.1.8",
     "@radix-ui/react-slot": "^1.2.4",
     "@radix-ui/react-tooltip": "^1.2.8",
+    "bcryptjs": "^3.0.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "colord": "^2.9.3",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.34.0",
     "lucide-react": "^0.562.0",
+    "mysql2": "^3.22.5",
     "next": "16.1.1",
     "next-auth": "^5.0.0-beta.30",
     "next-themes": "^0.4.6",
@@ -39,6 +41,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

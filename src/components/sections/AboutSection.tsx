@@ -9,7 +9,7 @@ const ContactDialog = dynamic(() =>
 
 export function AboutSection() {
   return (
-    <section id="nosotros" className="bg-background">
+    <section id="nosotros" className="bg-background/05">
       <div className="container px-4 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">

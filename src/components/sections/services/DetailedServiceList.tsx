@@ -23,7 +23,7 @@ export function DetailedServiceList() {
             return (
               <Card
                 key={index}
-                className="group border-none shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden"
+                className="group border-none shadow-md hover:shadow transition-all duration-300 overflow-hidden"
               >
                 <div className="h-2 w-full bg-primary/80 group-hover:bg-primary transition-colors" />
                 <CardHeader>

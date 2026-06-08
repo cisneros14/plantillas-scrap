@@ -11,7 +11,7 @@ import { LucideIcon } from "lucide-react";
 
 export function ServicesSection() {
   return (
-    <section id="servicios" className="bg-background">
+    <section id="servicios" className="bg-background/05">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
@@ -32,7 +32,7 @@ export function ServicesSection() {
             return (
               <Card
                 key={service.title}
-                className="border border-gray-200 dark:border-neutral-700 dark:bg-neutral-900 shadow transition-shadow"
+                className="border border-border bg-card shadow transition-shadow"
               >
                 <CardHeader>
                   <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">

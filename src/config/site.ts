@@ -1,197 +1,176 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Tu Negocio Local",
-  description: "Ofrecemos los mejores servicios en tu área. Calidad garantizada y atención personalizada.",
-  url: "https://tunegocio.com",
-  ogImage: "https://tunegocio.com/og.jpg",
+  name: "BIOPEPHT",
+  description: "Colágeno Hidrolizado de alta calidad para salud y belleza. Regeneración celular, pureza garantizada y solubilidad instantánea.",
+  url: "https://biopepht.com",
+  ogImage: "https://biopepht.com/og.jpg",
   author: {
-    name: "Tu Negocio",
-    url: "https://tunegocio.com",
-    twitter: "@tunegocio",
+    name: "BIOACTIVA",
+    url: "https://bioactiva.com",
+    twitter: "@bioactiva",
   },
-  keywords: ["servicios", "local", "negocio", "reparación", "mantenimiento"],
-  applicationName: "TuNegocioApp",
-  creator: "Tu Negocio",
+  keywords: ["colageno", "hidrolizado", "biopepht", "salud", "belleza", "regeneracion celular", "sin azucar"],
+  applicationName: "BiopephtStore",
+  creator: "BIOACTIVA",
   language: "es",
   
   // Business Specifics for JSON-LD and Contact Info
   business: {
-    name: "Tu Negocio Local S.A.",
-    phone: "+34 600 000 000",
-    whatsapp: "34600000000",
-    address: "Calle Principal 123, Madrid, España",
+    name: "BIOACTIVA S.A.",
+    phone: "+593 900 000 000", // Marcador de posición, ajustar si es necesario
+    whatsapp: "593900000000",
+    address: "Quito, Ecuador", // Basado en el prefijo de la conversación anterior
     coordinates: {
-      lat: 40.416775,
-      long: -3.703790,
+      lat: -2.170222,
+      long: -79.922308,
     },
-    email: "contacto@tunegocio.com",
-    operating_hours: "Mo-Fr 09:00-18:00",
+    email: "info@bioactiva.com",
+    operating_hours: "Lu-Vi 09:00-18:00",
   },
 
   // Navigation
   nav_items: [
     { label: "Inicio", href: "/" },
-    { label: "Servicios", href: "/services" },
-    { label: "Nosotros", href: "/about" },
-    { label: "Contacto", href: "/contact" },
-    { label: "Catalogo", href: "/catalogo" },
+    { label: "Beneficios", href: "#beneficios" },
+    { label: "Productos", href: "#productos" },
+    { label: "Nosotros", href: "#nosotros" },
+    { label: "Contacto", href: "#contacto" },
   ],
 
   // Branding & Design System
   branding: {
-    primary: "#ff004c", 
-    primary_foreground: "0 0% 98%",
-    secondary: "#2c7fbf",
+    primary: "#7c3aed", // Violeta con contraste óptimo
+    primary_foreground: "262 80% 30%",
+    secondary: "#4c1d95", // Púrpura oscuro
     secondary_foreground: "0 0% 98%",
     font_sans: "font-sans",
-    logo_text: "TuNegocio",
+    logo_text: "BIOPEPHT",
   },
 
   // Social Links
   social: {
-    facebook: "https://facebook.com",
-    instagram: "https://instagram.com",
-    twitter: "https://twitter.com",
-    linkedin: "https://linkedin.com",
-    whatsapp: "https://wa.me/593991234567",
+    facebook: "https://facebook.com/bioactiva",
+    instagram: "https://instagram.com/bioactiva",
+    twitter: "https://twitter.com/bioactiva",
+    linkedin: "https://linkedin.com/company/bioactiva",
+    whatsapp: "https://wa.me/593900000000",
   },
 
-  // Content Sections (Maintaining existing data structure)
+  // Content Sections
   services: [
     {
-      title: "Consultoría Estratégica",
-      description: "Analizamos tu negocio para identificar oportunidades de crecimiento y optimización.",
-      icon: "TrendingUp", 
+      title: "Salud y Belleza",
+      description: "Mejora la apariencia de tu piel, cabello y uñas desde el interior con colágeno de alta pureza.",
+      icon: "Sparkles", 
     },
     {
-      title: "Desarrollo Web",
-      description: "Creamos sitios web modernos, rápidos y optimizados para buscadores.",
-      icon: "Laptop",
+      title: "Regeneración Celular",
+      description: "Promueve la renovación de los tejidos y fortalece la estructura celular de todo el cuerpo.",
+      icon: "Atom",
     },
     {
-      title: "Marketing Digital",
-      description: "Estrategias de marketing para aumentar tu visibilidad y atraer más clientes.",
-      icon: "Megaphone",
+      title: "Fuerza y Flexibilidad",
+      description: "Ideal para el mantenimiento de articulaciones, tendones y huesos resistentes.",
+      icon: "Activity",
     },
     {
-      title: "Soporte Técnico",
-      description: "Asistencia técnica especializada para resolver cualquier incidencia.",
-      icon: "Headset",
+      title: "Fácil Digestión",
+      description: "Formula hidrolizada que asegura una absorción rápida y eficiente sin pesadez estomacal.",
+      icon: "ShieldCheck",
     },
   ],
   testimonials: [
     {
-      name: "María García",
-      role: "CEO, TechStart",
-      content: "El servicio fue excepcional. Transformaron completamente nuestra presencia digital y los resultados fueron inmediatos.",
+      name: "Valeria Herrera",
+      role: "Atleta Profesional",
+      content: "BIOPEPHT ha sido clave en mi recuperación. Mis articulaciones se sienten mucho más fuertes después de cada entrenamiento.",
       avatar: "/avatars/01.png",
     },
     {
-      name: "Carlos Rodríguez",
-      role: "Director, MarketingPro",
-      content: "Profesionales, rápidos y eficientes. La mejor inversión que hemos hecho para nuestro negocio este año.",
+      name: "Andrés Cevallos",
+      role: "Nutricionista",
+      content: "Es el colágeno hidrolizado más puro que he encontrado. Sin azúcar y con una solubilidad impecable.",
       avatar: "/avatars/02.png",
     },
     {
-      name: "Ana Martínez",
-      role: "Dueña, Boutique Local",
-      content: "Me ayudaron a entender qué necesitaba mi negocio y lo ejecutaron a la perfección. Totalmente recomendados.",
+      name: "Lucía Méndez",
+      role: "Cuidado de la Piel",
+      content: "Empecé a notar cambios en mi piel a las pocas semanas. Se ve más hidratada y con una textura increíble.",
       avatar: "/avatars/03.png",
     },
   ],
   faq: [
     {
-      question: "¿Cuáles son sus horarios de atención?",
-      answer: "Nuestro horario de atención es de lunes a viernes de 9:00 a 18:00. Sin embargo, ofrecemos soporte de emergencia para clientes con planes premium.",
+      question: "¿Cómo debo tomar BIOPEPHT?",
+      answer: "Se recomienda disolver una cucharada (10g) en tu bebida favorita, ya sea agua, jugo o batidos. Su sabor neutro hace que sea fácil de combinar.",
     },
     {
-      question: "¿Ofrecen servicios personalizados?",
-      answer: "Sí, todos nuestros planes se adaptan a las necesidades específicas de cada cliente. Realizamos una consultoría inicial para entender tus requerimientos.",
+      question: "¿Contiene azúcar?",
+      answer: "No, BIOPEPHT es totalmente libre de azúcar (Cero Azúcar) y carbohidratos, lo que lo hace apto para todo tipo de dietas.",
     },
     {
-      question: "¿Cuál es el tiempo de entrega promedio?",
-      answer: "Depende del proyecto. Para sitios web corporativos, el tiempo promedio es de 2 a 3 semanas. Para proyectos más complejos, definimos un cronograma detallado.",
+      question: "¿Cuánto contenido trae el empaque?",
+      answer: "Cada bolsa de BIOPEPHT contiene 300 gramos de colágeno hidrolizado puro.",
     },
     {
-      question: "¿Ofrecen garantía de satisfacción?",
-      answer: "Absolutamente. Nos aseguramos de que estés 100% satisfecho con el resultado final antes de cerrar el proyecto.",
+      question: "¿Es apto para intolerantes?",
+      answer: "Sí, es de fácil digestión y puro sin mezclas, minimizando cualquier riesgo de intolerancia digestiva.",
     },
   ],
   process: [
     {
-      title: "Consulta Inicial",
-      description: "Nos reunimos para entender a fondo tus necesidades y objetivos comerciales.",
-      icon: "MessageCircle",
+      title: "Hidrólisis Pura",
+      description: "Procesamos el colágeno para que las moléculas sean más pequeñas y fáciles de absorber.",
+      icon: "Filter",
     },
     {
-      title: "Estrategia",
-      description: "Diseñamos un plan de acción personalizado para tu negocio.",
-      icon: "Lightbulb",
+      title: "Sin Mezclas",
+      description: "Garantizamos un producto 100% puro, sin rellenos ni aditivos innecesarios.",
+      icon: "CheckCircle",
     },
     {
-      title: "Ejecución",
-      description: "Implementamos las soluciones con los más altos estándares de calidad.",
-      icon: "Hammer",
+      title: "Solubilidad Instantánea",
+      description: "Nuestra tecnología permite que se disuelva al instante en cualquier líquido.",
+      icon: "Zap",
     },
     {
-      title: "Optimización",
-      description: "Monitoreamos y mejoramos continuamente para asegurar resultados.",
-      icon: "TrendingUp",
+      title: "Calidad Bioactiva",
+      description: "Sometemos cada lote a estrictos controles de calidad para tu seguridad.",
+      icon: "Shield",
     },
   ],
   pricing: [
     {
-      name: "Básico",
-      price: "€499",
-      description: "Perfecto para pequeños negocios que están empezando.",
-      features: ["Diseño Web Básico", "3 Páginas", "Contacto por Email", "SEO Básico"],
-      cta: "Empezar",
-      popular: false,
-    },
-    {
-      name: "Profesional",
-      price: "€999",
-      description: "La mejor opción para negocios en crecimiento.",
-      features: ["Diseño Premium", "Hasta 10 Páginas", "Soporte Prioritario", "SEO Avanzado", "Integración CMS"],
-      cta: "Elegir Profesional",
+      name: "Biopepht Personal",
+      price: "$25",
+      description: "Ideal para tu rutina mensual de bienestar.",
+      features: ["1 Bolsa de 300g", "Envío a domicilio", "Guía de uso digital"],
+      cta: "Comprar ahora",
       popular: true,
     },
     {
-      name: "Empresarial",
-      price: "Consultar",
-      description: "Soluciones a medida para grandes organizaciones.",
-      features: ["Desarrollo a Medida", "Páginas Ilimitadas", "Soporte 24/7", "Auditoría SEO Mensual", "E-commerce"],
-      cta: "Contactar",
+      name: "Pack Dúo",
+      price: "$45",
+      description: "Ahorra comprando para dos meses o para compartir.",
+      features: ["2 Bolsas de 300g", "Envío GRATIS", "Shaker de regalo", "Descuento del 10%"],
+      cta: "Elegir Pack",
+      popular: false,
+    },
+    {
+      name: "Suscripción Trimestral",
+      price: "$20/mes",
+      description: "Asegura tu colágeno cada mes al mejor precio.",
+      features: ["Despacho automático", "Precio congelado", "Soporte nutricional", "Envío prioritario"],
+      cta: "Suscribirse",
       popular: false,
     },
   ],
   team: [
     {
-      name: "Ana García",
-      role: "CEO & Fundadora",
-      bio: "Con más de 15 años de experiencia liderando equipos y estrategias digitales.",
-      image: "/placeholder.webp",
-      social: { twitter: "#", linkedin: "#" }
-    },
-    {
-      name: "Carlos Ruiz",
-      role: "Director Tecnológico",
-      bio: "Apasionado por la innovación y la arquitectura de software escalable.",
-      image: "/placeholder.webp",
-      social: { twitter: "#", linkedin: "#" }
-    },
-    {
-      name: "Laura Martínez",
-      role: "Directora de Diseño",
-      bio: "Creando experiencias visuales impactantes que conectan con los usuarios.",
-      image: "/placeholder.webp",
-      social: { twitter: "#", linkedin: "#" }
-    },
-    {
-      name: "David López",
-      role: "Lead Developer",
-      bio: "Experto en desarrollo full-stack y optimización de rendimiento.",
+      name: "Equipo Bioactiva",
+      role: "Desarrollo y Calidad",
+      bio: "Contamos con expertos dedicados a la investigación de suplementos nutricionales de alta eficacia.",
       image: "/placeholder.webp",
       social: { twitter: "#", linkedin: "#" }
     }
@@ -199,336 +178,168 @@ export const siteConfig = {
   // Sections Titles & Descriptions
   sectionTitles: {
     services: {
-      title: "Nuestros Servicios",
-      description: "Soluciones integrales diseñadas para impulsar tu negocio al siguiente nivel.",
+      title: "Beneficios de BIOPEPHT",
+      description: "Descubre por qué miles de personas eligen nuestro colágeno hidrolizado para mejorar su calidad de vida.",
     },
     testimonials: {
-      title: "Lo que dicen nuestros clientes",
-      description: "La satisfacción de nuestros clientes es nuestra mejor carta de presentación.",
+      title: "Experiencias BIOPEPHT",
+      description: "Lo que dicen nuestros clientes sobre los resultados reales en su salud y belleza.",
     },
     faq: {
-      title: "Preguntas Frecuentes",
-      description: "Resolvemos tus dudas más comunes sobre nuestros servicios.",
+      title: "Dudas sobre BIOPEPHT",
+      description: "Respuestas directas a las preguntas más comunes sobre nuestro colágeno.",
     },
     contact: {
-      title: "Información de Contacto",
-      description: "Encuéntranos en nuestras oficinas o contáctanos directamente.",
-      formTitle: "Envíanos un mensaje",
-      formDescription: "Completa el formulario y te responderemos lo antes posible.",
+      title: "Ponte en Contacto",
+      description: "Estamos aquí para asesorarte en tu camino hacia una vida más saludable.",
+      formTitle: "Realiza tu pedido",
+      formDescription: "O pregúntanos cualquier duda que tengas sobre el producto.",
     },
   },
 
   // Home Page Sections
   hero: {
     badge: {
-      text: "¡Nuevo! Versión 2.0 disponible",
+      text: "Cero Azúcar • Hidrolizado",
       href: "#",
-      icon: "ArrowUpRight"
+      icon: "Sparkles"
     },
-    title: "Transformamos tus ideas en soluciones digitales",
-    description: "Desarrollamos software a medida, sitios web y aplicaciones móviles que impulsan el crecimiento de tu negocio con tecnología de vanguardia.",
+    title: "Potencia tu salud con BIOPEPHT",
+    description: "Colágeno hidrolizado puro para una regeneración celular profunda, fuerza en tus articulaciones y belleza real desde el interior.",
     primaryCta: {
-      text: "Ver Servicios",
-      href: "/services",
-      icon: "ArrowUpRight"
+      text: "Ver Beneficios",
+      href: "#beneficios",
+      icon: "ArrowRight"
     },
     secondaryCta: {
-      text: "Cotizar Proyecto",
-      icon: "CirclePlay"
+      text: "Comprar ahora",
+      icon: "ShoppingCart"
     },
     image: {
-      src: "/hero-image.png", 
-      alt: "Hero Image"
+      src: "/banner4.jpeg", 
+      alt: "Biopepht Collagen Pouch"
     }
   },
 
   categories: [
     {
-      id: "consultoria",
-      name: "Consultoría",
-      icon: "TrendingUp",
-      href: "/services#consultoria",
+      id: "salud",
+      name: "Salud",
+      icon: "HeartPulse",
+      href: "#",
     },
     {
-      id: "desarrollo",
-      name: "Desarrollo",
-      icon: "Laptop",
-      href: "/services#desarrollo",
+      id: "belleza",
+      name: "Belleza",
+      icon: "Moon",
+      href: "#",
     },
     {
-      id: "marketing",
-      name: "Marketing",
-      icon: "Megaphone",
-      href: "/services#marketing",
-    },
-    {
-      id: "soporte",
-      name: "Soporte",
-      icon: "Headset",
-      href: "/services#soporte",
+      id: "deporte",
+      name: "Deporte",
+      icon: "Dumbbell",
+      href: "#",
     },
   ],
 
   featuredProducts: [
     {
       id: "1",
-      name: 'Plan Emprendedor',
-      price: 499,
+      name: 'BIOPEPHT Colágeno (300g)',
+      price: 25,
       rating: 5.0,
-      reviewsCount: 120,
-      imageLight: "/products/starter-plan.png",
-      imageDark: "/products/starter-plan-dark.png",
-      discountBadge: "Popular",
+      reviewsCount: 1540,
+      imageLight: "/products/biopepht-pouch.png",
+      imageDark: "/products/biopepht-pouch.png",
+      discountBadge: "Efectividad Pro",
       features: [
-        { label: "Sitio Web", iconType: "check" as const },
-        { label: "SEO Básico", iconType: "check" as const },
-      ],
-    },
-    {
-      id: "2",
-      name: "Plan Pyme",
-      price: 999,
-      rating: 4.9,
-      reviewsCount: 85,
-      imageLight: "/products/business-plan.png",
-      imageDark: "/products/business-plan-dark.png",
-      discountBadge: "-15%",
-      features: [
-        { label: "E-commerce", iconType: "check" as const },
-        { label: "SEO Avanzado", iconType: "check" as const },
-      ],
-    },
-    {
-      id: "3",
-      name: "Plan Corporativo",
-      price: 2499,
-      rating: 4.8,
-      reviewsCount: 45,
-      imageLight: "/products/corporate-plan.png",
-      imageDark: "/products/corporate-plan-dark.png",
-      discountBadge: "Completo",
-      features: [
-        { label: "App Móvil", iconType: "check" as const },
-        { label: "Soporte 24/7", iconType: "check" as const },
+        { label: "100% Hidrolizado", iconType: "check" as const },
+        { label: "Sabor Neutro", iconType: "check" as const },
       ],
     },
   ],
 
   valueProposition: {
-    title: "¿Por qué elegirnos?",
-    description: "Nos diferenciamos por ofrecer un servicio integral que combina tecnología, experiencia y compromiso para impulsar tu crecimiento.",
+    title: "¿Por qué Biopepht?",
+    description: "Nos enfocamos en la pureza y la eficacia celular para entregarte resultados tangibles.",
     items: [
       {
         icon: "Zap",
-        title: "Rapidez y Eficiencia",
-        description: "Optimizamos cada proceso para entregarte resultados en tiempo récord sin sacrificar la calidad.",
+        title: "Absorción Rápida",
+        description: "Al ser hidrolizado, tu cuerpo lo procesa mucho más rápido que el colágeno convencional.",
+      },
+      {
+        icon: "Droplets",
+        title: "Mezcla Perfecta",
+        description: "Se disuelve por completo sin dejar grumos ni sabores extraños en tus bebidas.",
       },
       {
         icon: "Shield",
-        title: "Seguridad Garantizada",
-        description: "Tus datos y proyectos están protegidos con los más altos estándares de seguridad del mercado.",
-      },
-      {
-        icon: "Target",
-        title: "Enfoque en Resultados",
-        description: "No solo trabajamos, nos alineamos con tus objetivos para asegurar el éxito de tu negocio.",
+        title: "Pureza Bioactiva",
+        description: "Sin rellenos, sin conservantes y libre de azúcares añadidos.",
       },
       {
         icon: "Smile",
-        title: "Soporte Dedicado",
-        description: "Nuestro equipo está siempre disponible para resolver tus dudas y acompañarte en cada paso.",
+        title: "Resultados Visibles",
+        description: "Diseñado para impactar positivamente en piel, uñas, cabello y articulaciones.",
       },
     ]
   },
 
   cta: {
-    title: "¿Listo para transformar tu negocio?",
-    description: "Únete a cientos de clientes satisfechos que han confiado en nosotros para llevar sus proyectos al siguiente nivel.",
-    buttonText: "Llamar ahora",
+    title: "¿Lista para transformar tu rutina?",
+    description: "Empieza hoy a cuidar tu cuerpo con la pureza que solo BIOPEPHT te ofrece.",
+    buttonText: "Pedir Biopepht",
   },
 
   about: {
-    title: "Sobre Nosotros",
-    description: "Somos una empresa comprometida con la excelencia y la satisfacción del cliente. Con años de experiencia en el sector, ofrecemos soluciones personalizadas que se adaptan a tus necesidades específicas.",
+    title: "Sobre BIOPEPHT by BIOACTIVA",
+    description: "Bioactiva nace con el propósito de crear suplementos científicos de alta eficacia. BIOPEPHT es nuestro producto estrella, resultado de años de optimización técnica para lograr el colágeno hidrolizado más puro y soluble del mercado.",
     features: [
-      "Equipo altamente cualificado",
-      "Atención personalizada 24/7",
-      "Garantía de satisfacción",
-      "Tecnología de vanguardia",
+      "Fórmula científicamente probada",
+      "Compromiso con la pureza al 100%",
+      "Fabricación bajo estándares internacionales",
+      "Enfoque en salud holística y belleza natural",
     ],
-    image: "/about-image.jpg"
+    image: "/banner2.jpeg"
   },
   catalog: {
     categories: [
-      { id: "apple", label: "Apple", count: 56 },
-      { id: "microsoft", label: "Microsoft", count: 45 },
-      { id: "logitech", label: "Logitech", count: 97 },
-      { id: "sony", label: "Sony", count: 234 },
-      { id: "asus", label: "Asus", count: 97 },
-      { id: "dell", label: "Dell", count: 56 },
-      { id: "msi", label: "MSI", count: 97 },
-      { id: "canon", label: "Canon", count: 49 },
-      { id: "benq", label: "BenQ", count: 23 },
-      { id: "razor", label: "Razor", count: 49 },
+      { id: "colageno", label: "Colágeno", count: 1 },
+      { id: "suplementos", label: "Suplementos", count: 4 },
     ],
     shippingRegions: [
-      { id: "na", label: "Norteamérica" },
-      { id: "sa", label: "Sudamérica" },
-      { id: "asia", label: "Asia" },
-      { id: "aus", label: "Australia" },
-      { id: "eur", label: "Europa" },
+      { id: "ecuador", label: "Ecuador (Nacional)" },
     ],
   },
   
   products: [
     {
       id: "1",
-      name: 'Apple iMac 24" All-In-One Computer, Apple M1, 8GB RAM',
-      price: 1249.99,
+      name: 'BIOPEPHT Colágeno Hidrolizado Puro',
+      price: 25.00,
       rating: 5.0,
-      reviewsCount: 345,
-      imageLight: "https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front.svg",
-      imageDark: "https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front-dark.svg",
-      discountBadge: "the last 2 products",
+      reviewsCount: 1540,
+      imageLight: "/products/biopepht-bag.png",
+      imageDark: "/products/biopepht-bag.png",
+      discountBadge: "Best Seller",
       features: [
-        { label: "Fast Delivery", iconType: "fast-delivery" as const },
-        { label: "Best Price", iconType: "best-price" as const },
+        { label: "Envío Rápido", iconType: "fast-delivery" as const },
+        { label: "Precio Directo", iconType: "best-price" as const },
       ],
-      // Mock Details
       images: [
-          "https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front.svg",
-          "https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-side.svg",
-          "https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-back.svg",
-          "https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front-dark.svg", // Just to have 4
+          "/products/biopepht-bag.png",
+          "/products/biopepht-back.png",
       ],
-      description: "The product is a high-quality, durable solution designed to meet the needs of modern consumers. It features advanced technology and ergonomic design for optimal performance and comfort.\n\nKey features include a sleek interface, customizable settings, and compatibility with various devices. It is ideal for professionals and enthusiasts alike.",
-      colors: ["Green", "Pink", "Silver", "Blue"],
-      capacities: ["256GB", "512GB", "1TB"],
+      description: "BIOPEPHT es un producto de alta calidad diseñado para mejorar la salud y la belleza desde el interior. Posee solubilidad instantánea y sabor neutro, lo que lo hace perfecto para cualquier bebida.\n\nEs ideal para personas que buscan regeneración celular, fuerza en articulaciones y mejorar la apariencia de piel y cabello.",
+      colors: ["Neutral"],
+      capacities: ["300g"],
       specs: [
-          { label: "Processor", value: "Apple M1 chip" },
-          { label: "Memory", value: "8GB unified memory" },
-          { label: "Storage", value: "256GB SSD" },
-          { label: "Display", value: '24-inch 4.5K Retina display' },
+          { label: "Tipo", value: "Colágeno Hidrolizado" },
+          { label: "Azúcar", value: "0 gramos" },
+          { label: "Peso", value: "300 gr" },
+          { label: "Presentación", value: "Doypack trilaminado" },
       ]
-    },
-    {
-      id: "2",
-      name: "Apple iPhone 15 Pro Max, 256GB, Blue Titanium",
-      price: 1199,
-      rating: 4.9,
-      reviewsCount: 1233,
-      imageLight: "https://flowbite.s3.amazonaws.com/blocks/e-commerce/iphone-light.svg",
-      imageDark: "https://flowbite.s3.amazonaws.com/blocks/e-commerce/iphone-dark.svg",
-      discountBadge: "Up to 15% off",
-      features: [
-        { label: "Best Seller", iconType: "best-seller" as const },
-        { label: "Best Price", iconType: "best-price" as const },
-      ],
-      images: ["https://flowbite.s3.amazonaws.com/blocks/e-commerce/iphone-light.svg"],
-      description: "Experience the ultimate iPhone with Titanium design and A17 Pro chip.",
-      colors: ["Blue Titanium", "Natural Titanium", "Black Titanium"],
-      capacities: ["256GB", "512GB", "1TB"],
-      specs: [
-          { label: "Screen", value: "6.7 inch Super Retina XDR" },
-          { label: "Chip", value: "A17 Pro" }
-      ]
-    },
-    {
-      id: "3",
-      name: "PlayStation®5 Console – 1TB, PRO Controller",
-      price: 499,
-      rating: 4.8,
-      reviewsCount: 4263,
-      imageLight: "https://flowbite.s3.amazonaws.com/blocks/e-commerce/ps5-light.svg",
-      imageDark: "https://flowbite.s3.amazonaws.com/blocks/e-commerce/ps5-dark.svg",
-      discountBadge: "Up to 10% off",
-      features: [
-        { label: "Best Seller", iconType: "best-seller" as const },
-        { label: "Best Price", iconType: "best-price" as const },
-      ],
-      images: ["https://flowbite.s3.amazonaws.com/blocks/e-commerce/ps5-light.svg"],
-      description: "Play Has No Limits with the PS5 console.",
-      specs: [{ label: "Storage", value: "1TB SSD" }]
-    },
-    {
-      id: "4",
-      name: "Microsoft Xbox Series X 1TB Gaming Console",
-      price: 499,
-      rating: 4.8,
-      reviewsCount: 2957,
-      imageLight: "https://flowbite.s3.amazonaws.com/blocks/e-commerce/xbox-light.svg",
-      imageDark: "https://flowbite.s3.amazonaws.com/blocks/e-commerce/xbox-dark.svg",
-      discountBadge: "Up to 10% off",
-      features: [
-          { label: "Fast Delivery", iconType: "fast-delivery" as const },
-          { label: "Best Price", iconType: "best-price" as const },
-      ],
-       images: ["https://flowbite.s3.amazonaws.com/blocks/e-commerce/xbox-light.svg"],
-       description: "Power your dreams with Xbox Series X.",
-       specs: [{ label: "Resolution", value: "True 4K Gaming" }]
-    },
-    {
-      id: "5",
-      name: "Apple MacBook PRO Laptop with M2 chip",
-      price: 2599,
-      rating: 4.9,
-      reviewsCount: 1076,
-      imageLight: "https://flowbite.s3.amazonaws.com/blocks/e-commerce/macbook-pro-light.svg",
-      imageDark: "https://flowbite.s3.amazonaws.com/blocks/e-commerce/macbook-pro-dark.svg",
-      discountBadge: "Up to 5% off",
-      features: [
-          { label: "Fast Delivery", iconType: "fast-delivery" as const },
-          { label: "Best Price", iconType: "best-price" as const },
-      ],
-       images: ["https://flowbite.s3.amazonaws.com/blocks/e-commerce/macbook-pro-light.svg"],
-       description: "MacBook Pro with M2. Supercharged for pros.",
-       colors: ["Space Gray", "Silver"],
-       capacities: ["512GB", "1TB", "2TB"]
-    },
-    {
-      id: "6",
-      name: "Apple Watch SE [GPS 40mm], Smartwatch",
-      price: 699,
-      rating: 4.7,
-      reviewsCount: 387,
-      imageLight: "https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-light.svg",
-      imageDark: "https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-dark.svg",
-      discountBadge: "Up to 20% off",
-      features: [
-          { label: "Fast Delivery", iconType: "fast-delivery" as const },
-          { label: "Best Price", iconType: "best-price" as const },
-      ],
-       images: ["https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-light.svg"],
-    },
-    {
-      id: "7",
-      name: "Microsoft Surface Pro, Copilot+ PC, 13 Inch",
-      price: 899,
-      rating: 4.5,
-      reviewsCount: 154,
-      imageLight: "https://flowbite.s3.amazonaws.com/blocks/e-commerce/ipad-keyboard.svg",
-      imageDark: "https://flowbite.s3.amazonaws.com/blocks/e-commerce/ipad-keyboard-dark.svg",
-      discountBadge: "Up to 10% off",
-      features: [
-          { label: "Fast Delivery", iconType: "fast-delivery" as const },
-          { label: "Best Seller", iconType: "best-seller" as const },
-      ],
-       images: ["https://flowbite.s3.amazonaws.com/blocks/e-commerce/ipad-keyboard.svg"],
-    },
-    {
-      id: "8",
-      name: "iPad Pro 13-Inch (M4): XDR Display, 512GB",
-      price: 799,
-      rating: 4.9,
-      reviewsCount: 879,
-      imageLight: "https://flowbite.s3.amazonaws.com/blocks/e-commerce/ipad-light.svg",
-      imageDark: "https://flowbite.s3.amazonaws.com/blocks/e-commerce/ipad-dark.svg",
-      discountBadge: "Up to 35% off",
-      features: [
-          { label: "Shipping Today", iconType: "default" as const },
-          { label: "Best Price", iconType: "best-price" as const },
-      ],
-       images: ["https://flowbite.s3.amazonaws.com/blocks/e-commerce/ipad-light.svg"],
     },
   ],
 };

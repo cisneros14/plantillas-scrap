@@ -22,9 +22,9 @@ export function ContactMap() {
         className="grayscale hover:grayscale-0 transition-all duration-700 ease-in-out"
       />
 
-      {/* Premium Overlay Card */}
+      {/* Overlay Card */}
       <div className="absolute bottom-4 left-4 right-4 md:bottom-12 md:left-12 md:right-auto md:w-[400px]">
-        <div className="bg-background/90 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-border/50">
+        <div className="bg-background/90 backdrop-blur-md p-6 rounded-2xl shadow border border-border/50">
           <div className="mb-4">
             <h3 className="text-lg font-bold text-primary mb-1">
               {siteConfig.business.name}

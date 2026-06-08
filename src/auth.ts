@@ -16,18 +16,39 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         const email = credentials.email as string;
         const password = credentials.password as string;
 
-        if (
-          email === process.env.user_email &&
-          password === process.env.user_pass
-        ) {
-          return {
-            id: "1",
-            name: "Admin",
-            email: email,
-          };
-        }
+        try {
+          // Imports dinámicos para evitar cargar Node APIs en el Edge Runtime de Next.js Middleware
+          const { default: pool } = await import("@/lib/db");
+          const { default: bcrypt } = await import("bcryptjs");
 
-        return null;
+          // Buscar en la base de datos por email y validar que sea un admin
+          const [rows]: any = await pool.execute(
+            "SELECT * FROM users WHERE email = ? AND role = 'admin'",
+            [email]
+          );
+
+          if (rows.length === 0) {
+            return null;
+          }
+
+          const user = rows[0];
+          
+          // Comparar contraseña hasheada
+          const isPasswordCorrect = await bcrypt.compare(password, user.password_hash);
+          if (!isPasswordCorrect) {
+            return null;
+          }
+
+          return {
+            id: user.id.toString(),
+            name: user.name,
+            email: user.email,
+            role: user.role,
+          };
+        } catch (error) {
+          console.error("Error en autorización de NextAuth:", error);
+          return null;
+        }
       },
     }),
   ],
@@ -35,6 +56,18 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     signIn: "/login",
   },
   callbacks: {
+    async jwt({ token, user }: any) {
+      if (user) {
+        token.role = user.role;
+      }
+      return token;
+    },
+    async session({ session, token }: any) {
+      if (session.user) {
+        session.user.role = token.role;
+      }
+      return session;
+    },
     authorized({ auth, request: { nextUrl } }) {
       const isLoggedIn = !!auth?.user;
       const isOnDashboard = nextUrl.pathname.startsWith("/dashboard");
@@ -48,3 +81,4 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     },
   },
 });
+

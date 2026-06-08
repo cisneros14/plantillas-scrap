@@ -14,7 +14,7 @@ export function StorySection() {
               height={600}
               src="/placeholder.webp" // In a real scenario, this would be a real image
               alt="Nuestra historia"
-              className="w-full h-[400px] object-cover rounded-2xl shadow-lg"
+              className="w-full h-[400px] object-cover rounded-2xl shadow"
             />
           </div>
 
